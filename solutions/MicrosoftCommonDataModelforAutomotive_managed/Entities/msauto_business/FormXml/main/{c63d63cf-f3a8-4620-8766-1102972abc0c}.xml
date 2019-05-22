@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{c63d63cf-f3a8-4620-8766-1102972abc0c}</formid>
+    <IntroducedVersion>0.1</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{1ea2c28e-d007-48ea-905d-bb3707f1287a}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{841834fa-31d1-4b07-8240-a9aec53b7f4d}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{8487f4d3-55a4-49a8-92ad-6c4a4350f9d9}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{bd467986-a2f3-4cc1-9bab-caf28530e9f8}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{086dd8d7-eaa5-0d57-534e-32c3860ea6b0}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_account" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_account" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="{1ea2c28e-d007-48ea-905d-bb3707f1287a}_section_2" showlabel="false" showbar="false" locklevel="0" id="{dd590d57-3250-0886-6d1e-69725d2b34e4}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d906c967-37e4-8ccd-2a86-56bb3c9897b1}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_parentbusinessid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_parentbusinessid" disabled="false" />
+                      </cell>
+                      <cell id="{da382a42-2a6b-0870-a171-e075548839c9}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_identifier" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_identifier" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1d86c8c7-6561-8a43-ad26-5ec6300157bc}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_businesstypeid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_businesstypeid" disabled="false" />
+                      </cell>
+                      <cell id="{5bea0c7b-9edd-9438-13d7-be6a21d77550}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msauto_description" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

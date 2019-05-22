@@ -1,0 +1,243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.1.0.4046" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>MicrosoftCommonDataModelforAutomotive</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Microsoft Common Data Model for Automotive" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="Upgrade of Microsoft Common Data Model for Automotive" languagecode="1033" />
+    </Descriptions>
+    <Version>0.0.0.1</Version>
+    <Managed>1</Managed>
+    <Publisher>
+      <UniqueName>microsoftdynamics365automotiveaccelerator</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Microsoft Dynamics 365 Automotive Accelerator" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="Microsoft Dynamics 365 Automotive Accelerator" languagecode="1033" />
+      </Descriptions>
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>msauto</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>97223</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="msauto_aggregate" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_aggregatekpi" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_aggregatekpicontext" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_attributegroup" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_attributeoption" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_attributetype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_business" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_businessfacility" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_businessoperation" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_businessoperationcustomerpreference" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_businesstype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_configurationcode" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_configurationoption" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_customerattachment" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_customeridentifier" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_customeridentifiertype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_deal" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_dealcustomer" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_dealdevice" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_dealdeviceaddon" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_dealerplate" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_dealerplatedeviceassignment" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_dealfile" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_dealterm" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_dealtype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_device" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicebrand" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_deviceclass" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicecomponent" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicegeneration" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_deviceinspection" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_deviceinspectionchecklist" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_deviceinspectionchecklisttype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicelicenseplate" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicemeasure" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicemeasurement" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicemeter" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicemodel" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicemodelcode" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_deviceobservation" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_deviceobservationtype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_deviceregistration" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicesensor" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicestate" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicestyle" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicetype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicevariant" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicewarranty" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_devicewarrantylimit" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_fleet" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_fleetdevice" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_operationcode" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_operationtype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_salescontract" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_salescontractdetail" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_salescontractpayment" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_salescontractterm" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_salescontracttype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_serviceappointment" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_serviceappointmenttype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_servicecontract" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_servicecontractdetail" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_servicecontractterm" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_servicecontracttype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_serviceorder" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_serviceordergroup" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_serviceorderjob" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_serviceorderjobdetail" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_serviceorderjobtype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_serviceordertype" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_specification" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_specificationaccessory" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_specificationattribute" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_testdrive" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_tradein" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_unit" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_warranty" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_warrantylimit" behavior="0" />
+      <RootComponent type="1" schemaName="msauto_warrantytype" behavior="0" />
+      <RootComponent type="60" id="{00d2c36d-923f-44b6-ac58-43b394db586b}" behavior="0" />
+      <RootComponent type="60" id="{064ce895-2048-42e5-9b37-c76f365cb3df}" behavior="0" />
+      <RootComponent type="60" id="{09c36403-1dfb-4221-baac-e5a7f123da7f}" behavior="0" />
+      <RootComponent type="60" id="{2930a6ce-ba62-443d-b51f-a7d660500c07}" behavior="0" />
+      <RootComponent type="60" id="{7d1aec62-9062-4fcc-af04-b368ac211532}" behavior="0" />
+      <RootComponent type="60" id="{c7347e30-6e66-4bbe-aaba-377099e057bb}" behavior="0" />
+      <RootComponent type="60" id="{df90729a-f5e6-4861-9222-6ea58b7fbcdf}" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Brand16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Brand32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_BrandSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Business16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Business32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_BusinessSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Car32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_CarImageforForms" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Code16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Code32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_CodeSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Deal16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Deal32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Deal32SVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Device32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_DeviceModel16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_DeviceModel32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_DeviceModelSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_device_class16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_device_class32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Device_Class_SVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Facility16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Facility32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_FacilitySVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_FinancingContract16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_FinancingContract32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_FinancingContractSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Fleet16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Fleet32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_FleetSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Generation16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Generation32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_GenerationSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Operations16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Operations32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_OperationsSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_SalesContract16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_SalesContract32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_SalesContractSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_ServiceContract16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_ServiceContract32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_ServiceContractSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_ServiceOrder16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_ServiceOrder32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_ServiceOrderSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Specification16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Specification32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_SpecificationSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Style16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Style32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_StyleSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_TestDrive16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_TestDrive32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_TestDriveSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_TradeIn16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_TradeIn32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_TradeInSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Type16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Type32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_TypeSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Variant16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Variant32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_VariantSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Vehicle16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Vehicle32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_VehicleSVG" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Warranty16" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_Warranty32" behavior="0" />
+      <RootComponent type="61" schemaName="msauto_WarrantySVG" behavior="0" />
+    </RootComponents>
+    <MissingDependencies />
+  </SolutionManifest>
+</ImportExportXml>

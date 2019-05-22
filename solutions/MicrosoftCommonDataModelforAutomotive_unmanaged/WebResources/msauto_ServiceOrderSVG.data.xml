@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{8478d99a-864a-e911-a957-000d3a3b9a2b}</WebResourceId>
+  <Name>msauto_ServiceOrderSVG</Name>
+  <DisplayName>Service Order SVG</DisplayName>
+  <Description>Service Order SVG</Description>
+  <WebResourceType>11</WebResourceType>
+  <IntroducedVersion>0.2</IntroducedVersion>
+  <IsEnabledForMobileClient>1</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/msauto_ServiceOrderSVG8478D99A-864A-E911-A957-000D3A3B9A2B</FileName>
+</WebResource>

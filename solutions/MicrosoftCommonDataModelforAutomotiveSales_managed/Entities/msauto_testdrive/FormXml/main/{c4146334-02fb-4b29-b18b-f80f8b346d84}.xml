@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{c4146334-02fb-4b29-b18b-f80f8b346d84}</formid>
+    <IntroducedVersion>0.1</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab name="tab_3" id="{5348306d-9014-9ec2-478a-9ab898d7b7ba}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true" ordinalvalue="0">
+          <columns>
+            <column width="100%" id="0">
+              <sections>
+                <section name="tab_3_section_1" showlabel="false" showbar="false" locklevel="0" id="{38112c94-11ac-2e4d-88a4-b588aec46eb8}" IsUserDefined="0" layout="varwidth" columns="1" labelwidth="115" ordinalvalue="0">
+                  <rows>
+                    <row>
+                      <cell id="{8b30728c-9d91-528c-be48-31150ac9717b}" showlabel="true" locklevel="0" ordinalvalue="10002" solutionaction="Added">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_customerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_customerid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{869584b4-eb9a-a9d4-e87c-bc963e6e51a3}" showlabel="true" locklevel="0" ordinalvalue="10003" solutionaction="Added">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_contactid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_contactid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4e7c0578-5162-5ade-7342-2c6b6e8191e0}" showlabel="true" locklevel="0" ordinalvalue="10004" solutionaction="Added">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_leadid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_leadid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{aee68e13-655c-8dea-0c00-6b4ab28556b1}" showlabel="true" locklevel="0" ordinalvalue="10005" solutionaction="Added">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_opportunityid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_opportunityid" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <header id="{3bfde17d-b8c8-44b6-99f2-1d36e0104e75}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{3c47ea06-a86b-4a60-b3e2-c9b12d1369b7}" showlabel="false" ordinalvalue="10000" solutionaction="Removed" />
+            <cell id="{cbf65d17-c518-413f-9e85-50622d1cc09c}" showlabel="false" ordinalvalue="20001" solutionaction="Removed" />
+            <cell id="{24934349-62c3-416b-bb57-fe6aed03e3c4}" showlabel="false" ordinalvalue="30002" solutionaction="Removed" />
+          </row>
+        </rows>
+      </header>
+      <footer id="{10f7abd0-b250-4ba9-bd53-48ba447e0007}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{9b70b2c6-5f1c-4621-9ebf-97d80d1896d0}" showlabel="false" ordinalvalue="10000" solutionaction="Removed" />
+            <cell id="{1fe7232c-c1f8-426d-a416-131d7554e57e}" showlabel="false" ordinalvalue="20001" solutionaction="Removed" />
+            <cell id="{fa019c10-7a1d-4419-94f9-9515bd1ae467}" showlabel="false" ordinalvalue="30002" solutionaction="Removed" />
+          </row>
+        </rows>
+      </footer>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

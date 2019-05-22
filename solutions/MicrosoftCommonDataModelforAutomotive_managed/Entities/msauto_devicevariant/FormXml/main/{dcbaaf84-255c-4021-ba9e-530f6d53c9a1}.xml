@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{dcbaaf84-255c-4021-ba9e-530f6d53c9a1}</formid>
+    <IntroducedVersion>0.2</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{0e507fe7-5327-46ca-ba22-265d1c8ad123}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{89c1d7cc-e685-420b-9461-44f4f03a0f8b}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{3aa6f766-20da-4cb5-94c5-d9d106414f5a}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{2581ae6f-d790-43b7-a518-7a6bef680dc8}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="{0e507fe7-5327-46ca-ba22-265d1c8ad123}_section_2" showlabel="false" showbar="false" locklevel="0" id="{1ea48b70-7127-0475-750a-2b1a52550791}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{04bb2732-b4d5-b5e4-9e68-0733791b7972}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_deviceclassid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_deviceclassid" disabled="false" />
+                      </cell>
+                      <cell id="{ba989406-7599-e7b9-76cb-c97c68e4663c}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_devicemodelcodeid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_devicemodelcodeid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4433b80d-b873-b9db-8b03-02414a363198}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_devicetypeid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_devicetypeid" disabled="false" />
+                      </cell>
+                      <cell id="{998ac7cb-e45c-1577-d79d-73eb9262b8c7}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_devicebrandid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_devicebrandid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{eb02ded7-e98c-49dc-cb2a-ee91b1ee581b}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_devicemodelid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_devicemodelid" disabled="false" />
+                      </cell>
+                      <cell id="{923485ab-2a59-3abc-936d-365176c01b5a}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_devicestyleid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_devicestyleid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{de1e0c99-9edc-0968-a54d-57d82cd1ace6}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_code" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_code" disabled="false" />
+                      </cell>
+                      <cell id="{9c494322-4169-d1aa-886e-10ae27617943}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msauto_description" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{dbe44b9e-091e-84b3-64e1-b459b79263dc}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_specificationid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_specificationid" disabled="false" />
+                      </cell>
+                      <cell id="{83093021-d7ca-22e2-2cde-de3a5273e4d2}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_devicegenerationid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_devicegenerationid" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

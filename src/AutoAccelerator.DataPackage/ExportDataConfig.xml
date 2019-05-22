@@ -1,0 +1,757 @@
+<entities >
+  <entity name="account" displayname="Account" etc="1" primaryidfield="accountid" primarynamefield="name" disableplugins="false">
+    <fields>
+      <field displayname="Account" name="accountid" type="guid" primaryKey="true" />
+      <field displayname="Account Name" name="name" type="string" />
+      <field displayname="Account Type" name="msnfp_accounttype" type="optionsetvalue" customfield="true" />
+      <field displayname="Acquisition Date" name="msnfp_acquisitiondate" type="datetime" customfield="true" />
+      <field displayname="Acquisition Source" name="msnfp_acquisitionsource" type="optionsetvalue" customfield="true" />
+      <field displayname="Address 1: City" name="address1_city" type="string" />
+      <field displayname="Address 1: Country/Region" name="address1_country" type="string" />
+      <field displayname="Address 1: State/Province" name="address1_stateorprovince" type="string" />
+      <field displayname="Address 1: Street 1" name="address1_line1" type="string" />
+      <field displayname="Address 1: ZIP/Postal Code" name="address1_postalcode" type="string" />
+      <field displayname="Annual Revenue" name="revenue" type="money" />
+      <field displayname="Credit Hold" name="creditonhold" type="bool" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Do not allow Bulk Emails" name="donotbulkemail" type="bool" />
+      <field displayname="Do not allow Bulk Mails" name="donotbulkpostalmail" type="bool" />
+      <field displayname="Do not allow Emails" name="donotemail" type="bool" />
+      <field displayname="Do not allow Faxes" name="donotfax" type="bool" />
+      <field displayname="Do not allow Mails" name="donotpostalmail" type="bool" />
+      <field displayname="Do not allow Phone Calls" name="donotphone" type="bool" />
+      <field displayname="Follow Email Activity" name="followemail" type="bool" />
+      <field displayname="Main Phone" name="telephone1" type="string" />
+      <field displayname="Number of Employees" name="numberofemployees" type="number" />
+      <field displayname="Preferred Method of Contact" name="preferredcontactmethodcode" type="optionsetvalue" />
+      <field displayname="Primary Constituent Type" name="msnfp_primaryconstituenttype" type="optionsetvalue" customfield="true" />
+      <field displayname="Primary Contact" name="primarycontactid" type="entityreference" lookupType="contact" />
+      <field displayname="Send Marketing Materials" name="donotsendmm" type="bool" />
+    </fields>
+  </entity>
+  <entity name="contact" displayname="Contact" etc="2" primaryidfield="contactid" primarynamefield="fullname" disableplugins="false">
+    <fields>
+      <field displayname="Address 1: City" name="address1_city" type="string" />
+      <field displayname="Address 1: Country/Region" name="address1_country" type="string" />
+      <field displayname="Address 1: State/Province" name="address1_stateorprovince" type="string" />
+      <field displayname="Address 1: Street 1" name="address1_line1" type="string" />
+      <field displayname="Address 1: Street 2" name="address1_line2" type="string" />
+      <field displayname="Address 1: ZIP/Postal Code" name="address1_postalcode" type="string" />
+      <field displayname="Age" name="msnfp_age" type="number" customfield="true" />
+      <field displayname="Birth Day" name="msnfp_birthday" type="optionsetvalue" customfield="true" />
+      <field displayname="Birth Month" name="msnfp_birthmonth" type="optionsetvalue" customfield="true" />
+      <field displayname="Birth Year" name="msnfp_birthyear" type="number" customfield="true" />
+      <field displayname="Business Phone" name="telephone1" type="string" />
+      <field displayname="Company Name" name="parentcustomerid" type="entityreference" lookupType="account|contact" />
+      <field displayname="Credit Hold" name="creditonhold" type="bool" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Do not allow Bulk Emails" name="donotbulkemail" type="bool" />
+      <field displayname="Do not allow Bulk Mails" name="donotbulkpostalmail" type="bool" />
+      <field displayname="Do not allow Emails" name="donotemail" type="bool" />
+      <field displayname="Do not allow Faxes" name="donotfax" type="bool" />
+      <field displayname="Do not allow Mails" name="donotpostalmail" type="bool" />
+      <field displayname="Do not allow Phone Calls" name="donotphone" type="bool" />
+      <field displayname="Email" name="emailaddress1" type="string" />
+      <field displayname="Ethnicity" name="msnfp_ethnicity" type="optionsetvalue" customfield="true" />
+      <field displayname="First Name" name="firstname" type="string" />
+      <field displayname="Follow Email Activity" name="followemail" type="bool" />
+      <field displayname="GDPR Optout" name="msdyn_gdproptout" type="bool" customfield="true" />
+      <field displayname="Job Title" name="jobtitle" type="string" />
+      <field displayname="Last Name" name="lastname" type="string" />
+      <field displayname="Maiden Name" name="msnfp_maidenname" type="string" customfield="true" />
+      <field displayname="Mobile Phone" name="mobilephone" type="string" />
+      <field displayname="Preferred Method of Contact" name="preferredcontactmethodcode" type="optionsetvalue" />
+      <field displayname="Preferred Time" name="preferredappointmenttimecode" type="optionsetvalue" />
+      <field displayname="Primary Constituent Type" name="msnfp_primaryconstituenttype" type="optionsetvalue" customfield="true" />
+      <field displayname="Reports To" name="msnfp_reportstoid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Send Marketing Materials" name="donotsendmm" type="bool" />
+    </fields>
+  </entity>
+  <entity name="msnfp_award" displayname="Award" etc="10058" primaryidfield="msnfp_awardid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Award" name="msnfp_awardid" type="guid" primaryKey="true" />
+      <field displayname="Docket" name="msnfp_docketid" type="entityreference" lookupType="msnfp_docket" customfield="true" />
+      <field displayname="Fiscal Sponsor" name="msnfp_fiscalsponsorid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Internal Contact" name="msnfp_internalcontactid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Notice Of Award Channel" name="msnfp_noticeofawardchannel" type="optionsetvalue" customfield="true" />
+      <field displayname="Notice of Award Date" name="msnfp_noticeofawarddate" type="datetime" customfield="true" />
+      <field displayname="Recipient" name="msnfp_recipient" type="entityreference" lookupType="account|contact" customfield="true" />
+      <field displayname="Request" name="msnfp_requestid" type="entityreference" lookupType="msnfp_request" customfield="true" />
+      <field displayname="Type" name="msnfp_type" type="optionsetvalue" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_awardversion" displayname="Award Version" etc="10059" primaryidfield="msnfp_awardversionid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Award" name="msnfp_awardid" type="entityreference" lookupType="msnfp_award" customfield="true" />
+      <field displayname="Award Date" name="msnfp_awarddate" type="datetime" customfield="true" />
+      <field displayname="Award End Date" name="msnfp_awardenddate" type="datetime" customfield="true" />
+      <field displayname="Award Start Date" name="msnfp_awardstartdate" type="datetime" customfield="true" />
+      <field displayname="Award Version" name="msnfp_awardversionid" type="guid" primaryKey="true" />
+      <field displayname="Description" name="msnfp_description" type="string" customfield="true" />
+      <field displayname="Enrollment Start Date" name="msnfp_enrollmentstartdate" type="datetime" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Performance Measures Smmary" name="msnfp_performancemeasuressummary" type="string" customfield="true" />
+      <field displayname="Primary Contact" name="msnfp_primarycontactid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Reporting Schedule" name="msnfp_reportingschedule" type="string" customfield="true" />
+      <field displayname="Status" name="msnfp_status" type="optionsetvalue" customfield="true" />
+      <field displayname="Submitted By" name="msnfp_submittedbyid" type="entityreference" lookupType="contact" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_budget" displayname="Budget" etc="10016" primaryidfield="msnfp_budgetid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Budget" name="msnfp_budgetid" type="guid" primaryKey="true" />
+      <field displayname="Budget Name" name="msnfp_budgetname" type="string" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Delivery Framework" name="msnfp_deliveryframeworkid" type="entityreference" lookupType="msnfp_deliveryframework" customfield="true" />
+      <field displayname="Description" name="msnfp_description" type="string" customfield="true" />
+      <field displayname="End Date" name="msnfp_enddate" type="datetime" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Objective" name="msnfp_objectiveid" type="entityreference" lookupType="msnfp_objective" customfield="true" />
+      <field displayname="Start Date" name="msnfp_startdate" type="datetime" customfield="true" />
+      <field displayname="Total Budget" name="msnfp_totalbudget" type="money" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="campaign" displayname="Campaign" etc="4400" primaryidfield="campaignid" primarynamefield="name" disableplugins="false">
+    <fields>
+      <field displayname="Acquisition Source" name="msnfp_aquisitionsource" type="string" customfield="true" />
+      <field displayname="Actual End Date" name="actualend" type="datetime" />
+      <field displayname="Actual Start Date" name="actualstart" type="datetime" />
+      <field displayname="Appeal Segment" name="msnfp_appealsegment" type="optionsetvalue" customfield="true" />
+      <field displayname="Budget Allocated" name="budgetedcost" type="money" />
+      <field displayname="Campaign" name="campaignid" type="guid" primaryKey="true" />
+      <field displayname="Campaign Category" name="msnfp_campaigncategory" type="optionsetvalue" customfield="true" />
+      <field displayname="Campaign Code" name="codename" type="string" />
+      <field displayname="Campaign Type" name="msnfp_campaigntype" type="optionsetvalue" customfield="true" />
+      <field displayname="Channel" name="msnfp_channel" type="optionsetvalue" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Default Designation" name="msnfp_campaign_defaultdesignation" type="entityreference" lookupType="msnfp_designation" customfield="true" />
+      <field displayname="Effort" name="msnfp_effort" type="optionsetvalue" customfield="true" />
+      <field displayname="Estimated Revenue" name="expectedrevenue" type="money" />
+      <field displayname="Expected Response Percentage" name="expectedresponse" type="number" />
+      <field displayname="First Response Date" name="msnfp_firstresponsedate" type="datetime" customfield="true" />
+      <field displayname="Last Response Date" name="msnfp_lastresponsedate" type="datetime" customfield="true" />
+      <field displayname="Miscellaneous Costs" name="othercost" type="money" />
+      <field displayname="Name" name="name" type="string" />
+      <field displayname="Proposed End Date" name="proposedend" type="datetime" />
+      <field displayname="Proposed Start Date" name="proposedstart" type="datetime" />
+      <field displayname="Source Code" name="msnfp_sourcecode" type="string" customfield="true" />
+      <field displayname="Start Date" name="msnfp_startdate" type="datetime" customfield="true" />
+      <field displayname="SubChannel" name="msnfp_subchannel" type="optionsetvalue" customfield="true" />
+      <field displayname="Template" name="istemplate" type="bool" />
+      <field displayname="Total Cost of Campaign" name="totalactualcost" type="money" />
+      <field displayname="Total Cost of Campaign Activities" name="totalcampaignactivityactualcost" type="money" />
+      <field displayname="Type" name="typecode" type="optionsetvalue" />
+    </fields>
+  </entity>
+  <entity name="msnfp_creditplan" displayname="Credit Plan" etc="10018" primaryidfield="msnfp_creditplanid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Campaign" name="msnfp_creditplan_campaignid" type="entityreference" lookupType="campaign" customfield="true" />
+      <field displayname="Credit Plan" name="msnfp_creditplanid" type="guid" primaryKey="true" />
+      <field displayname="Credit Type" name="msnfp_credittype" type="optionsetvalue" customfield="true" />
+      <field displayname="Default on Account" name="msnfp_creditplan_accountid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Payment Schedule" name="msnfp_creditplan_paymentscheduleid" type="entityreference" lookupType="msnfp_paymentschedule" customfield="true" />
+      <field displayname="Valid To Date" name="msnfp_validtodate" type="datetime" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_creditrecipient" displayname="Credit Plan Recipient" etc="10019" primaryidfield="msnfp_creditrecipientid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Credit Plan" name="msnfp_creditrecipient_creditplanid" type="entityreference" lookupType="msnfp_creditplan" customfield="true" />
+      <field displayname="Credit Plan Recipient" name="msnfp_creditrecipientid" type="guid" primaryKey="true" />
+      <field displayname="Customer" name="msnfp_creditplanrecipient_customer" type="entityreference" lookupType="account|contact" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Percentage of Payment" name="msnfp_percentageofpayment" type="decimal" customfield="true" />
+      <field displayname="Soft Credit Reason" name="msnfp_softcreditreason" type="optionsetvalue" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_deliveryframework" displayname="Delivery Framework" etc="10060" primaryidfield="msnfp_deliveryframeworkid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Objective" name="msnfp_objectiveid" type="entityreference" lookupType="msnfp_objective" customfield="true" />
+      <field displayname="Parent Delivery Framework" name="msnfp_parentdeliveryframeworkid" type="entityreference" lookupType="msnfp_deliveryframework" customfield="true" />
+      <field displayname="Scope" name="msnfp_scope" type="optionsetvalue" customfield="true" />
+      <field displayname="Start Date" name="msnfp_startdate" type="datetime" customfield="true" />
+      <field displayname="Status" name="msnfp_status" type="optionsetvalue" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_designatedcredit" displayname="Designated Credit" etc="10020" primaryidfield="msnfp_designatedcreditid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Is Adjusted" name="msnfp_isadjusted" type="bool" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Posted Date" name="msnfp_posteddate" type="datetime" customfield="true" />
+      <field displayname="Received Date" name="msnfp_receiveddate" type="datetime" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_designation" displayname="Designation" etc="10021" primaryidfield="msnfp_designationid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Acknowledgement Name" name="msnfp_acknowledgementname" type="string" customfield="true" />
+      <field displayname="Description" name="msnfp_description" type="string" customfield="true" />
+      <field displayname="Designation" name="msnfp_designationid" type="guid" primaryKey="true" />
+      <field displayname="Designation Code" name="msnfp_designationcode" type="string" customfield="true" />
+      <field displayname="Designation Group" name="msnfp_designationgroup" type="string" customfield="true" />
+      <field displayname="End Date" name="msnfp_enddate" type="datetime" customfield="true" />
+      <field displayname="Endowment Type" name="msnfp_endowmenttype" type="optionsetvalue" customfield="true" />
+      <field displayname="GL Credit Account" name="msnfp_glcreditaccount" type="string" customfield="true" />
+      <field displayname="GL Debit Account" name="msnfp_gldebitaccount" type="string" customfield="true" />
+      <field displayname="Initiative" name="msnfp_initiative" type="string" customfield="true" />
+      <field displayname="Is Active" name="msnfp_isactive" type="bool" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Parent Designation" name="msnfp_parentdesignationid" type="entityreference" lookupType="msnfp_designation" customfield="true" />
+      <field displayname="Program" name="msnfp_program" type="string" customfield="true" />
+      <field displayname="Restriction Type" name="msnfp_restrictiontype" type="optionsetvalue" customfield="true" />
+      <field displayname="Start Date" name="msnfp_startdate" type="datetime" customfield="true" />
+      <field displayname="Total Disbursed" name="msnfp_totaldisbursed" type="money" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+    </fields>
+  </entity>
+  <entity name="msnfp_designationplan" displayname="Designation Plan" etc="10022" primaryidfield="msnfp_designationplanid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Amount Of Pledge Max" name="msnfp_amountofpledgemax" type="money" customfield="true" />
+      <field displayname="Campaign" name="msnfp_designationplan_campaignid" type="entityreference" lookupType="campaign" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Designation" name="msnfp_designationplan_designationid" type="entityreference" lookupType="msnfp_designation" customfield="true" />
+      <field displayname="Designation Plan" name="msnfp_designationplanid" type="guid" primaryKey="true" />
+      <field displayname="Donor Commitment" name="msnfp_designationplan_donorcommitmentid" type="entityreference" lookupType="msnfp_donorcommitment" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Number Of Payments Max" name="msnfp_numberofpaymentsmax" type="number" customfield="true" />
+      <field displayname="Opportunity" name="msnfp_designationplan_opportunityid" type="entityreference" lookupType="opportunity" customfield="true" />
+      <field displayname="Payment Schedule" name="msnfp_designationplan_paymentscheduleid" type="entityreference" lookupType="msnfp_paymentschedule" customfield="true" />
+      <field displayname="Per Payment Max Amount" name="msnfp_perpaymentmaxamount" type="money" customfield="true" />
+      <field displayname="Per Payment Max Percent" name="msnfp_perpaymentmaxpercent" type="decimal" customfield="true" />
+      <field displayname="Percentage Of Payments Max" name="msnfp_percentageofpaymentsmax" type="decimal" customfield="true" />
+      <field displayname="Percentage Of Pledge Max" name="msnfp_percentageofpledgemax" type="decimal" customfield="true" />
+      <field displayname="Priority Order" name="msnfp_priorityorder" type="number" customfield="true" />
+      <field displayname="Valid From Date" name="msnfp_validfromdate" type="datetime" customfield="true" />
+      <field displayname="Valid To Date" name="msnfp_validtodate" type="datetime" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_disbursement" displayname="Disbursement" etc="10071" primaryidfield="msnfp_disbursementid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Adjustment Comment" name="msnfp_adjustmentcomment" type="string" customfield="true" />
+      <field displayname="Adjustment Reason" name="msnfp_adjustmentreason" type="optionsetvalue" customfield="true" />
+      <field displayname="Adjustment Type" name="msnfp_adjustmenttype" type="optionsetvalue" customfield="true" />
+      <field displayname="Adjusts Original Transaction" name="msnfp_adjustsoriginaltransactionid" type="entityreference" lookupType="msnfp_disbursementdistribution" customfield="true" />
+      <field displayname="Amount" name="msnfp_amouont" type="money" customfield="true" />
+      <field displayname="Award" name="msnfp_awardid" type="entityreference" lookupType="msnfp_award" customfield="true" />
+      <field displayname="Book Date" name="msnfp_bookdate" type="datetime" customfield="true" />
+      <field displayname="Comment" name="msnfp_comment" type="string" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Description" name="msnfp_description" type="string" customfield="true" />
+      <field displayname="Disbursement" name="msnfp_disbursementid" type="guid" primaryKey="true" />
+      <field displayname="Is Adjusted" name="msnfp_isadjusted" type="bool" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Posted Date" name="msnfp_posteddate" type="datetime" customfield="true" />
+      <field displayname="Recipient Account" name="msnfp_recipientaccountid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Recipient Contact" name="msnfp_recipientcontactid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Request Date" name="msnfp_requestdate" type="datetime" customfield="true" />
+      <field displayname="Scheduled Disbursement Date" name="msnfp_scheduleddisbursementdate" type="datetime" customfield="true" />
+      <field displayname="Sent Date" name="msnfp_sentdate" type="datetime" customfield="true" />
+      <field displayname="Type" name="msnfp_type" type="optionsetvalue" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_disbursementdistribution" displayname="Disbursement Distribution" etc="10072" primaryidfield="msnfp_disbursementdistributionid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Amount" name="msnfp_amount" type="money" customfield="true" />
+      <field displayname="Budget" name="msnfp_budgetid" type="entityreference" lookupType="msnfp_budget" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Delivery Framework" name="msnfp_deliveryframeworkid" type="entityreference" lookupType="msnfp_deliveryframework" customfield="true" />
+      <field displayname="Disbursement Distribution" name="msnfp_disbursementdistributionid" type="guid" primaryKey="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Payment" name="msnfp_paymentid" type="entityreference" lookupType="msnfp_disbursement" customfield="true" />
+      <field displayname="Payment Date" name="msnfp_paymentdate" type="datetime" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_docket" displayname="Docket" etc="10023" primaryidfield="msnfp_docketid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Assigned To" name="msnfp_assignedtoid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Award Recipient" name="msnfp_awardrecipientid" type="entityreference" lookupType="account|contact" customfield="true" />
+      <field displayname="Docket" name="msnfp_docketid" type="guid" primaryKey="true" />
+      <field displayname="Fiscal Sponsor" name="msnfp_docket_fiscalsponsor" type="entityreference" lookupType="account|contact" customfield="true" />
+      <field displayname="Internal Due Date" name="msnfp_internalduedate" type="datetime" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Status" name="msnfp_status" type="optionsetvalue" customfield="true" />
+      <field displayname="Summary Description" name="msnfp_summarydescription" type="string" customfield="true" />
+      <field displayname="Type" name="msnfp_type" type="optionsetvalue" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_donorcommitment" displayname="Donor Commitment" etc="10024" primaryidfield="msnfp_donorcommitmentid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Commitment Date" name="msnfp_commitmentdate" type="datetime" customfield="true" />
+      <field displayname="Campaign" name="msnfp_commitment_campaignid" type="entityreference" lookupType="campaign" customfield="true" />
+      <field displayname="Book Date" name="msnfp_bookdate" type="datetime" customfield="true" />
+      <field displayname="Anonymity" name="msnfp_anonymity" type="optionsetvalue" customfield="true" />
+      <field displayname="Commitment Type" name="msnfp_commitmenttype" type="optionsetvalue" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Data Entry Reference" name="msnfp_dataentryreference" type="string" customfield="true" />
+      <field displayname="Data Entry Source" name="msnfp_dataentrysource" type="optionsetvalue" customfield="true" />
+      <field displayname="Default Designation" name="msnfp_commitment_defaultdesignationid" type="entityreference" lookupType="msnfp_designation" customfield="true" />
+      <field displayname="Donor Commitment" name="msnfp_donorcommitmentid" type="guid" primaryKey="true" />
+      <field displayname="Expected By Date" name="msnfp_expectedbydate" type="datetime" customfield="true" />
+      <field displayname="Is Bookable" name="msnfp_isbookable" type="bool" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Next Payment Amount" name="msnfp_nextpaymentamount" type="money" customfield="true" />
+      <field displayname="Next Payment Date" name="msnfp_nextpaymentdate" type="datetime" customfield="true" />
+      <field displayname="Planned Giving" name="msnfp_donorcommitment_plannedgivingid" type="entityreference" lookupType="msnfp_plannedgiving" customfield="true" />
+      <field displayname="Pledged By Contact" name="msnfp_pledgedbycontactid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Pledged On Account" name="msnfp_pledgedonaccountid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Received Date" name="msnfp_receiveddate" type="datetime" customfield="true" />
+      <field displayname="Total Amount" name="msnfp_totalamount" type="money" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_education" displayname="Education" etc="10025" primaryidfield="msnfp_educationid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Class Year" name="msnfp_classyear" type="number" customfield="true" />
+      <field displayname="Completion Year" name="msnfp_completionyear" type="number" customfield="true" />
+      <field displayname="Contact" name="msnfp_education_contactid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Degree Or Certificate" name="msnfp_degreeorcertificate" type="optionsetvalue" customfield="true" />
+      <field displayname="Department or College" name="msnfp_departmentorcollegeid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Education" name="msnfp_educationid" type="guid" primaryKey="true" />
+      <field displayname="Field of Study #1" name="msnfp_fieldofstudy1" type="optionsetvalue" customfield="true" />
+      <field displayname="Field of Study #2" name="msnfp_fieldofstudy2" type="optionsetvalue" customfield="true" />
+      <field displayname="First Year Attended" name="msnfp_firstyearattended" type="number" customfield="true" />
+      <field displayname="Grade" name="msnfp_grade" type="string" customfield="true" />
+      <field displayname="Institution" name="msnfp_institutionid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Last Year Attended" name="msnfp_lastyearattended" type="number" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_employmenthistory" displayname="Employment History" etc="10026" primaryidfield="msnfp_employmenthistoryid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Current Employment" name="msnfp_currentemployment" type="bool" customfield="true" />
+      <field displayname="Employer" name="msnfp_employerid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Employer Name" name="msnfp_employername" type="string" customfield="true" />
+      <field displayname="Employment End Date" name="msnfp_employmentenddate" type="datetime" customfield="true" />
+      <field displayname="Employment History" name="msnfp_employmenthistoryid" type="guid" primaryKey="true" />
+      <field displayname="Employment Start Date" name="msnfp_employmentstartdate" type="datetime" customfield="true" />
+      <field displayname="Industry" name="msnfp_industry" type="optionsetvalue" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Occupation" name="msnfp_occupation" type="optionsetvalue" customfield="true" />
+      <field displayname="Title" name="msnfp_title" type="string" customfield="true" />
+      <field displayname="Contact" name="msnfp_contactid" type="entityreference" lookupType="contact" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_indicator" displayname="Indicator" etc="10053" primaryidfield="msnfp_indicatorid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Aggregation Status" name="msnfp_aggregationstatus" type="bool" customfield="true" />
+      <field displayname="Ascending" name="msnfp_ascending" type="bool" customfield="true" />
+      <field displayname="Baseline Value" name="msnfp_baselinevalue" type="string" customfield="true" />
+      <field displayname="Description" name="msnfp_description" type="string" customfield="true" />
+      <field displayname="End Date" name="msnfp_enddate" type="datetime" customfield="true" />
+      <field displayname="Indicator" name="msnfp_indicatorid" type="guid" primaryKey="true" />
+      <field displayname="Measure" name="msnfp_measure" type="optionsetvalue" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Result" name="msnfp_resultid" type="entityreference" lookupType="msnfp_result" customfield="true" />
+      <field displayname="Start Date" name="msnfp_startdate" type="datetime" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_indicatorvalue" displayname="Indicator Value" etc="10054" primaryidfield="msnfp_indicatorvalueid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Amount" name="msnfp_amount" type="money" customfield="true" />
+      <field displayname="Baseline Value" name="msnfp_baselinevalue" type="string" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Description" name="msnfp_description" type="string" customfield="true" />
+      <field displayname="End Date" name="msnfp_enddate" type="datetime" customfield="true" />
+      <field displayname="Indicator" name="msnfp_indicatorid" type="entityreference" lookupType="msnfp_indicator" customfield="true" />
+      <field displayname="Indicator Value" name="msnfp_indicatorvalueid" type="guid" primaryKey="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Number" name="msnfp_number" type="number" customfield="true" />
+      <field displayname="Parent IndicatorValue" name="msnfp_parentindicatorvalueid" type="entityreference" lookupType="msnfp_indicatorvalue" customfield="true" />
+      <field displayname="Percentage" name="msnfp_percentage" type="decimal" customfield="true" />
+      <field displayname="Start Date" name="msnfp_startdate" type="datetime" customfield="true" />
+      <field displayname="Value Type" name="msnfp_valuetype" type="optionsetvalue" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="lead" displayname="Lead" etc="4" primaryidfield="leadid" primarynamefield="fullname" disableplugins="false">
+    <fields>
+      <field displayname="Name" name="fullname" type="string" />
+      <field displayname="Application Deadline" name="msnfp_applicationdeadline" type="datetime" customfield="true" />
+      <field displayname="Business Phone" name="telephone1" type="string" />
+      <field displayname="City" name="address1_city" type="string" />
+      <field displayname="Company Name" name="companyname" type="string" />
+      <field displayname="Country/Region" name="address1_country" type="string" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Delivery Framework" name="msnfp_deliveryframeworkid" type="entityreference" lookupType="msnfp_deliveryframework" customfield="true" />
+      <field displayname="Do not allow Bulk Emails" name="donotbulkemail" type="bool" />
+      <field displayname="Do not allow Emails" name="donotemail" type="bool" />
+      <field displayname="Do not allow Faxes" name="donotfax" type="bool" />
+      <field displayname="Do not allow Mails" name="donotpostalmail" type="bool" />
+      <field displayname="Do not allow Phone Calls" name="donotphone" type="bool" />
+      <field displayname="Docket" name="msnfp_lead_docketid" type="entityreference" lookupType="msnfp_docket" customfield="true" />
+      <field displayname="Email" name="emailaddress1" type="string" />
+      <field displayname="Expected Amount Requested" name="msnfp_expectedamountrequested" type="money" customfield="true" />
+      <field displayname="Expected Duration (Months)" name="msnfp_expectedduration" type="number" customfield="true" />
+      <field displayname="Expected Start Date" name="msnfp_expectedstartdate" type="datetime" customfield="true" />
+      <field displayname="First Name" name="firstname" type="string" />
+      <field displayname="Follow Email Activity" name="followemail" type="bool" />
+      <field displayname="GDPR Optout" name="msdyn_gdproptout" type="bool" customfield="true" />
+      <field displayname="Is Renewal" name="msnfp_isrenewal" type="bool" customfield="true" />
+      <field displayname="Job Title" name="jobtitle" type="string" />
+      <field displayname="Last Name" name="lastname" type="string" />
+      <field displayname="Letter of Intent Deadline" name="msnfp_letterofintentdeadline" type="datetime" customfield="true" />
+      <field displayname="Marketing Material" name="donotsendmm" type="bool" />
+      <field displayname="Mobile Phone" name="mobilephone" type="string" />
+      <field displayname="Organization Budget" name="msnfp_organizationalbudget" type="money" customfield="true" />
+      <field displayname="Organization Type" name="msnfp_organizationtype" type="optionsetvalue" customfield="true" />
+      <field displayname="Preferred Method of Contact" name="preferredcontactmethodcode" type="optionsetvalue" />
+      <field displayname="Rating" name="leadqualitycode" type="optionsetvalue" />
+      <field displayname="Request Type" name="msnfp_requesttype" type="optionsetvalue" customfield="true" />
+      <field displayname="State/Province" name="address1_stateorprovince" type="string" />
+      <field displayname="Street 1" name="address1_line1" type="string" />
+      <field displayname="Street 2" name="address1_line2" type="string" />
+      <field displayname="Topic" name="subject" type="string" />
+      <field displayname="Total Project Budget" name="msnfp_totalprojectbudget" type="money" customfield="true" />
+      <field displayname="Website" name="websiteurl" type="string" />
+      <field displayname="ZIP/Postal Code" name="address1_postalcode" type="string" />
+    </fields>
+  </entity>
+  <entity name="msnfp_objective" displayname="Objective" etc="10031" primaryidfield="msnfp_objectiveid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Account" name="msnfp_objective_accountid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Description" name="msnfp_description" type="string" customfield="true" />
+      <field displayname="End Date" name="msnfp_enddate" type="datetime" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Objective" name="msnfp_objectiveid" type="guid" primaryKey="true" />
+      <field displayname="Objective Type" name="msnfp_objectivetype" type="optionsetvalue" customfield="true" />
+      <field displayname="Parent Objective" name="msnfp_parentobjectiveid" type="entityreference" lookupType="msnfp_objective" customfield="true" />
+      <field displayname="Start Date" name="msnfp_startdate" type="datetime" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_ofacmatch" displayname="OFAC Match" etc="10032" primaryidfield="msnfp_ofacmatchid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Customer" name="msnfp_ofacmatch_customer" type="entityreference" lookupType="account|contact" customfield="true" />
+      <field displayname="Inquiry / Lead" name="msnfp_inquiryid" type="entityreference" lookupType="lead" customfield="true" />
+      <field displayname="Match Type" name="msnfp_matchtype" type="string" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="OFAC Match" name="msnfp_ofacmatchid" type="guid" primaryKey="true" />
+      <field displayname="Report Date" name="msnfp_reportdate" type="datetime" customfield="true" />
+      <field displayname="Request" name="msnfp_requestid" type="entityreference" lookupType="msnfp_request" customfield="true" />
+      <field displayname="SDN Name" name="msnfp_sdnname" type="string" customfield="true" />
+      <field displayname="SDN Number" name="msnfp_sdnnumber" type="string" customfield="true" />
+      <field displayname="Title" name="msnfp_title" type="string" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="opportunity" displayname="Opportunity" etc="3" primaryidfield="opportunityid" primarynamefield="name" disableplugins="false">
+    <fields>
+      <field displayname="Account" name="parentaccountid" type="entityreference" lookupType="account" />
+      <field displayname="Budget Amount" name="budgetamount" type="money" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Contact" name="parentcontactid" type="entityreference" lookupType="contact" />
+      <field displayname="Est. Close Date" name="estimatedclosedate" type="datetime" />
+      <field displayname="Est. Revenue" name="estimatedvalue" type="money" />
+      <field displayname="Expected Giving Amount" name="msnfp_expectedgivingamount" type="money" customfield="true" />
+      <field displayname="Potential Customer" name="customerid" type="entityreference" lookupType="account|contact" />
+      <field displayname="Primary Proposal" name="msnfp_primaryproposalid" type="entityreference" lookupType="msnfp_donorcommitment" customfield="true" />
+      <field displayname="Prospective Gift Type" name="msnfp_prospectivegifttype" type="optionsetvalue" customfield="true" />
+      <field displayname="Rating" name="opportunityratingcode" type="optionsetvalue" />
+      <field displayname="Solicitation Type" name="msnfp_solicitationtype" type="optionsetvalue" customfield="true" />
+      <field displayname="Source Code" name="msnfp_sourcecode" type="string" customfield="true" />
+      <field displayname="Topic" name="name" type="string" />
+      <field displayname="Total Amount" name="totalamount" type="money" />
+      <field displayname="Total Detail Amount" name="totallineitemamount" type="money" />
+      <field displayname="Total Pre-Freight Amount" name="totalamountlessfreight" type="money" />
+      <field displayname="Total Tax" name="totaltax" type="money" />
+    </fields>
+  </entity>
+  <entity name="msnfp_paymentasset" displayname="Payment Asset" etc="10033" primaryidfield="msnfp_paymentassetid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Amount" name="msnfp_amount" type="money" customfield="true" />
+      <field displayname="Asset Type" name="msnfp_assettype" type="optionsetvalue" customfield="true" />
+      <field displayname="Book Date" name="msnfp_bookdate" type="datetime" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Description" name="msnfp_description" type="string" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Original Asset Gift Adjusted" name="msnfp_originalassetadjustedid" type="entityreference" lookupType="msnfp_paymentasset" customfield="true" />
+      <field displayname="Payment Asset" name="msnfp_paymentassetid" type="guid" primaryKey="true" />
+      <field displayname="Payment Asset Category" name="msnfp_paymentassetcategory" type="optionsetvalue" customfield="true" />
+      <field displayname="Payment Asset Subcategory" name="msnfp_paymentassetsubcategory" type="optionsetvalue" customfield="true" />
+      <field displayname="Pledged Asset" name="msnfp_paymentasset_pledgedasset" type="entityreference" lookupType="msnfp_paymentasset" customfield="true" />
+      <field displayname="Pledged On Payment Schedule" name="msnfp_pledgedonpaymentscheduleid" type="entityreference" lookupType="msnfp_paymentschedule" customfield="true" />
+      <field displayname="Quantity" name="msnfp_quantity" type="decimal" customfield="true" />
+      <field displayname="Symbol" name="msnfp_symbol" type="string" customfield="true" />
+      <field displayname="Transferred On Transaction" name="msnfp_transferredontransactionid" type="entityreference" lookupType="msnfp_transaction" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_paymentmethod" displayname="Payment Method" etc="10034" primaryidfield="msnfp_paymentmethodid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Comments" name="msnfp_comments" type="string" customfield="true" />
+      <field displayname="Is Default" name="msnfp_isdefault" type="bool" customfield="true" />
+      <field displayname="Last Authentication Status" name="msnfp_lastauthenticationstatus" type="optionsetvalue" customfield="true" />
+      <field displayname="Last Authentication Status Date" name="msnfp_lastauthenticationstatusdate" type="datetime" customfield="true" />
+      <field displayname="Last Authentication Status Detail" name="msnfp_lastauthenticationstatusdetail" type="string" customfield="true" />
+      <field displayname="Last Authentication Status Technical Detail" name="msnfp_lastauthenticationstatustechnicaldetail" type="string" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Payment Method" name="msnfp_paymentmethodid" type="guid" primaryKey="true" />
+      <field displayname="Payor Account" name="msnfp_payorid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Type" name="msnfp_type" type="optionsetvalue" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_paymentprocessor" displayname="Payment Processor" etc="10035" primaryidfield="msnfp_paymentprocessorid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Payment Processor" name="msnfp_paymentprocessorid" type="guid" primaryKey="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_paymentschedule" displayname="Payment Schedule" etc="10036" primaryidfield="msnfp_paymentscheduleid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Default Hard Credit To Customer" name="msnfp_omtsched_defaulthardcredittocustomer" type="entityreference" lookupType="account|contact" customfield="true" />
+      <field displayname="Donor Commitment" name="msnfp_paymentschedule_donorcommitmentid" type="entityreference" lookupType="msnfp_donorcommitment" customfield="true" />
+      <field displayname="First Payment Date" name="msnfp_firstpaymentdate" type="datetime" customfield="true" />
+      <field displayname="Frequency" name="msnfp_frequency" type="optionsetvalue" customfield="true" />
+      <field displayname="Frequency Interval" name="msnfp_frequencyinterval" type="number" customfield="true" />
+      <field displayname="Last Payment Date" name="msnfp_lastpaymentdate" type="datetime" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Next Payment Amount" name="msnfp_nextpaymentamount" type="money" customfield="true" />
+      <field displayname="Next Payment Date" name="msnfp_nextpaymentdate" type="datetime" customfield="true" />
+      <field displayname="Number of Payments" name="msnfp_numberofpayments" type="number" customfield="true" />
+      <field displayname="Payment Schedule" name="msnfp_paymentscheduleid" type="guid" primaryKey="true" />
+      <field displayname="Receipt on Account" name="msnfp_receiptonaccountid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Recurring Amount" name="msnfp_recurringamount" type="money" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Total Amount" name="msnfp_totalamount" type="money" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_plannedgiving" displayname="Planned Giving" etc="10037" primaryidfield="msnfp_plannedgivingid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Account" name="msnfp_fundid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Actual % of Estate Received" name="msnfp_actualpercentofestaterecieved" type="decimal" customfield="true" />
+      <field displayname="Affiliation" name="msnfp_affiliation" type="optionsetvalue" customfield="true" />
+      <field displayname="Amount Per Frequency" name="msnfp_amountperfrequency" type="money" customfield="true" />
+      <field displayname="Annual Market Value" name="msnfp_annualmarketvalue" type="money" customfield="true" />
+      <field displayname="Annual Market Value Date" name="msnfp_annualmarketvaluedate" type="datetime" customfield="true" />
+      <field displayname="Annual Payment" name="msnfp_annualpayment" type="money" customfield="true" />
+      <field displayname="Anticipated % of Trust" name="msnfp_anticipatedpercentoftrust" type="decimal" customfield="true" />
+      <field displayname="Anticipated Annual Payment" name="msnfp_anticipatedannualpayment" type="money" customfield="true" />
+      <field displayname="Anticipated Distribution Date of Trust" name="msnfp_anticipateddistributiondateoftrust" type="datetime" customfield="true" />
+      <field displayname="Appraisal Date" name="msnfp_appraisaldate" type="datetime" customfield="true" />
+      <field displayname="Appraisal Value" name="msnfp_appraisalvalue" type="money" customfield="true" />
+      <field displayname="Bequest Type" name="msnfp_bequesttype" type="optionsetvalue" customfield="true" />
+      <field displayname="Campaign" name="msnfp_plannedgiving_campaignid" type="entityreference" lookupType="campaign" customfield="true" />
+      <field displayname="Capital Gain Income" name="msnfp_capitalgainincome" type="money" customfield="true" />
+      <field displayname="Cash Surrender Value" name="msnfp_cashsurrendervalue" type="money" customfield="true" />
+      <field displayname="Charitable Deduction" name="msnfp_charitablededuction" type="money" customfield="true" />
+      <field displayname="Contract Date" name="msnfp_contractdate" type="datetime" customfield="true" />
+      <field displayname="Cost Basis" name="msnfp_costbasis" type="money" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Date Claim Forms Received" name="msnfp_dateclaimformsrecieved" type="datetime" customfield="true" />
+      <field displayname="Date Claim Forms Submitted" name="msnfp_dateclaimformssubmitted" type="datetime" customfield="true" />
+      <field displayname="Date Estate Closed" name="msnfp_dateestateclosed" type="datetime" customfield="true" />
+      <field displayname="Date Management Agreement Signed" name="msnfp_datemanagementagreementsigned" type="datetime" customfield="true" />
+      <field displayname="Date Organization Notified of Death" name="msnfp_datestationnotifiedofdeath" type="datetime" customfield="true" />
+      <field displayname="Date Organization Notified of Intention" name="msnfp_datestationnotifiedofintention" type="datetime" customfield="true" />
+      <field displayname="Date Organization Notified to Make Claim" name="msnfp_datestationnotifiedtomakeclaim" type="datetime" customfield="true" />
+      <field displayname="Date Will Executed" name="msnfp_datewillexecuted" type="datetime" customfield="true" />
+      <field displayname="Deceased Day" name="msnfp_deceasedday" type="optionsetvalue" customfield="true" />
+      <field displayname="Deceased Month" name="msnfp_deceasedmonth" type="optionsetvalue" customfield="true" />
+      <field displayname="Deceased Year" name="msnfp_deceasedyear" type="optionsetvalue" customfield="true" />
+      <field displayname="Deceased?" name="msnfp_deceased" type="bool" customfield="true" />
+      <field displayname="Deferred To Date" name="msnfp_deferredtodate" type="datetime" customfield="true" />
+      <field displayname="Designated Organization %" name="msnfp_designatedorganizationpercent" type="decimal" customfield="true" />
+      <field displayname="Designated Principle Amount" name="msnfp_designatedprincipleamount" type="money" customfield="true" />
+      <field displayname="Designated Principle Amount (Base)" name="msnfp_designatedprincipleamount_base" type="money" customfield="true" />
+      <field displayname="Designation" name="msnfp_designation" type="optionsetvalue" customfield="true" />
+      <field displayname="Discount Rate" name="msnfp_discountrate" type="decimal" customfield="true" />
+      <field displayname="Discount Rate Month" name="msnfp_discountratemonth" type="optionsetvalue" customfield="true" />
+      <field displayname="Discount Rate Year" name="msnfp_discountrateyear" type="optionsetvalue" customfield="true" />
+      <field displayname="Endowment Type" name="msnfp_endowmenttype" type="optionsetvalue" customfield="true" />
+      <field displayname="Estimated Giving Amount" name="msnfp_estimatedgivingamount" type="money" customfield="true" />
+      <field displayname="Estimated Trust/Probate Date" name="msnfp_estimatedtrustprobatedate" type="datetime" customfield="true" />
+      <field displayname="Expected Final Distribution Date" name="msnfp_expectedfinaldistributiondate" type="datetime" customfield="true" />
+      <field displayname="Expected First Distribution Date" name="msnfp_expectedfirstdistributiondate" type="datetime" customfield="true" />
+      <field displayname="External ID" name="msnfp_externalid" type="string" customfield="true" />
+      <field displayname="Face Value" name="msnfp_facevalue" type="money" customfield="true" />
+      <field displayname="Giving Amount" name="msnfp_givingamount" type="number" customfield="true" />
+      <field displayname="Giving Received Date" name="msnfp_givingreceiveddate" type="datetime" customfield="true" />
+      <field displayname="Giving Subtype" name="msnfp_givingsubtype" type="optionsetvalue" customfield="true" />
+      <field displayname="Insurance Annual Premium" name="msnfp_insuranceannualpremium" type="money" customfield="true" />
+      <field displayname="Insurance Company" name="msnfp_insurancecompany" type="string" customfield="true" />
+      <field displayname="Insurance Death Benefit Amount" name="msnfp_insurancedeathbenefitamount" type="number" customfield="true" />
+      <field displayname="Insurance Policy Code" name="msnfp_insurancepolicycode" type="string" customfield="true" />
+      <field displayname="Insurance Policy Name" name="msnfp_insurancepolicyname" type="string" customfield="true" />
+      <field displayname="Insurance Premium Due Date" name="msnfp_insurancepremiumduedate" type="datetime" customfield="true" />
+      <field displayname="Insurance Premium Payment Address" name="msnfp_insurancepremiumpaymentaddress" type="string" customfield="true" />
+      <field displayname="Lead Source" name="msnfp_leadsource" type="optionsetvalue" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Ordinary Income" name="msnfp_ordinaryincome" type="money" customfield="true" />
+      <field displayname="Payment Frequency" name="msnfp_paymentfrequency" type="optionsetvalue" customfield="true" />
+      <field displayname="Payout Rate" name="msnfp_payoutrate" type="decimal" customfield="true" />
+      <field displayname="Planned Giving" name="msnfp_plannedgivingid" type="guid" primaryKey="true" />
+      <field displayname="Pledged By Contact" name="msnfp_plannedgiving_pledgedbycontactid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Pledges On Account" name="msnfp_pledgesonaccountid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Present Value" name="msnfp_presentvalue" type="money" customfield="true" />
+      <field displayname="Record Type" name="msnfp_recordtype" type="string" customfield="true" />
+      <field displayname="Remainder Amount" name="msnfp_remainderamount" type="money" customfield="true" />
+      <field displayname="Revocable" name="msnfp_isrevocable" type="bool" customfield="true" />
+      <field displayname="Rollup Giving" name="msnfp_rollupgiving" type="datetime" customfield="true" />
+      <field displayname="Salvage Value of Buildings" name="msnfp_salvagevalueofbuildings" type="money" customfield="true" />
+      <field displayname="Sever Date" name="msnfp_severdate" type="datetime" customfield="true" />
+      <field displayname="Stage" name="msnfp_stage" type="optionsetvalue" customfield="true" />
+      <field displayname="Tax Free Income" name="msnfp_taxfreeincome" type="money" customfield="true" />
+      <field displayname="Term End Date" name="msnfp_termenddate" type="datetime" customfield="true" />
+      <field displayname="Term Type" name="msnfp_termtype" type="optionsetvalue" customfield="true" />
+      <field displayname="Term Years" name="msnfp_termyears" type="number" customfield="true" />
+      <field displayname="Total Estate Value" name="msnfp_totalestatevalue" type="money" customfield="true" />
+      <field displayname="Trust Market Value" name="msnfp_trustmarketvalue" type="money" customfield="true" />
+      <field displayname="Trust Value Date" name="msnfp_trustvaluedate" type="datetime" customfield="true" />
+      <field displayname="Trust/Probate Notice Date" name="msnfp_trustprobatenoticedate" type="datetime" customfield="true" />
+      <field displayname="Type of Management" name="msnfp_typeofmanagement" type="optionsetvalue" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_preference" displayname="Preference" etc="10038" primaryidfield="msnfp_preferenceid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Preference" name="msnfp_preferenceid" type="guid" primaryKey="true" />
+      <field displayname="Priority" name="msnfp_priority" type="number" customfield="true" />
+      <field displayname="Start Date" name="msnfp_startdate" type="datetime" customfield="true" />
+      <field displayname="Value" name="msnfp_value" type="string" customfield="true" />
+      <field displayname="Weight" name="msnfp_weight" type="number" customfield="true" />
+      <field displayname="Account or Contact" name="msnfp_preference_customer" type="entityreference" lookupType="account|contact" customfield="true" />
+      <field displayname="Confidence" name="msnfp_confidence" type="optionsetvalue" customfield="true" />
+      <field displayname="End Date" name="msnfp_enddate" type="datetime" customfield="true" />
+      <field displayname="Key" name="msnfp_key" type="optionsetvalue" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Opportunity" name="msnfp_preference_opportunityid" type="entityreference" lookupType="opportunity" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_recommendation" displayname="Recommendation" etc="10040" primaryidfield="msnfp_recommendationid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Communication Channel" name="msnfp_communicationchannel" type="optionsetvalue" customfield="true" />
+      <field displayname="Date" name="msnfp_date" type="datetime" customfield="true" />
+      <field displayname="Date Submitted" name="msnfp_datesubmitted" type="datetime" customfield="true" />
+      <field displayname="Description" name="msnfp_description" type="string" customfield="true" />
+      <field displayname="Lead" name="msnfp_recommendation_leadid" type="entityreference" lookupType="lead" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="On Behalf of Account" name="msnfp_recommenderaccountid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Recommendation" name="msnfp_recommendationid" type="guid" primaryKey="true" />
+      <field displayname="Recommended by Contact" name="msnfp_recommendercontactid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Request" name="msnfp_requestid" type="entityreference" lookupType="msnfp_request" customfield="true" />
+      <field displayname="Status" name="msnfp_status" type="optionsetvalue" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_report" displayname="Report" etc="10041" primaryidfield="msnfp_reportid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Account" name="msnfp_report_accountid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Award" name="msnfp_award" type="entityreference" lookupType="msnfp_award" customfield="true" />
+      <field displayname="Award Version" name="msnfp_awardversionid" type="entityreference" lookupType="msnfp_awardversion" customfield="true" />
+      <field displayname="Contact" name="msnfp_primarycontactid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Description" name="msnfp_description" type="string" customfield="true" />
+      <field displayname="Due Date" name="msnfp_duedate" type="datetime" customfield="true" />
+      <field displayname="Lead" name="msnfp_report_leadid" type="entityreference" lookupType="lead" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Report" name="msnfp_reportid" type="guid" primaryKey="true" />
+      <field displayname="Report Status" name="msnfp_status" type="optionsetvalue" customfield="true" />
+      <field displayname="Request" name="msnfp_requestid" type="entityreference" lookupType="msnfp_request" customfield="true" />
+      <field displayname="Submitted By" name="msnfp_report_submittedbyid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Submitted Date" name="msnfp_submitteddate" type="datetime" customfield="true" />
+      <field displayname="Type" name="msnfp_type" type="optionsetvalue" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_request" displayname="Request" etc="10057" primaryidfield="msnfp_requestid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Amount Projected" name="msnfp_amountprojected" type="money" customfield="true" />
+      <field displayname="Amount Recommended" name="msnfp_amountrecommended" type="money" customfield="true" />
+      <field displayname="Amount Requested" name="msnfp_amountrequested" type="money" customfield="true" />
+      <field displayname="Application ID" name="msnfp_applicationid" type="string" customfield="true" />
+      <field displayname="Conflict of Interest Detail" name="msnfp_conflictofinterestdetail" type="string" customfield="true" />
+      <field displayname="Conflict of Interest Status" name="msnfp_conflictofintereststatus" type="optionsetvalue" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Docket" name="msnfp_docketid" type="entityreference" lookupType="msnfp_docket" customfield="true" />
+      <field displayname="Fiscal Sponsor" name="msnfp_fiscalsponsorid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Initial Application Channel" name="msnfp_initialapplicationchannel" type="optionsetvalue" customfield="true" />
+      <field displayname="Lead" name="msnfp_leadid" type="entityreference" lookupType="lead" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Purpose" name="msnfp_purpose" type="string" customfield="true" />
+      <field displayname="Recipient" name="msnfp_recipientid" type="entityreference" lookupType="account|contact" customfield="true" />
+      <field displayname="Renewal of Award" name="msnfp_renewalofawardid" type="entityreference" lookupType="msnfp_award" customfield="true" />
+      <field displayname="Request" name="msnfp_requestid" type="guid" primaryKey="true" />
+      <field displayname="Request Type" name="msnfp_requesttype" type="optionsetvalue" customfield="true" />
+      <field displayname="Requested Duration" name="msnfp_requestedduration" type="number" customfield="true" />
+      <field displayname="Requested Start Date" name="msnfp_requestedstartdate" type="datetime" customfield="true" />
+      <field displayname="Requirements" name="msnfp_requirements" type="string" customfield="true" />
+      <field displayname="Stage" name="msnfp_stage" type="optionsetvalue" customfield="true" />
+      <field displayname="Submitted By" name="msnfp_submittedbyid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Submitted Date" name="msnfp_submitteddate" type="datetime" customfield="true" />
+      <field displayname="Total Project Budget" name="msnfp_totalprojectbudget" type="money" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_result" displayname="Result" etc="10052" primaryidfield="msnfp_resultid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Aggregation Status" name="msnfp_aggregationstatus" type="bool" customfield="true" />
+      <field displayname="Delivery Framework" name="msnfp_deliveryframeworkid" type="entityreference" lookupType="msnfp_deliveryframework" customfield="true" />
+      <field displayname="Description" name="msnfp_description" type="string" customfield="true" />
+      <field displayname="End Date" name="msnfp_enddate" type="datetime" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Result" name="msnfp_resultid" type="guid" primaryKey="true" />
+      <field displayname="Result Type" name="msnfp_resulttype" type="optionsetvalue" customfield="true" />
+      <field displayname="Start Date" name="msnfp_startdate" type="datetime" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_review" displayname="Review" etc="10042" primaryidfield="msnfp_reviewid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Award" name="msnfp_awardid" type="entityreference" lookupType="msnfp_award" customfield="true" />
+      <field displayname="Award Version" name="msnfp_awardversionid" type="entityreference" lookupType="msnfp_awardversion" customfield="true" />
+      <field displayname="Date Submitted" name="msnfp_datesubmitted" type="datetime" customfield="true" />
+      <field displayname="Description" name="msnfp_description" type="string" customfield="true" />
+      <field displayname="Docket" name="msnfp_review_docketid" type="entityreference" lookupType="msnfp_docket" customfield="true" />
+      <field displayname="Due Date" name="msnfp_duedate" type="datetime" customfield="true" />
+      <field displayname="Lead" name="msnfp_review_leadid" type="entityreference" lookupType="lead" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Report" name="msnfp_review_reportid" type="entityreference" lookupType="msnfp_report" customfield="true" />
+      <field displayname="Request" name="msnfp_requestid" type="entityreference" lookupType="msnfp_request" customfield="true" />
+      <field displayname="Review" name="msnfp_reviewid" type="guid" primaryKey="true" />
+      <field displayname="Review Date" name="msnfp_reviewdate" type="datetime" customfield="true" />
+      <field displayname="Reviewer" name="msnfp_reviewerid" type="entityreference" lookupType="contact" customfield="true" />
+      <field displayname="Reviewer Type" name="msnfp_reviewertype" type="optionsetvalue" customfield="true" />
+      <field displayname="Status" name="msnfp_status" type="optionsetvalue" customfield="true" />
+      <field displayname="Type" name="msnfp_type" type="optionsetvalue" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_salutation" displayname="Salutation" etc="10043" primaryidfield="msnfp_salutationid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Address Label Line 1" name="msnfp_addresslabelline1" type="string" customfield="true" />
+      <field displayname="Address Label Line 2" name="msnfp_addresslabelline2" type="string" customfield="true" />
+      <field displayname="Address Label Line 3" name="msnfp_addresslabelline3" type="string" customfield="true" />
+      <field displayname="Communication Method" name="msnfp_communicationmethod" type="optionsetvalue" customfield="true" />
+      <field displayname="Constituent Type" name="msnfp_constituenttype" type="optionsetvalue" customfield="true" />
+      <field displayname="Customer" name="msnfp_salutation_customer" type="entityreference" lookupType="account|contact" customfield="true" />
+      <field displayname="First Name" name="msnfp_firstname" type="string" customfield="true" />
+      <field displayname="Full Name" name="msnfp_fullname" type="string" customfield="true" />
+      <field displayname="Inside Salutation" name="msnfp_insidesalutation" type="string" customfield="true" />
+      <field displayname="Last Name" name="msnfp_lastname" type="string" customfield="true" />
+      <field displayname="Middle Name" name="msnfp_middlename" type="string" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="On Behalf Of Account" name="msnfp_onbehalfofaccount" type="bool" customfield="true" />
+      <field displayname="Preferred" name="msnfp_ispreferred" type="bool" customfield="true" />
+      <field displayname="Salutation" name="msnfp_salutationid" type="guid" primaryKey="true" />
+      <field displayname="Suffix" name="msnfp_suffix" type="optionsetvalue" customfield="true" />
+      <field displayname="Title" name="msnfp_title" type="optionsetvalue" customfield="true" />
+      <field displayname="Type" name="msnfp_type" type="optionsetvalue" customfield="true" />
+    </fields>
+  </entity>
+  <entity name="msnfp_transaction" displayname="Transaction" etc="10044" primaryidfield="msnfp_transactionid" primarynamefield="msnfp_name" disableplugins="false">
+    <fields>
+      <field displayname="Adjustment Comment" name="msnfp_adjustmentcomment" type="string" customfield="true" />
+      <field displayname="Adjustment Reason" name="msnfp_adjustmentreason" type="optionsetvalue" customfield="true" />
+      <field displayname="Adjustment Type" name="msnfp_adjustmenttype" type="optionsetvalue" customfield="true" />
+      <field displayname="Amount" name="msnfp_amount" type="money" customfield="true" />
+      <field displayname="Anonymity" name="msnfp_anonymity" type="optionsetvalue" customfield="true" />
+      <field displayname="Book Date" name="msnfp_bookdate" type="datetime" customfield="true" />
+      <field displayname="Currency" name="transactioncurrencyid" type="entityreference" lookupType="transactioncurrency" />
+      <field displayname="Data Entry Reference" name="msnfp_dataentryreference" type="string" customfield="true" />
+      <field displayname="Data Entry Source" name="msnfp_dataentrysource" type="optionsetvalue" customfield="true" />
+      <field displayname="Effective Campaign" name="msnfp_effectivecampaignid" type="entityreference" lookupType="campaign" customfield="true" />
+      <field displayname="Effective Source Code" name="msnfp_effectivesourcecode" type="string" customfield="true" />
+      <field displayname="Exchange Rate Date" name="msnfp_exchangeratedate" type="datetime" customfield="true" />
+      <field displayname="Is Adjusted" name="msnfp_isadjusted" type="bool" customfield="true" />
+      <field displayname="Name" name="msnfp_name" type="string" customfield="true" />
+      <field displayname="Original Transaction Adjusted" name="msnfp_originaltxnadjustedid" type="entityreference" lookupType="msnfp_transaction" customfield="true" />
+      <field displayname="Originating Campaign" name="msnfp_originatingcampaignid" type="entityreference" lookupType="campaign" customfield="true" />
+      <field displayname="Originating Source Code" name="msnfp_originatingsourcecode" type="string" customfield="true" />
+      <field displayname="Payment Method" name="msnfp_transaction_paymentmethodid" type="entityreference" lookupType="msnfp_paymentmethod" customfield="true" />
+      <field displayname="Payment Schedule" name="msnfp_transaction_paymentscheduleid" type="entityreference" lookupType="msnfp_paymentschedule" customfield="true" />
+      <field displayname="Posted Date" name="msnfp_posteddate" type="datetime" customfield="true" />
+      <field displayname="Receipt On Account" name="msnfp_transaction_receiptonaccountid" type="entityreference" lookupType="account" customfield="true" />
+      <field displayname="Received Date" name="msnfp_receiveddate" type="datetime" customfield="true" />
+      <field displayname="Transaction" name="msnfp_transactionid" type="guid" primaryKey="true" />
+    </fields>
+  </entity>
+</entities>
