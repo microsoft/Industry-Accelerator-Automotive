@@ -1,0 +1,2511 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore</name>
+    </assembly>
+    <members>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Core">
+            <summary>
+            Package deployer Core.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Core.CoreData">
+            <summary>
+            Core configuration data. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Core.ContainerDispatcher">
+            <summary>
+            Dispatcher used by the contain application. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations">
+            <summary>
+            This is the base class to derive your customizations from.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.progressEventLinks">
+            <summary>
+            Events from the progress Event stream in the Import processor. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.CurrentProgress">
+            <summary>
+            Current progress step we are working on. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.CurrentHostedApplicationsList">
+            <summary>
+            List of all the hosted applications on the system at run time. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.CurrentWorkflowStepsList">
+            <summary>
+            Current list of all Workflows Steps in the system. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.CurrentWorkflowList">
+            <summary>
+            Current List of all WorkFlows in the system. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.MapLinkRefKeyList">
+            <summary>
+            List of Reference keys for the Workflow to Step Link table. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.dtHoldImportTill">
+            <summary>
+            DateTime to hold the Import till. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.currentOperationStartedDT">
+            <summary>
+            Sets the start time for the current operation,  this is used to handle timeouts for long running operations. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.operationMaxTimeOut">
+            <summary>
+            Operation Time out Minute Count:  Default is 60
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.deploymentTimer">
+            <summary>
+            Timer that will track the overall deployment. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.userCodeTimer">
+            <summary>
+            Timer that is used to track time spent inside customer code calls. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.logger">
+            <summary>
+            Logging Interface. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.SolutionsToImport">
+            <summary>
+            Queue of solutions to install. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.FilesToImport">
+            <summary>
+            Queue of files to import. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.workingTimer">
+            <summary>
+            Callback Timer for Dealing with Polling operations.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.proceedwithImport">
+            <summary>
+             Flag used to control Import Continuance for Importing solutions. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.iEx">
+            <summary>
+            Extension Interface for Custom Import Extensions.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.postImportProcessComplete">
+            <summary>
+             Used to signal the Import process to roll to the last stage. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations._bootExecption">
+            <summary>
+            if this is populated then there was a fault during construction raised by the package. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.solImportProgressHelper">
+            <summary>
+            Solution Reset count check.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.DEFAULTSTALEPROGRESSCHECKOUNT">
+            <summary>
+            Default Progress checkount
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.DEFAULTSOLUTIONPROGRESSPOLLINTERVAL">
+            <summary>
+            Default value for Solution Progress Polling ( in seconds ) 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.DEFAULTSOLUTIONIMPORTBLOCKWAITINTERVAL">
+            <summary>
+            Default value for used to Determine how long a blocked solution will wait to retry ( in seconds ) 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.DEFAULTSOLUTIONIMPORTBLOCKRETRYCOUNT">
+            <summary>
+            Default value for used to Determine how many retries of a blocked solution will be attempted 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.DEFAULTUSEASYNCMODE">
+            <summary>
+            Default value for used to Determine if async mode should be used by default
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.ASYNCFETCH">
+            <summary>
+            Query used to ask for Async info
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.IMPORTJOBSTATUSFETCH">
+            <summary>
+            Async query for Import Job Status
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.SDKMESSAGEFETCH">
+            <summary>
+            Fetches information on the Import Solution and delete and promote messages. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.IsSolutionImportAsyncSupported">
+            <summary>
+            Indicates that the target platform supports Async ImportSolution
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.IsDeleteAndPromoteAsyncSupported">
+            <summary>
+            Indicates that the target platform supports Async DeleteAndPromote
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.METADATAOPERATIONBLOCKED_ERRORCODE">
+            <summary>
+            Error code used to determine if there is a blocked Metadata operation. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.SolutionUpgradeNotAvailable_ERRORCODE">
+            <summary>
+            Error code used to determine SolutionUpgradeNotAvailable. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.StaleProgressCheckCount">
+            <summary>
+            Gets or sets the maximum stale progress check count before giving up.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.SolutionProgressPollingInterval">
+            <summary>
+            Contains the polling interval for checking solution status in CDS
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.SolutionBlockedRetryWaitSeconds">
+            <summary>
+            Contains the Interval in seconds that a Solution will wait for retry of import
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.SolutionBlockedRetryMaxCount">
+            <summary>
+            Property that Determines how many retries of a blocked solution will be attempted 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.UseAsyncModeByDefaultForSolutionImport">
+            <summary>
+            Property used to Determine if async mode should be used by default
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.crmSvc">
+            <summary>
+            Pointer to the DynamicsCrm.Connector Service.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.AddNewProgressItem">
+            <summary>
+            Raised when progress is added. 
+            </summary>
+        </member>
+        <member name="E:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.UpdateProgressItem">
+            <summary>
+            Raised when a progress item is updated.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.ImportComplete">
+            <summary>
+            Raised when the Import is completed. 
+            </summary>
+        </member>
+        <member name="E:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.ImportStatusUpdate">
+            <summary>
+            Raised when the Import Status Updates.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.iEx_UpdateProgressItem(System.Object,Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase.ProdgressDataItemEventArgs)">
+            <summary>
+            Extension Events. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.iEx_AddNewProgressItem(System.Object,Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase.ProdgressDataItemEventArgs)">
+            <summary>
+            Extension Events. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.BeginSolutionImport">
+            <summary>
+            Queues and begins the solution loading process. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.LogPackageInstallationRequestType(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile)">
+            <summary>
+            Check package installation request type
+            </summary>
+            <param name="anchorSolution"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.GetConfigSetting(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            Gets the value for a given propertyy 
+            </summary>
+            <param name="keyName"></param>
+            <param name="defaultPropertyValue"></param>
+            <param name="propertyName"></param>
+            <param name="errorMessageFormat"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.GetConfigSetting(System.String,System.Boolean,System.Nullable{System.Boolean},System.String)">
+            <summary>
+            Gets the value for a given propertyy 
+            </summary>
+            <param name="keyName"></param>
+            <param name="defaultPropertyValue"></param>
+            <param name="propertyName"></param>
+            <param name="errorMessageFormat"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.BeginFileImport(System.Boolean)">
+            <summary>
+            Queues all File Items. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.IsDataImportSupressed">
+            <summary>
+            This method will read the Suppress data import flag from the package and decide if data import operations should be skipped. 
+            </summary>
+            <returns>true of the data import should be skipped, or false by default</returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.BeginSampleDataImport">
+            <summary>
+            Import Sample data. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.RunSetup">
+            <summary>
+            Runs the Core Setup logic.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.PreImportSetup">
+            <summary>
+            PreImport Process. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.ExecuteImportApplications">
+            <summary>
+            Executes the import applications process.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.ExecuteImportUiiWorkflows">
+            <summary>
+            Executes the Import workflow process.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.ExecuteDeepDataImportActions(System.Object)">
+            <summary>
+            This checks for the existence of a data mig file and starts the Importer process for that tool. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations._parser_UpdateProgressItem(System.Object,Microsoft.Xrm.Tooling.Dmt.DataMigCommon.Utility.ProgressItemEventArgs)">
+            <summary>
+            Update status event from the import process. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations._parser_AddNewProgressItem(System.Object,Microsoft.Xrm.Tooling.Dmt.DataMigCommon.Utility.ProgressItemEventArgs)">
+            <summary>
+            New event from the import process. 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.ExecutePostImportActions">
+            <summary>
+            Executes the post Import actions process. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.DoImportSolutionItem(System.Object)">
+            <summary>
+            Imports an individual solution item. 
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.CheckSolutionImportStatus(System.Object)">
+            <summary>
+             Checks the status of a solution import.
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.DoDeleteSolution(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile)">
+            <summary>
+            Delete a Solution from the system. 
+            </summary>
+            <param name="Sol"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.GetSolutionIdInfo(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile)">
+            <summary>
+            Gets the solution ID Information for the given stage of the solution Import. 
+            </summary>
+            <param name="Sol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.EnqueueSolutionCopy(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile)">
+            <summary>
+            this method enqueue solution copy at top/first place in queue
+            </summary>
+            <param name="sol">solution to enqueue</param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.IsSolutionAlreadyDeployed(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile)">
+            <summary>
+            Checks to see if the solution is deployed. 
+            </summary>
+            <param name="Sol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.GetSolutionData(System.String,System.Boolean@,System.Boolean@,System.Version@)">
+            <summary>
+            Lookup data for a given solution and return the id of that solution if found. 
+            </summary>
+            <param name="UniqueNameOfInstanceToSearchFor">Name of the Solution being looked for</param>
+            <param name="isDeployedSolutionManaged"></param>
+            <param name="isDeployedSolutionFound"></param>
+            <param name="TargetEnviromentSolutionVersion"></param>
+            <returns>ID of the solution if found. </returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.DeterminSolutionAction(System.Version,System.Version,System.Version)">
+            <summary>
+            Determine the solution import actions 
+            </summary>
+            <param name="soltuionPackageVersion">Package version of the incoming solution file.</param>
+            <param name="IncomingSolution">Version of the Incoming solution</param>
+            <param name="TargetEnviromentSolution">Version of the solution on the target deployment.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.IsSolutionDeploymentComplete(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile,System.Double@)">
+            <summary>
+            Verify deployment state of a Solution Import job.
+            </summary>
+            <param name="Sol"></param>
+            <param name="progress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.CheckAsyncOperationStatus(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile,System.Boolean@)">
+            <summary>
+            Check the status of an Async Job for Solution Import. 
+            </summary>
+            <param name="Sol"></param>
+            <param name="isFailed"> if set to true, the message is failed.. got to abort mode.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.CheckSolutionUpgradeNotAvailable(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile,System.Nullable{System.Int32},System.String)">
+            <summary>
+            This function will check the returned exception for the known SolutionUpgradeNotAvailable error case. 
+            </summary>
+            <param name="sol">Solution Import Record we are working with at this time.</param>
+            <param name="errorCode">if populated, it should be used to determine if there is a fault. </param>
+            <param name="asyncErrorMessage">if populated, used to determine if there is a solution fault</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.DoImportSolutionItemRetry(System.Object)">
+            <summary>
+            Raised when a retry event is triggered for a meta data import. 
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.ImportSolution(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile)">
+            <summary>
+            Import Solutions from config. 
+            </summary>
+            <param name="Sol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.ExecuteImportSolution(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile,System.String)">
+            <summary>
+            Runs the Solution Import Behavior. 
+            </summary>
+            <param name="Sol"></param>
+            <param name="sSolutionImportFilePath"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.DoImportSampleData(System.Object)">
+            <summary>
+            Imports Sample Data if necessary. 
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.DoImportFileItem(System.Object)">
+            <summary>
+            Imports an individual solution item. 
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.IsFileAlreadyImported(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile)">
+            <summary>
+            Checks to see if the solution is deployed.
+            </summary>
+            <param name="impFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.ImportFile(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile)">
+            <summary>
+            Executes the Import File command.
+            </summary>
+            <param name="importFile"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.CheckFileImportStatus(System.Object)">
+            <summary>
+             Checks the status of a solution import.
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.IsFileImportComplete(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile)">
+            <summary>
+             Verify deployment state of a Solution Import job.
+            </summary>
+            <param name="impFile"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.GetProcessId(System.String,System.Boolean)">
+            <summary>
+            Determines the GUID for a Dialog by Name. 
+            </summary>
+            <param name="name">Dailog name.</param>
+            <param name="isDialog">Boolean true or false.</param>
+            <returns>Returns GUID.</returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.LoadCurrentDataStoreListFromServer(System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,System.Guid})">
+            <summary>
+            Loads a list of records form the Server by Name and ID. 
+            </summary>
+            <param name="namefld"></param>
+            <param name="idfld"></param>
+            <param name="entityname"></param>
+            <param name="currentIn"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.LoadWorkflowMapToStepKeyRefList">
+            <summary>
+            Creates a list of a aggrogate keyindex for workflow to step links.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.GetHostedAppIdByName(System.String)">
+            <summary>
+            Returns the Guid of the Hosted app by name. 
+            </summary>
+            <param name="hostedAppName">Name of the hosted app to get the name for.</param>
+            <returns>Returns GUID.</returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.GetMapIdByName(System.String)">
+            <summary>
+            Returns the iD of the map asked for By Name. 
+            </summary>
+            <param name="mapName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.AddWorkflowStep(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowStep)">
+            <summary>
+            Adds a Workflow Step.
+            </summary>
+            <param name="step"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.AddWorkflowItem(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflow)">
+            <summary>
+            Adds and maps a workflow with its steps. 
+            </summary>
+            <param name="wfItem"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.ImportMapData">
+            <summary>
+            THis method will attempt to import any maps in the config file. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.GetActionIdForHostedControlByName(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowStep)">
+            <summary>
+            Returns the ID of the Action referenced by the hosted control name and Action Name. 
+            </summary>
+            <param name="step"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.IsRoleAssoicatedWithTeam(System.Guid,System.Guid)">
+            <summary>
+            Checks to see if the Team is already associated to the requested security role.
+            </summary>
+            <param name="guTeamId"></param>
+            <param name="guRoleId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.CheckAndInstallSampleData">
+            <summary>
+            This is check and start the install of sample data if required. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.IsWorkflowActive(System.Guid)">
+            <summary>
+            Is a Workflow Active. 
+            </summary>
+            <param name="wfId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.ReplicateLoginConfigToIAD">
+            <summary>
+            This will attempt to replicate the login config used by the demo loader tool to the IAD using the IAD Solution starter config settings as a template. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.CopyConfigKey(System.Configuration.Configuration,System.Configuration.Configuration,System.String)">
+            <summary>
+            Copys config keys. 
+            </summary>
+            <param name="srcConfig">Source configuration file that is applicable to a particular computer,application, or resource.</param>
+            <param name="destConfig">Destination configuration file that is applicable to a particular computer,application, or resource.</param>
+            <param name="keyName">Configuration key name</param>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.StaleProgressHelper`1">
+            <summary>
+            Helper class to detect no progress change in specified count of polling in a row.
+            This class is thread-safe.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.StaleProgressHelper`1.#ctor(`0,System.Int32)">
+            <summary>
+            Initializes a new instance of <see cref="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.StaleProgressHelper`1"/>.
+            </summary>
+            <param name="initialValue">The initial progress value.</param>
+            <param name="threshold">The number of polling that returns the same progress value before reporting false in SetProgress call.</param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.StaleProgressHelper`1.SetProgress(`0)">
+            <summary>
+            Sets the current progress value. If this and the last N-1 timee are all having the 
+            same progress value then return false, otherwise return true.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.StaleProgressHelper`1.Reset(`0)">
+            <summary>
+            Reset to specified progress value and set counter to 0.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.FormatSolutionLogName(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile)">
+            <summary>
+            This function will format the Solution Name being imported for Logging. 
+            </summary>
+            <param name="Sol"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.WriteSolutionWrapUpLogEntry(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile)">
+            <summary>
+            Write solution wrapup log.
+            </summary>
+            <param name="Sol"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.CheckForSolutionOperationBlockedByMetadataOperation(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile,Microsoft.Xrm.Tooling.Connector.CrmServiceClient,System.Nullable{System.Int32},System.String)">
+            <summary>
+            This function will check the returned exception for the known meta-data blocked error codes. 
+            </summary>
+            <param name="Sol">Solution Import Record we are working with at this time.</param>
+            <param name="crmSvc">Service Client to use to check </param>
+            <param name="errorCode">if populated, it should be used toe determine if there is a fault. </param>
+            <param name="asyncErrorMessage">if populated, used to determin if there is a solution fault</param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.DeterminIfAsyncOpIsPermitted(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile,System.Boolean)">
+            <summary>
+            Determine if Async Op is Permitted  
+            </summary>
+            <param name="sol">Solution Object being tracked</param>
+            <param name="isDeleteAndPromote">if true, message is a promote and delete message</param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.RaiseFailEvent(System.String,System.Exception)">
+            <summary>
+            Raised a failed event to the caller. 
+            </summary>
+            <param name="message"></param>
+            <param name="Ex"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.RaiseUpdateEvent(System.String,Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase.ProgressPanelItemStatus)">
+            <summary>
+            Raise a Status updated event. 
+            </summary>
+            <param name="message"></param>
+            <param name="status"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.CreateProgressItem(System.String)">
+            <summary>
+            Create and add new progress item. 
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.BaseImportCustomizations.RaiseImportComplete(System.Boolean,System.String)">
+            <summary>
+            Raised when the import completes
+            </summary>
+            <param name="isComplete"></param>
+            <param name="message"></param>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.UiiImportConfigurationParser">
+            <summary>
+            Reads the configuration for the given import package. 
+            </summary>
+        </member>
+        <member name="E:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.UiiImportConfigurationParser.AddNewProgressItem">
+            <summary>
+            Raised when progress is added. 
+            </summary>
+        </member>
+        <member name="E:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.UiiImportConfigurationParser.UpdateProgressItem">
+            <summary>
+            Raised when a progress item is updated.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.UiiImportConfigurationParser.ConfigReadComplete">
+            <summary>
+            Raised when the the Configuration parse is completed. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.UiiImportConfigurationParser.ReadConfig">
+            <summary>
+            Config Reader.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.UiiImportConfigurationParser.CheckDependencies(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile)">
+            <summary>
+            Checks if dependencies are resolved on target system before proceeding with import
+            </summary>
+            <param name="solution"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.UiiImportConfigurationParser.CleanUpTempDirectory(System.String)">
+            <summary>
+            used to clean up the directory used by the zip file extractor. 
+            </summary>
+            <param name="tempDirectory"></param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.UiiImportConfigurationParser.IsSolutionCompatableToDeploy(Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile)">
+            <summary>
+            Checks to see if the solution is compatible to deploy on the CRM Organization
+            </summary>
+            <param name="Sol">Solution Meta Data</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.UiiImportConfigurationParser.GetSolutionData(System.String,System.Boolean@,System.Boolean@,System.Version@)">
+            <summary>
+            Lookup data for a given solution and return the id of that solution if found. 
+            </summary>
+            <param name="UniqueNameOfInstanceToSearchFor">Name of the Solution being looked for</param>
+            <param name="isDeployedSolutionManaged"></param>
+            <param name="isDeployedSolutionFound"></param>
+            <param name="TargetEnviromentSolutionVersion"></param>
+            <returns>ID of the solution if found. </returns>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ImportCustomizationLoader">
+            <summary>
+            This class will import and return the customization assembly.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ImportCustomizationLoader.MissingWIFDependancy">
+            <summary>
+            Gets or Sets Windows Identity Foundation Dependency missing.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ImportCustomizationLoader.currentPlugins">
+            <summary>
+            List of current plugins found by the system. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ImportCustomizationLoader.selectedPlugin">
+            <summary>
+            Selected Plugin.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ImportCustomizationLoader.SelectedPluginPath">
+            <summary>
+            Path to the location of the selected plugin.
+            </summary>
+        </member>
+        <member name="E:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ImportCustomizationLoader.ImportCustomizationsLoaded">
+            <summary>
+            raised when the customization lib finishes Importing. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ImportCustomizationLoader.ImportExtensionsContainer">
+            <summary>
+            Composition Container. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ImportCustomizationLoader.#ctor(System.String,System.String,Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageExtentionBase.TraceLogger,System.Boolean)">
+            <summary>
+            Default Constructor
+            </summary>
+            <param name="sourcePackageAssemblyPath">Fully qualified path and name of package assembly to load</param>
+            <param name="targetSearchPath">Target path to search in</param>
+            <param name="logSource">Initialized Log source or null</param>
+            <param name="allowCustomCode">doesn't allow custom code</param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ImportCustomizationLoader.OnImportsSatisfied">
+            <summary>
+            Called when a part's imports have been satisfied.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ImportCustomizationLoader.Dispose">
+            <summary>
+            Clean up. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ZipUtils">
+            <summary>
+            Class for Zipping or UnZipping the files.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ZipUtils.UnZipFiles(System.String,System.String)">
+            <summary>
+            Unzips a file to a directory. 
+            </summary>
+            <param name="zipPathAndFile">File to Unzip.</param>
+            <param name="outputFolder">Where to unzip it too.</param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ZipUtils.ZipFiles(System.String,System.String,System.Boolean)">
+            <summary>
+            Zips the Directory specified to the output Zip File. 
+            </summary>
+            <param name="directoryToAdd">Directory Name.</param>
+            <param name="outputZipFile">Output Zip File Name.</param>
+            <param name="flattenStructure">Drops the path from the inbound data.</param>
+            <returns>True on success, false on fail. </returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ZipUtils.ZipFiles(System.Collections.Generic.List{System.String},System.String,System.Boolean)">
+            <summary>
+            Zips the requested files into the output ZipFile. 
+            </summary>
+            <param name="fileNames">List of File Name to Zip.</param>
+            <param name="outputZipFile">Output Zip File.</param>
+            <param name="flattenStructure">Drops the path from the inbound data.</param>
+            <returns>True on Success</returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ZipUtils.ZipFiles(System.Collections.Generic.List{System.String},System.String,System.String,System.Boolean)">
+            <summary>
+            Internal method for creating the zip files. 
+            </summary>
+            <param name="fileNames">List of File Name to Zip.</param>
+            <param name="directoryToAdd">Directory Name.</param>
+            <param name="outputZipFile">Output Zip File.</param>
+            <param name="flattenStructure">Drops the path from the inbound data.</param>
+            <returns>True on success</returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ZipUtils.CopyStream(System.IO.Stream,System.IO.Stream)">
+            <summary>
+            Copies the source stream to the target stream.
+            </summary>
+            <param name="source">File name.</param>
+            <param name="target">File target.</param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ZipUtils.GetRelativeUri(System.String)">
+            <summary>
+            Converts a file path to a URI.
+            </summary>
+            <param name="currentFile">Current file name.</param>
+            <returns>Uri.</returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.ZipUtils.RemoveAccents(System.String)">
+            <summary>
+            Cleans up the resulting Uri.
+            </summary>
+            <param name="input">Relative Uri path.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation">
+            <summary>
+            Process whose execution can proceed independently or in the background.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.AsyncOperationId">
+            <summary>
+            Unique identifier of the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.CompletedOn">
+            <summary>
+            Date and time when the system job was completed.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.CorrelationId">
+            <summary>
+            Unique identifier used to correlate between multiple SDK requests and system jobs.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.CorrelationUpdatedTime">
+            <summary>
+            Last time the correlation depth was updated.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.CreatedBy">
+            <summary>
+            Unique identifier of the user who created the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.CreatedOn">
+            <summary>
+            Date and time when the system job was created.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.CreatedOnBehalfBy">
+            <summary>
+            Unique identifier of the delegate user who created the asyncoperation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.Data">
+            <summary>
+            Unstructured data associated with the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.DependencyToken">
+            <summary>
+            Execution of all operations with the same dependency token is serialized.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.Depth">
+            <summary>
+            Number of SDK calls made since the first call.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.ErrorCode">
+            <summary>
+            Error code returned from a canceled system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.ExecutionTimeSpan">
+            <summary>
+            Time that the system job has taken to execute.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.FriendlyMessage">
+            <summary>
+            Message provided by the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.HostId">
+            <summary>
+            Unique identifier of the host that owns this system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.IsWaitingForEvent">
+            <summary>
+            Indicates that the system job is waiting for an event.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.Message">
+            <summary>
+            Message related to the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.MessageName">
+            <summary>
+            Name of the message that started this system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.ModifiedBy">
+            <summary>
+            Unique identifier of the user who last modified the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.ModifiedOn">
+            <summary>
+            Date and time when the system job was last modified.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.ModifiedOnBehalfBy">
+            <summary>
+            Unique identifier of the delegate user who last modified the asyncoperation.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.Name">
+            <summary>
+            Name of the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.OperationType">
+            <summary>
+            Type of the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.OwnerId">
+            <summary>
+            Unique identifier of the user or team who owns the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.OwningBusinessUnit">
+            <summary>
+            Unique identifier of the business unit that owns the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.OwningExtensionId">
+            <summary>
+            Unique identifier of the owning extension with which the system job is associated.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.OwningTeam">
+            <summary>
+            Unique identifier of the team who owns the record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.OwningUser">
+            <summary>
+            Unique identifier of the user who owns the record.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.ParentPluginExecutionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.PostponeUntil">
+            <summary>
+            Indicates whether the system job should run only after the specified date and time.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.PrimaryEntityType">
+            <summary>
+            Type of entity with which the system job is primarily associated.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.RecurrencePattern">
+            <summary>
+            Pattern of the system job's recurrence.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.RecurrenceStartTime">
+            <summary>
+            Starting time in UTC for the recurrence pattern.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.RegardingObjectId">
+            <summary>
+            Unique identifier of the object with which the system job is associated.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.RequestId">
+            <summary>
+            Unique identifier of the request that generated the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.RetryCount">
+            <summary>
+            Number of times to retry the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.RootExecutionContext">
+            <summary>
+            Root execution context of the job that trigerred async job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.Sequence">
+            <summary>
+            Order in which operations were submitted.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.StartedOn">
+            <summary>
+            Date and time when the system job was started.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.StateCode">
+            <summary>
+            Status of the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.StatusCode">
+            <summary>
+            Reason for the status of the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.Subtype">
+            <summary>
+            The Subtype of the Async Job
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.TimeZoneRuleVersionNumber">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.UTCConversionTimeZoneCode">
+            <summary>
+            Time zone code that was in use when the record was created.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.WorkflowActivationId">
+            <summary>
+            Unique identifier of the workflow activation related to the system job.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.AsyncOperation.WorkflowStageName">
+            <summary>
+            Name of a workflow stage.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage">
+            <summary>
+            Message that is supported by the SDK.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.#ctor">
+            <summary>
+            Default Constructor.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.AutoTransact">
+            <summary>
+            Information about whether the SDK message is automatically transacted.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.Availability">
+            <summary>
+            Identifies where a method will be exposed. 0 - Server, 1 - Client, 2 - both.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.CategoryName">
+            <summary>
+            If this is a categorized method, this is the name, otherwise None.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.CreatedBy">
+            <summary>
+            Unique identifier of the user who created the SDK message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.CreatedOn">
+            <summary>
+            Date and time when the SDK message was created.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.CreatedOnBehalfBy">
+            <summary>
+            Unique identifier of the delegate user who created the sdkmessage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.CustomizationLevel">
+            <summary>
+            Customization level of the SDK message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.Expand">
+            <summary>
+            Indicates whether the SDK message should have its requests expanded per primary entity defined in its filters.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.IsActive">
+            <summary>
+            Information about whether the SDK message is active.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.IsPrivate">
+            <summary>
+            Indicates whether the SDK message is private.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.IsReadOnly">
+            <summary>
+            Identifies whether an SDK message will be ReadOnly or Read Write. false - ReadWrite, true - ReadOnly .
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.IsValidForExecuteAsync">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.ModifiedBy">
+            <summary>
+            Unique identifier of the user who last modified the SDK message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.ModifiedOn">
+            <summary>
+            Date and time when the SDK message was last modified.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.ModifiedOnBehalfBy">
+            <summary>
+            Unique identifier of the delegate user who last modified the sdkmessage.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.Name">
+            <summary>
+            Name of the SDK message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.OrganizationId">
+            <summary>
+            Unique identifier of the organization with which the SDK message is associated.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.SdkMessageId">
+            <summary>
+            Unique identifier of the SDK message entity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.SdkMessageIdUnique">
+            <summary>
+            Unique identifier of the SDK message.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.Template">
+            <summary>
+            Indicates whether the SDK message is a template.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.ThrottleSettings">
+            <summary>
+            For internal use only.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.VersionNumber">
+            <summary>
+            Number that identifies a specific revision of the SDK message. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.WorkflowSdkStepEnabled">
+            <summary>
+            Whether or not the SDK message can be called from a workflow.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.ImportCode.SdkMessage.#ctor(System.Object)">
+            <summary>
+            Constructor for populating via LINQ queries given a LINQ anonymous type
+            <param name="anonymousType">LINQ anonymous type.</param>
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigVersionCheck">
+            <summary>
+            Version Check for dependency - defines range of version to check on target system for given unique name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigVersionCheck.UniqueName">
+            <summary>
+            Solution unique name
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigVersionCheck.MinVersion">
+            <summary>
+            Min version that should be present on the target environment
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigVersionCheck.MaxVersion">
+            <summary>
+            Max version that should be present on the system
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects">
+            <summary>
+            This is the shared data payload. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects._importConnections">
+            <summary>
+            Internal Object. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.CrmSvc">
+            <summary>
+            CRM Web Service Interface. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.allowCustomCode">
+            <summary>
+            Allow Custom Code
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.RuntimeSettings">
+            <summary>
+            Runtime settings that will be passed though to the selected package as RuntimeSettings. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.ParseRuntimeSettingsDelimitedString(System.String)">
+            <summary>
+            Used to parse the inbound runtime settings into the RuntimeSettings object. 
+            requires the form key=value|key=value
+            </summary>
+            <param name="inputstring">string to be parsed.</param>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.ImportConnections">
+            <summary>
+            Connections used by the import manager. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.ImportConfigInfo">
+            <summary>
+            Configuration Information For Import.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.AppsListToImport">
+            <summary>
+            Application Records to import. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.WorkflowToImport">
+            <summary>
+            Workflows.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.WorkflowStepsToImport">
+            <summary>
+            Workflow Steps to Import. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.InstallCCAToPath">
+            <summary>
+            to Install CCA too. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.InstallerCustomizedExentions">
+            <summary>
+            Composer and extensions manager for Installer Extensions. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.Logger">
+            <summary>
+            Default Logging Source.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.SelectedPluginPath">
+            <summary>
+            Path to the running Exe. 
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Creates a new instance of the core connection objects for executing a package deployment. 
+            </summary>
+            <param name="targetSearchPath">Search Path to use to look for packages</param>
+            <param name="sourcePackageAssemblyPath">Fully qualified package path and name to search for</param>
+            <param name="allowPackageCodeExecution">Boolean value for allowing custom code of Package</param>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.OnResolveAssembly(System.Object,System.ResolveEventArgs)">
+            <summary>
+            Assembly resolver handler
+            </summary>
+            <param name="sender"></param>
+            <param name="args"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CoreObjects.LoadAssemblyFromManifest(System.String)">
+            <summary>
+            try to load the assembly from the current app Domain assembly info. 
+            </summary>
+            <param name="targetAssemblyName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage">
+            <summary>
+            Config Info DataStorage Description,  used when reading the ImportConfig XML file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.Solutions">
+            <summary>
+            Gets or Sets config solutions file list
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.FilesToImport">
+            <summary>
+            Gets or Sets config import files list.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.FileMapsToImport">
+            <summary>
+            Gets or Sets config import map files list.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.CMTFilesForImport">
+            <summary>
+            CMT files used during the import process.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.UiiApplicationDataFile">
+            <summary>
+            Gets or Sets uii application data file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.UiiApplicationActionsFile">
+            <summary>
+            Gets or Sets uii application actions file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.UiiWorkflowsFile">
+            <summary>
+            Gets or Sets uii work flow file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.UiiWorkflowStepsFile">
+            <summary>
+            Gets or Sets uii work flow steps file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.InstallSampleData">
+            <summary>
+            Gets or Sets install sample data.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.WaitForSampleDataToInstall">
+            <summary>
+            Gets or Sets wait for sample data to install.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.AgentDesktopZipFile">
+            <summary>
+            Gets or Sets agent desk top zip file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.PerformDepedencyChecks">
+            <summary>
+            Flag to enforce dependency checks
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.AgentDesktopExeName">
+            <summary>
+            Gets or Sets agent desk top exe name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.CopyLoginConfigToAgentDesktop">
+            <summary>
+            Gets or Sets copying login config to agent desktop.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigDataStorage.CrmMigDataImportFile">
+            <summary>
+            This is the name of the zip file that contains Import data generated by the CRM Mig Tool. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile">
+            <summary>
+            Used when reading config import file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.FileName">
+            <summary>
+            Gets or Sets file name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.FileType">
+            <summary>
+            Gets or Sets file type.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.AssociatedMap">
+            <summary>
+            Gets or Sets associated map.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.ImportToEntity">
+            <summary>
+            Gets or Sets import to entity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.DataDelimiter">
+            <summary>
+            Gets or Sets data delimiter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.FieldDelimiter">
+            <summary>
+            Gets or Sets field delimiter.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.IsFirstRowHeader">
+            <summary>
+            Gets or Sets is first row header or not.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.IsRecordOwnerATeam">
+            <summary>
+            Gets or Sets record owner a team or not.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.OwnerUser">
+            <summary>
+            Gets or Sets owner user.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.EnableDuplicateDetection">
+            <summary>
+            Gets or Sets duplicate detection enabled or not.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.WaitForImportToComplete">
+            <summary>
+            Gets or Sets wait for import to complete or not.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.ProcessLast">
+            <summary>
+            Gets or Sets process last or not.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.ZipImportFileDetails">
+            <summary>
+            Gets or Sets zip import details list.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.ImportId">
+            <summary>
+            Gets or Sets import GUID.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportFile.ImportStatus">
+            <summary>
+            Gets or Sets import status.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ZipImportFileDetail">
+            <summary>
+            class for zip file imported details.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ZipImportFileDetail.FileName">
+            <summary>
+            Gets or Sets file name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ZipImportFileDetail.ImportToEntity">
+            <summary>
+            Gets or Sets import to entity.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ZipImportFileDetail.FileType">
+            <summary>
+            Gets or Sets file type.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportMapFile">
+            <summary>
+            Class for configuration import mapping file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportMapFile.FileName">
+            <summary>
+            Gets or Sets file name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigImportMapFile.MapId">
+            <summary>
+            Set by the system.. not included in the XML doc. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile">
+            <summary>
+            Class for configuration solution file.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.OverwriteUnmanagedCustomizations_str">
+            <summary>
+            Overwrite customizations flag 
+            backing object to handle conversion. 
+            Added as part of IIMportExtentions2 work
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.PublishWorkflowsAndActivatePlugins_str">
+            <summary>
+            Command to instruct the plugins and workflows to be activated 
+            backing object to handle conversion. 
+            Added as part of IIMportExtentions2 work
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.RequireImportMode_str">
+            <summary>
+            if Set to true,  requires import to be done in an Sync Manner.
+            Added as part of IIMportExtentions5 work
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.SolutionPackageFileName">
+            <summary>
+            Gets or Sets solution package file name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.OverwriteUnmanagedCustomizations">
+            <summary>
+            Overwrite customizations flag
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.RequireSyncImport">
+            <summary>
+            when set, requires sync import flows. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.RequireAsyncImport">
+            <summary>
+            When set, requires Async Import flow if possible. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.PublishWorkflowsAndActivatePlugins">
+            <summary>
+            Command to instruct the plugins and workflows to be activated 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.DisplayName">
+            <summary>
+            Gets or Sets solution display name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.PackageVersion">
+            <summary>
+            Gets or Sets solution Deployment Version.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.UniqueName">
+            <summary>
+            Gets or Sets solution unique name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.Version">
+            <summary>
+            Gets or Sets solution version.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.IsManaged">
+            <summary>
+            Gets or Sets managed solution or not.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.SolutionId">
+            <summary>
+            Gets or Sets solution ID.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.IsOverWrite">
+            <summary>
+            if True,  Solution Exists,  Run the OverWrite Process, 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.HoldSolutionPackageUniqueName">
+            <summary>
+            Name of the Holding Solution.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.HoldSolutionPackageId">
+            <summary>
+            ID of the Holding Solution. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.HoldSolutionPackageFileName">
+            <summary>
+            Name of the Hold Solution Zip file. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.HoldSolutionVersion">
+            <summary>
+            Version of holding solution
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.OldSolutionPackageId">
+            <summary>
+            ID of the Old Solution. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.OldSolutionVersion">
+            <summary>
+            version of Old Solution.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.Stage">
+            <summary>
+            Stage of the upload. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.ImportId">
+            <summary>
+            This is the ID of the Import in progress. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.ImportStatus">
+            <summary>
+            status of the import process.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.SolutionProgressItem">
+            <summary>
+            Gets or Sets solution progress item.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.UseAsyncPattern">
+            <summary>
+            Use requires the use of the Async Pattern for the current stage
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.AsyncJobId">
+            <summary>
+            Job ID of the Solution Task being preformed. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.ActionTimer">
+            <summary>
+            Gets the solution action timer. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.ImportBlockedByMetadataAction">
+            <summary>
+            When true, this solution is blocked by another meta-data import operation 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.RetryCount">
+            <summary>
+            Number of times a retry has occurred 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.MissingDependencies">
+            <summary>
+            Missing Dependencies - list is populated from solution.xml file within the zip folder
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.MissingDependencyBehavior">
+            <summary>
+            Defines how the solution import will be handled if dependencies are found missing on target environment. Possible options are Skip or Fault.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.DependencyOverrides">
+            <summary>
+            Gets or Sets config dependencies list
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.HasDependencyCheckSucceeded">
+            <summary>
+            Flag to check if all missing dependencies are resolved on target system
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.#ctor">
+            <summary>
+            Constructor.
+            </summary>
+        </member>
+        <member name="M:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigSolutionFile.ShallowCopy">
+            <summary>
+            Create a shallow copy of ConfigSolutionFile
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigMigrationImportFile">
+            <summary>
+            File item from the configuration migration tool 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigMigrationImportFile.FileName">
+            <summary>
+            Gets or Sets file name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigMigrationImportFile.LCID">
+            <summary>
+            Get the Language code. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ConfigMigrationImportFile.UserMapFileName">
+            <summary>
+            File name for the user map. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UpdateSolutionStage">
+            <summary>
+            Upload stage. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UpdateSolutionStage.UploadHoldingSolution">
+            <summary>
+            Upload Holdings Solution.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UpdateSolutionStage.DeleteOrginalSolution">
+            <summary>
+            Delete Original Solution.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UpdateSolutionStage.UploadNewSolution">
+            <summary>
+            upload new solution.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UpdateSolutionStage.DeleteHoldingSolution">
+            <summary>
+            Delete the Holding Solution.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UpdateSolutionStage.NormalSolutionLoad">
+            <summary>
+            Normal Solution Load.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UpdateSolutionStage.UpdateOfSolutionComplete">
+            <summary>
+            Solution complete Updates.
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UpdateSolutionStage.UploadHoldingSolutionV2">
+            <summary>
+            Upload Holding Solution using 7.2 + API. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UpdateSolutionStage.PromoteHoldingSolutionV2">
+            <summary>
+            Run the Holding solution to the primary using the 7.2 + API PromoteAndDelete
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UpdateSolutionStage.PromoteHoldingSolutionRecoveryV2">
+            <summary>
+            Run the Recovery Behavior for Delete and Promote failure. 
+            </summary>
+        </member>
+        <member name="F:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UpdateSolutionStage.PromoteHoldingSolutionV2_Async_Pending">
+            <summary>
+            Async Promote and Delete, indicating a pending job.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflow">
+            <summary>
+            The class for UII WorkflowData descriptions.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflow.Id">
+            <summary>
+            Gets or Sets the id.
+            </summary>
+            <value>The id.</value>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflow.Name">
+            <summary>
+            Gets or Sets the name.
+            </summary>
+            <value>The name.</value>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflow.Description">
+            <summary>
+            Gets or Sets the description.
+            </summary>
+            <value>The description.</value>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflow.IsForced">
+            <summary>
+            Gets or Sets a value indicating whether this instance is forced.
+            </summary>
+            <value><c>true</c> if this instance is forced; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflow.Mappings">
+            <summary>
+            Gets or Sets the mappings.
+            </summary>
+            <value>The mappings.</value>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowMapping">
+            <summary>
+            Uii Workflow Mappings.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowMapping.Id">
+            <summary>
+            Gets or Sets the id.
+            </summary>
+            <value>The id.</value>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowMapping.Sequence">
+            <summary>
+            Gets or Sets the sequence.
+            </summary>
+            <value>The sequence.</value>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowMapping.WorkflowName">
+            <summary>
+            Gets or Sets the name of the workflow.
+            </summary>
+            <value>The name of the workflow.</value>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowMapping.workflowId">
+            <summary>
+            Gets or Sets the workflow id.
+            </summary>
+            <value>The workflow id.</value>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowMapping.workflowStepId">
+            <summary>
+            Gets or Sets the workflow step id.
+            </summary>
+            <value>The workflow step id.</value>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowMapping.WorkflowStepName">
+            <summary>
+            Gets or Sets the name of the workflow step.
+            </summary>
+            <value>The name of the workflow step.</value>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowStep">
+            <summary>
+            Describes a Workflow step.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowStep.ActionName">
+            <summary>
+            Gets or Sets name of the action.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowStep.Description">
+            <summary>
+            Gets or Sets Action Description.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowStep.HostedApplicationName">
+            <summary>
+            Gets or Sets Hosted Aplication Name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowStep.Name">
+            <summary>
+            Gets or Sets Name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowStep.Id">
+            <summary>
+            Gets or Sets id.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.UiiWorkflowStep.CrmAssignedID">
+            <summary>
+            This is set by the create process. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.MissingDependency">
+            <summary>
+            Missing Dependency for a solution
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.MissingDependency.SolutionUniqueName">
+            <summary>
+            unique name of the required dependency
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CrmPackageSetupImportConfig">
+            <summary>
+            Class for CRM Package setup configuration import.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.CrmPackageSetupImportConfig.Packages">
+            <summary>
+            Gets or Sets packages import list.
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ImportPackage">
+            <summary>
+            Class for package imports.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ImportPackage.ConfigFileName">
+            <summary>
+            Gets or Sets configuration file name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ImportPackage.ConfigName">
+            <summary>
+            Gets or Sets configuration name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ImportPackage.ConfigFriendlyName">
+            <summary>
+            Gets or Sets configuration friendly name.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ImportPackage.GetImportPackageConfigFileNameAndPath">
+            <summary>
+            Return the path to the Configuration file for this solution. 
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Models.ImportPackage.GetImportPackagePath">
+            <summary>
+            Gets the path to the import package directory. 
+            </summary>
+        </member>
+        <member name="T:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.BEGINFILEIMPORT_QUEUESALLFILEITEMS_STATUSMSG">
+            <summary>
+              Looks up a localized string similar to Importing data files.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.BEGINSAMPLEDATAIMPORT_IMPORTSAMPLEDATA_STATUSMSG">
+            <summary>
+              Looks up a localized string similar to Importing sample data files.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.BEGINSOLUTIONIMPORT_LOADINGPROCESS_STATUSMSG">
+            <summary>
+              Looks up a localized string similar to Importing solutions.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.CREATEPROGRESSITEM_BEGINNINGIMPORTFILE_MSG">
+            <summary>
+              Looks up a localized string similar to Beginning import of file {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.CREATEPROGRESSITEM_BEGINNINGLOADSOLUTION_MSG">
+            <summary>
+              Looks up a localized string similar to Beginning load of solution {0}, version: {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.CREATEPROGRESSITEM_BEGINNINGPUBLISHUNMANAGEDCUST_MSG">
+            <summary>
+              Looks up a localized string similar to Beginning publish of unmanaged customizations..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.CREATEPROGRESSITEM_INPROGRESS_MSG">
+            <summary>
+              Looks up a localized string similar to CRM Sample Data import is in progress, Please Wait....
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.CREATEPROGRESSITEM_PROCESSINGPOSTIMPORTDATASTEPS_MSG">
+            <summary>
+              Looks up a localized string similar to Processing post-import data steps..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.CREATEPROGRESSITEM_PROCESSINGPREIMPORTDATASTEPS_MSG">
+            <summary>
+              Looks up a localized string similar to Processing pre-import data steps..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.CREATEPROGRESSITEM_PROCESSINGUIIAPPIMPORTSTEPS_MSG">
+            <summary>
+              Looks up a localized string similar to Processing UII application import steps..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.CREATEPROGRESSITEM_RUNNINGCOMPLEXDATAIMPORT_MSG">
+            <summary>
+              Looks up a localized string similar to Running complex data import..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.CREATEPROGRESSITEM_STARTINGUIIWORKFLOWIMPORTPROCESS_MSG">
+            <summary>
+              Looks up a localized string similar to Starting UII workflow steps import process..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.CREATEPROGRESSITEM_STARTSAMPLEDATAIMPORT_MSG">
+            <summary>
+              Looks up a localized string similar to Starting sample data import..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.FAILTOREAD_SOLUTION_MSG">
+            <summary>
+              Looks up a localized string similar to Failed to read solution {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.IMPORTFILE_MSG">
+            <summary>
+              Looks up a localized string similar to Imported file {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.IMPORTING_DATAMAPS_MSG">
+            <summary>
+              Looks up a localized string similar to Importing data maps..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_COMPLEXDATAIMPORTFAILED_FILEFOUND_SCHEMAISINVALID_CANNOTCONTINUE_MSG">
+            <summary>
+              Looks up a localized string similar to The complex data import can&apos;t continue. The file schema is invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_COMPLEXDATAIMPORTFAILED_FILENOTFOUND_ZIPINVALID_MSG">
+            <summary>
+              Looks up a localized string similar to The complex data import failed because the file can&apos;t be found, or the compressed (.zip) file is invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_Dependency_Unmanaged_Msg">
+            <summary>
+              Looks up a localized string similar to Dependency Not Found : Target environment does not have managed solution {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_Dependency_VersionMaxCheck_Msg">
+            <summary>
+              Looks up a localized string similar to Dependency Not Found : Target environment has required solution {0} greater than maximum required version {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_Dependency_VersionMinCheck_Msg">
+            <summary>
+              Looks up a localized string similar to Dependency Not Found : Target environment does not have required solution {0} minimum version {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FAILEDFOUNDSOLUTION_SOLUTIONZIP">
+            <summary>
+              Looks up a localized string similar to Failed to Find the Solution {0}. Solution is not Found..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FAILEDREADSOLUTION_SOLUTIONZIP_READONLY_MSG">
+            <summary>
+              Looks up a localized string similar to Failed to read solution {0}. The solution compressed (.zip) file is read-only..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FAILEDREADUNIQUENAMEFROMSOLUTION_MSG">
+            <summary>
+              Looks up a localized string similar to Failed to read the unique name from solution {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FAILEDTOREADDATAFILE_FILEREADONLY_MSG">
+            <summary>
+              Looks up a localized string similar to Failed to read the data file {0}. The file is read-only..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FAILTOLOADIMPORTCONFIG_MISSING_MSG">
+            <summary>
+              Looks up a localized string similar to Failed to Load the Import Configuration : Config File Missing.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FAILTOLOADIMPORTCONFIG_MSG">
+            <summary>
+              Looks up a localized string similar to Failed to load the import configuration:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FOUND_APPSTOIMPORT_MSG">
+            <summary>
+              Looks up a localized string similar to Found {0} applications to import..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FOUND_Dependencies_MSG">
+            <summary>
+              Looks up a localized string similar to Found {0} dependencies.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FOUND_Dependency_MSG">
+            <summary>
+              Looks up a localized string similar to Found 1 dependency..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FOUND_SOULUTION_MSG">
+            <summary>
+              Looks up a localized string similar to Found {0} solutions..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FOUNDDEPENDENCY_MSG">
+            <summary>
+              Looks up a localized string similar to Dependency Found : Dependency on solution {0} found on target environment.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FOUNDDEPENDENCY_VERSION_MSG">
+            <summary>
+              Looks up a localized string similar to Dependency Found : Dependency on solution {0} and version {1} found on target environment.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FOUNDDETAILEDDATATOIMPORT">
+            <summary>
+              Looks up a localized string similar to Found the detailed data to import..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FOUNDFILEMAPSTOIMPORT_MSG">
+            <summary>
+              Looks up a localized string similar to Found {0} file maps to import..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FOUNDFILESTOIMPORT_MSG">
+            <summary>
+              Looks up a localized string similar to Found {0} files to import..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FOUNDSOLUTION_VERSION_MSG">
+            <summary>
+              Looks up a localized string similar to Found the solution: {0}, version: {1} {2}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_FOUNDWORKFLOWSTOIMPORT_MSG">
+            <summary>
+              Looks up a localized string similar to Found {0} workflows and {1} steps to import..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_ImportBlocked_MissingDependency_MSG">
+            <summary>
+              Looks up a localized string similar to Solution Import blocked due to missing dependency for : {0}, version: {1} {2}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_ImportBlocked_UnrecognizedDependencyBehavior_MSG">
+            <summary>
+              Looks up a localized string similar to Unrecognized dependency behavior encountered for solution {0} : {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_IMPORTCONFIGLOADED_MSG">
+            <summary>
+              Looks up a localized string similar to Import configuration loaded..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_ImportSkipped_MissingDependency_MSG">
+            <summary>
+              Looks up a localized string similar to Solution Import skipped due to missing dependency for : {0}, version: {1} {2}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_INVALID_Dependency">
+            <summary>
+              Looks up a localized string similar to Invalid dependency defined. Check logs for details..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_MANAGED_MSG">
+            <summary>
+              Looks up a localized string similar to (Managed).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_MissingDependency_Msg">
+            <summary>
+              Looks up a localized string similar to Dependency Not Found :Target environment does not have required solution {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_NO_APPSFOUNDTOIMPORT_MSG">
+            <summary>
+              Looks up a localized string similar to No applications found to import..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_NOWORKFLOWFOUNDTOIMPORT_MSG">
+            <summary>
+              Looks up a localized string similar to No workflows found to import..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_ProcessingDependencies_WAIT_MSG">
+            <summary>
+              Looks up a localized string similar to Processing solution dependencies. Please Wait..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_READINGIMPORTCONFIG_MSG">
+            <summary>
+              Looks up a localized string similar to Reading the import configuration. Please wait..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_READINGSOLUTIONS_PLZWAIT_MSG">
+            <summary>
+              Looks up a localized string similar to Reading the solutions. Please wait..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_STARTINGUIIWORKFLOWIMPORTPROCESS_MSG">
+            <summary>
+              Looks up a localized string similar to Starting the UII workflow import process..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.ITEMTEXT_UNMANAGED_MSG">
+            <summary>
+              Looks up a localized string similar to (Unmanaged).
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEFAILEDEVENT_FAILEDTODELETESOLUTION_CHECKLOG_MSG">
+            <summary>
+              Looks up a localized string similar to Failed to delete solution {0}, version: {1}. See the log file..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEFAILEDEVENT_FAILEDTOLOADSOLUTION_CHECKLOG_MSG">
+            <summary>
+              Looks up a localized string similar to Failed to load solution {0}, version: {1}. See the log file..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEFAILEDEVENT_POSTIMPORTPROCESS_FAILED_MSG">
+            <summary>
+              Looks up a localized string similar to The post-import process failed: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEFAILEDEVENT_PREIMPORTPROCESS_FAILED_MSG">
+            <summary>
+              Looks up a localized string similar to The pre-import process failed: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEFAILEDEVENT_UIIAPPIMPORTPROCESS_FAILED_MSG">
+            <summary>
+              Looks up a localized string similar to The UII application import process failed: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEFAILEDEVENT_UIIWORKFLOWIMPORTPROCESS_FAILED_MSG">
+            <summary>
+              Looks up a localized string similar to The UII workflow import process failed: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_CANTCREATEDIR_MSG">
+            <summary>
+              Looks up a localized string similar to Unpacking {0}. Directory couldn&apos;t be created..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_CANTFINDPACK_MSG">
+            <summary>
+              Looks up a localized string similar to Unpacking {0}. {1} pack file can&apos;t be found:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_CHECKLOG_MSG">
+            <summary>
+              Looks up a localized string similar to The solution import failed. See the log file..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_COMPLEXDATEIMPORT_COMPLETE_MSG">
+            <summary>
+              Looks up a localized string similar to The complex data import is complete..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_COMPLEXDATEIMPORTFAILED_INVALIDSCHEMA_MSG">
+            <summary>
+              Looks up a localized string similar to The complex data import failed because the schema is invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_COMPLEXDATEIMPORTFAILED_INVALIDZIPFILE_MSG">
+            <summary>
+              Looks up a localized string similar to The complex data import failed because the compressed (.zip) file is invalid..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_COMPLEXDATEIMPORTFAILED_MISSINGDATAFILE_MSG">
+            <summary>
+              Looks up a localized string similar to The complex data import failed because a data file is missing..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_FAILEDTOIMPORTFILE_MSG">
+            <summary>
+              Looks up a localized string similar to Failed to import file {0} to Microsoft Dynamics CRM..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_FAILEDTOUNPACK_MSG">
+            <summary>
+              Looks up a localized string similar to Unpacking {0}. Failed to unpack {1}:.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_FAILTOIMPORT_MSG">
+            <summary>
+              Looks up a localized string similar to Failed to import the solution into Microsoft Dynamics CRM. Verify the state of the solution in CRM. Rerunning this tool may correct the state. **\n{0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_IMPORTINGDATAMAPS_COMPLETE_MSG">
+            <summary>
+              Looks up a localized string similar to Importing data maps: Complete..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_IMPORTINGDATAMAPS_ERRORINLOADED_MSG">
+            <summary>
+              Looks up a localized string similar to Importing data maps: Error loading the data maps..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_IMPORTINGDATAMAPS_MAPSLOADED_MSG">
+            <summary>
+              Looks up a localized string similar to Importing data maps: Map loaded..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_IMPORTINGDATAMAPS_MSG">
+            <summary>
+              Looks up a localized string similar to Importing data maps: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_IMPORTINGDATAMAPS_SKIPALREADYLOADED_MSG">
+            <summary>
+              Looks up a localized string similar to Importing data maps: Skipping this step, data maps already loaded..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_IMPORTREQUESTFAIL_CHECKLOG_MSG">
+            <summary>
+              Looks up a localized string similar to Import request for file {0} failed. See the log file..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_IMPORTREQUESTFAIL_MISSINGDETAIL_CHECKLOG_MSG">
+            <summary>
+              Looks up a localized string similar to Import request for file {0} failed. File {1} has missing details. See the log file..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_LOADEDSOLUTION_MSG">
+            <summary>
+              Looks up a localized string similar to Loaded the solution {0}, version: {1}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_NO_DIR_TRYTOCREATE_MSG">
+            <summary>
+              Looks up a localized string similar to Unpacking {0}: Creating directory..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_OVERWRITEUNMANAGED_MSG">
+            <summary>
+              Looks up a localized string similar to An error occurred for solution {0}. You can&apos;t overwrite a unmanaged version of this solution with a managed version..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_POSTIMPORTPROCESSCOMPLETE_MSG">
+            <summary>
+              Looks up a localized string similar to Post-import process complete..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_PREIMPORTPROCESSCOMPLETE_MSG">
+            <summary>
+              Looks up a localized string similar to Pre-import process complete..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_PUBLISHUNMANAGEDCUST_COMPLETED_MSG">
+            <summary>
+              Looks up a localized string similar to Publishing of unmanaged customizations completed..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_PUBLISHUNMANAGEDCUST_FAILED_MSG">
+            <summary>
+              Looks up a localized string similar to Publishing of unmanaged customizations failed..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_SAMPLEDATAIMPORTREQUESTCOMPLETE_MSG">
+            <summary>
+              Looks up a localized string similar to Sample data import request complete..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_SAMPLEDATAIMPORTREQUESTFAILED_MSG">
+            <summary>
+              Looks up a localized string similar to Sample data import request failed: {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_SAMPLEDATAINSTALLED_MSG">
+            <summary>
+              Looks up a localized string similar to Sample data is installed..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_SAMPLEDATAISALREADYINSTALLED_MSG">
+            <summary>
+              Looks up a localized string similar to Sample data is already installed..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_SKIP_FILEALREADYLOAD_MSG">
+            <summary>
+              Looks up a localized string similar to Skipping {0}, the file is already loaded..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_SKIPSOLUTION_INCOMPATIBLE">
+            <summary>
+              Looks up a localized string similar to Skipping solution {0}, Solution is incompatible with server version {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_SKIPSOLUTION_USERREQUESTED">
+            <summary>
+              Looks up a localized string similar to Skipping solution {0} at Package Request..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_SKIPSOLUTIONVERSION_MSG">
+            <summary>
+              Looks up a localized string similar to Skipping solution {0}. Version {1} of the solution is already loaded..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_SUBMITIMPORTREQUEST_STATUS_MSG">
+            <summary>
+              Looks up a localized string similar to Submitted import request for file {0} is in status: {1}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_UIIAPPIMPORTPROCESSCOMPLETE_MSG">
+            <summary>
+              Looks up a localized string similar to UII application import process complete..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_UIIWORKFLOWIMPORTCOMPLETE_MSG">
+            <summary>
+              Looks up a localized string similar to UII workflow import complete..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_UIIWORKFLOWSTEPSIMPORTCOMPLETE_MSG">
+            <summary>
+              Looks up a localized string similar to UII workflow steps import complete..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_UPDATESOLUTIONVERSION_COMPLETE_MSG">
+            <summary>
+              Looks up a localized string similar to Completed updating  the solution {0} version {1} to version {2}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_UPDATESOLUTIONVERSION_CREATING_MSG">
+            <summary>
+              Looks up a localized string similar to Updating solution {0} version {1} to version {2}:  Creating holding solution..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_UPDATESOLUTIONVERSION_CUSTOMMIGCODE_FAILED_MSG">
+             <summary>
+               Looks up a localized string similar to Updating solution {0} version {1} to version {2}:  Running custom migration code.
+            Custom code for solution migration of {0}, version {1} to {2} Failed with Execption {3}. See the log file for more information..
+             </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_UPDATESOLUTIONVERSION_CUSTOMMIGCODE_MSG">
+            <summary>
+              Looks up a localized string similar to Updating solution {0} version {1} to version {2}:  Running custom migration code..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_UPDATESOLUTIONVERSION_DELETESOLTIONS_MSG">
+            <summary>
+              Looks up a localized string similar to Updating solution {0} version {1} to version {2}: Deleting {3} solution..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_UPDATESOLUTIONVERSION_IMPORTING_MSG">
+            <summary>
+              Looks up a localized string similar to Updating solution {0} version {1} to version {2}: Importing holding solution..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RAISEUPDATEVENT_UPDATESOLUTIONVERSION_IMPORTING_UPDATED_MSG">
+            <summary>
+              Looks up a localized string similar to Updating solution {0} version {1} to version {2}: Importing updated solution..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RUNSETUP_MAINIMPORTPROCESS_STATUSMSG">
+            <summary>
+              Looks up a localized string similar to Custom Install Module - Main Import process.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.RUNSETUP_PREIMPORTPROCESS_STATUSMSG">
+            <summary>
+              Looks up a localized string similar to Custom Install Module - Pre-import process.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.SAMPLE_DATA_ALREADY_EXIST_FAILED_STATE">
+            <summary>
+              Looks up a localized string similar to SampleData already exists in the failed state..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.SAMPLE_DATA_BEING_INSTALLED">
+            <summary>
+              Looks up a localized string similar to SampleData is being installed..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.SUBMITIMPORTREQUEST_MSG">
+            <summary>
+              Looks up a localized string similar to Submitted the import request for file {0}..
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.UNPACKING">
+            <summary>
+              Looks up a localized string similar to Unpacking {0}.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.UNPACKING_COMPLETE">
+            <summary>
+              Looks up a localized string similar to Unpacking {0} complete.
+            </summary>
+        </member>
+        <member name="P:Microsoft.Xrm.Tooling.PackageDeployment.CrmPackageCore.Resources.LocalResourcesCore.UNPACKING_FAILED">
+            <summary>
+              Looks up a localized string similar to Unpacking {0} failed.
+            </summary>
+        </member>
+    </members>
+</doc>

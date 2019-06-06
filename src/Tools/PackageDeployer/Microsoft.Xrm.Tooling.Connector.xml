@@ -1,0 +1,1913 @@
+﻿<?xml version="1.0" encoding="utf-8"?><doc>
+  <assembly>
+    <name>Microsoft.Xrm.Tooling.Connector</name>
+  </assembly>
+  <members>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmFieldType">
+      <summary>Allowed typelist of entities</summary>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.CrmBoolean">
+      <summary>Bool - Converts from bool</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.CrmDateTime">
+      <summary>DateTime - Converts from a DataTime Object</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.CrmDecimal">
+      <summary>Decimal, for money, use CrmMoney - Converts from a decimal type</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.CrmFloat">
+      <summary>Double type, while CRM calls this a float, it is actually a double for money, use CrmMoney - Converts from a double type</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.CrmMoney">
+      <summary>Money Type - Converts from a decimal type</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.CrmNumber">
+      <summary>CRM whole number - Converts from a Int type</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.Customer">
+      <summary>Ref Type for CRM, Creates an EntityReference You need to provide a Guid as a value, and a the name of an entity for the lookup key</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.Key">
+      <summary>Primary Key - Converts from a Guid Type</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.Lookup">
+      <summary>Ref Type for CRM, Creates an EntityReference You need to provide a Guid as a value, and a the name of an entity for the lookup key</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.Picklist">
+      <summary>Pick List value - Converts from a Int type</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.Raw">
+      <summary>User Specified type... will be appended directly. This type must be one of the valid CRM 2011 types</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.String">
+      <summary>String type - Converts from a string type.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmFieldType.UniqueIdentifier">
+      <summary>Guid Type - Converts from a Guid Type</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.FormTypeId">
+      <summary>Used with GetFormIdsForEntity Call</summary>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.FormTypeId.AppointmentBook">
+      <summary>Appointment book, for service requests.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.FormTypeId.Dashboard">
+      <summary>Dashboard form</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.FormTypeId.Main">
+      <summary>Main or default form</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.FormTypeId.Mobile">
+      <summary>Mobile default form</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.FormTypeId.Other">
+      <summary>User defined forms</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem">
+      <summary>Describes an Individual Import Item.</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.DataDelimiter">
+      <summary>This is the delimiter for the Data,</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.EnableDuplicateDetection">
+      <summary>This enabled duplicate detection rules</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.FieldDelimiter">
+      <summary>this is the field separator</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.FileContentToImport">
+      <summary>This is the CSV file you wish to import,</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.FileName">
+      <summary>File Name of Individual file</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.FileType">
+      <summary>Type of Import file.. XML or CSV</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.IsFirstRowHeader">
+      <summary>Is the first row of the CSV the RowHeader?</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.IsRecordOwnerATeam">
+      <summary>Set true if the Record Owner is a Team</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.RecordOwner">
+      <summary>UserID or Team ID of the Record Owner ( from systemuser )</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.SourceEntityName">
+      <summary>Name of the entity that Originated the data.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.TargetEntityName">
+      <summary>Name of the entity that Target Entity the data.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient">
+      <summary>Provides the low-level interaction and wrapper methods to connect to Microsoft Dynamics CRM and execute actions.</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.#ctor(Microsoft.Xrm.Sdk.Client.OrganizationServiceProxy)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient"></see> class using the Organization service proxy provided by the user.</summary>
+      <param name="externalOrgServiceProxy">Organization service proxy provided by the user.</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.#ctor(Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient"></see> class using the OrganizationWebProxyClient instance provided by the user.</summary>
+      <param name="externalOrgWebProxyClient">The <see cref="Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient"></see> instance provided by the user.</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.#ctor(System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient"></see> class using a connection string.</summary>
+      <param name="crmConnectionString">The connection string. More information: Use connection strings in XRM tooling to connect to Dynamics 365</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.#ctor(System.Uri,System.Boolean)">
+      <param name="instanceUrl"></param>
+      <param name="useUniqueInstance"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.#ctor(System.Net.NetworkCredential,System.String,System.String,System.String,System.Boolean,System.Boolean,Microsoft.Xrm.Sdk.Discovery.OrganizationDetail)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient"></see> class using the specified network credentials and Active Directory (AD) authentication.</summary>
+      <param name="credential">Initialized network credential object to sign in to Microsoft Dynamics CRM.</param>
+      <param name="hostName">Name of the server that hosts the Microsoft Dynamics CRM web service.</param>
+      <param name="port">Port number on the server that hosts the Microsoft Dynamics CRM web service.</param>
+      <param name="orgName">Organization name that you want to connect to.</param>
+      <param name="useUniqueInstance">Optional. Indicates whether to reuse an existing connection, if recalled while the connection is still active. Default is false. If set to true, will force the system to create a unique connection.</param>
+      <param name="useSsl">Optional. Indicates whether to use SSL to connect to Microsoft Dynamics CRM. Defaults to false, that is, uses http://. If set to true, uses https://.</param>
+      <param name="orgDetail">Optional. Defaults to null. If set, this is returned from a query to the Discovery service, and is generally used as the second leg of an organization selection process.</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.#ctor(System.Net.NetworkCredential,Microsoft.Xrm.Tooling.Connector.AuthenticationType,System.String,System.String,System.String,System.Boolean,System.Boolean,Microsoft.Xrm.Sdk.Discovery.OrganizationDetail)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient"></see> class using the specified network credentials and authentication type as AD or IFD </summary>
+      <param name="credential">Initialized network credential object to sign in to Microsoft Dynamics CRM.</param>
+      <param name="authType">Authentication type requested. Supported values are: AD or IFD.</param>
+      <param name="hostName">Name of the server that hosts the Microsoft Dynamics CRM web or discovery service.</param>
+      <param name="port">Port number on the server that hosts the Microsoft Dynamics CRM web or discovery service (usually 5555).</param>
+      <param name="orgName">Organization name that you want to connect to.</param>
+      <param name="useUniqueInstance">Optional. Indicates whether to reuse an existing connection, if recalled while the connection is still active. Default is false. If set to true, will force the system to create a unique connection.</param>
+      <param name="useSsl">Optional. Indicates whether to use SSL to connect to Microsoft Dynamics CRM. Defaults to false, that is, uses http://. If set to true, uses https://.</param>
+      <param name="orgDetail">Optional. Defaults to null. If set, this is returned from a query to the Discovery service, and is generally used as the second leg of an organization selection process.</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.#ctor(System.String,System.Security.SecureString,System.String,System.String,System.Boolean,System.Boolean,Microsoft.Xrm.Sdk.Discovery.OrganizationDetail,System.Boolean)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient"></see> class using the specified network credentials and authentication type as Office 365.</summary>
+      <param name="crmUserId">User name for connecting to CRM Online instance in Office 365.</param>
+      <param name="crmPassword">Password for connecting to CRM Online instance in Office 365.</param>
+      <param name="crmRegion">Geographic region of your Office 365 server where CRM Online is deployed. Valid values are NorthAmerica, EMEA, APAC, SouthAmerica, Oceania, JPN, CAN, IND, and NorthAmerica2. If you specify String.Empty, search will be run for servers in all the regions.</param>
+      <param name="orgName">CRM organization name that you want to connect to.</param>
+      <param name="useUniqueInstance">Optional. Indicates whether to reuse an existing connection, if recalled while the connection is still active. Default is false. If set to true, will force the system to create a unique connection.</param>
+      <param name="useSsl">Optional. Indicates whether to use SSL to connect to Microsoft Dynamics CRM. Defaults to false, that is, uses http://. If set to true, uses https://.</param>
+      <param name="orgDetail">Optional. Defaults to null. If set, this is returned from a query to the Discovery service, and is generally used as the second leg of an organization selection process.</param>
+      <param name="isOffice365">Indicates whether to use Office 365 authentication. If true, uses office 365 authentication.</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.StoreName,System.String,System.Uri,System.Boolean,Microsoft.Xrm.Sdk.Discovery.OrganizationDetail,System.String,System.Uri,System.String)">
+      <param name="certificate"></param>
+      <param name="certificateStoreName"></param>
+      <param name="certificateThumbPrint"></param>
+      <param name="instanceUrl"></param>
+      <param name="useUniqueInstance"></param>
+      <param name="orgDetail"></param>
+      <param name="clientId"></param>
+      <param name="redirectUri"></param>
+      <param name="tokenCachePath"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.#ctor(System.String,System.Security.SecureString,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,Microsoft.Xrm.Sdk.Discovery.OrganizationDetail)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient"></see> class using the specified network credentials and claims-based authentication.</summary>
+      <param name="userId">User ID to sign in to CRM.</param>
+      <param name="password">Password to sign in to CRM.</param>
+      <param name="domain">Domain name to use for signing in to CRM.</param>
+      <param name="homeRealm">Home realm URI of the user.</param>
+      <param name="hostName">Name of the server that hosts the Microsoft Dynamics CRM web or discovery service.</param>
+      <param name="port">Port number on the server that hosts the Microsoft Dynamics CRM web or discovery service (usually 5555).</param>
+      <param name="orgName">CRM organization name that you want to connect to.</param>
+      <param name="useUniqueInstance">Optional. Indicates whether to reuse an existing connection, if recalled while the connection is still active. Default is false. If set to true, will force the system to create a unique connection.</param>
+      <param name="useSsl">Optional. Indicates whether to use SSL to connect to Microsoft Dynamics CRM. Defaults to false, that is, uses http://. If set to true, uses https://.</param>
+      <param name="orgDetail">Optional. Defaults to null. If set, this is returned from a query to the Discovery service, and is generally used as the second leg of an organization selection process.</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.#ctor(System.Security.Cryptography.X509Certificates.X509Certificate2,System.Security.Cryptography.X509Certificates.StoreName,System.String,System.Uri,System.String,System.Boolean,System.Boolean,Microsoft.Xrm.Sdk.Discovery.OrganizationDetail,System.String,System.Uri,System.String)">
+      <param name="certificate"></param>
+      <param name="certificateStoreName"></param>
+      <param name="certificateThumbPrint"></param>
+      <param name="instanceUrl"></param>
+      <param name="orgName"></param>
+      <param name="useSsl"></param>
+      <param name="useUniqueInstance"></param>
+      <param name="orgDetail"></param>
+      <param name="clientId"></param>
+      <param name="redirectUri"></param>
+      <param name="tokenCachePath"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.#ctor(System.String,System.Security.SecureString,System.String,System.String,System.Boolean,Microsoft.Xrm.Sdk.Discovery.OrganizationDetail,Microsoft.IdentityModel.Clients.ActiveDirectory.UserIdentifier,System.String,System.Uri,System.String,Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient,Microsoft.IdentityModel.Clients.ActiveDirectory.PromptBehavior)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient"></see> using the OAuth protocol to connect to your CRM Online instance in Office 365.</summary>
+      <param name="crmUserId">User name for connecting to CRM Online instance in Office 365 using OAuth.</param>
+      <param name="crmPassword">Password for connecting to CRM Online instance in Office 365 using OAuth.</param>
+      <param name="crmRegion">Geographic region of your Office 365 server where CRM Online is deployed. Valid values are NorthAmerica, EMEA, APAC, SouthAmerica, Oceania, JPN, CAN, IND, and NorthAmerica2. If you specify String.Empty, search will be run for servers in all the regions.</param>
+      <param name="orgName">CRM organization name that you want to connect to.</param>
+      <param name="useUniqueInstance">Indicates whether to reuse an existing connection, if recalled while the connection is still active. If set to true, will force the system to create a unique connection.</param>
+      <param name="orgDetail">This is returned from a query to the Discovery service, and is generally used as the second leg of an organization selection process. You can set it as null if you do not want to specify a value in the request.</param>
+      <param name="user"></param>
+      <param name="clientId">The Client ID assigned when you registered your application in Microsoft Azure Active Directory or Active Directory Federation Services (AD FS).</param>
+      <param name="redirectUri">The redirect URI of the application you registered in Microsoft Azure Active Directory or Active Directory Federation Services (AD FS).</param>
+      <param name="tokenCachePath">The full path to the location where the user token cache should be stored. The running process should have access to the specified path.</param>
+      <param name="externalOrgWebProxyClient">The <see cref="Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient"></see> instance to connect to CRM.</param>
+      <param name="promptBehavior">Specify whether the user is prompted for credentials if the credentials are not supplied. Valid values are: Always (always prompts the user to specify credentials), Auto (allows the user to select in the login control interface whether to display the prompt or not), or Never (does not prompt the user to specify credentials; if using a connection method does not have a user interface, you should use this value).</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.#ctor(System.String,System.Security.SecureString,System.String,System.String,System.String,System.String,System.String,System.Boolean,System.Boolean,Microsoft.Xrm.Sdk.Discovery.OrganizationDetail,Microsoft.IdentityModel.Clients.ActiveDirectory.UserIdentifier,System.String,System.Uri,System.String,Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient,Microsoft.IdentityModel.Clients.ActiveDirectory.PromptBehavior)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient"></see> class using the specified network credentials and OAuth protocol.</summary>
+      <param name="crmUserId">User ID to sign in to CRM.</param>
+      <param name="crmPassword">Password to sign in to CRM.</param>
+      <param name="domain">Domain name to use for signing in to CRM.</param>
+      <param name="homeRealm">Home realm URI of the user.</param>
+      <param name="hostName">Name of the server that hosts the Microsoft Dynamics CRM web or discovery service.</param>
+      <param name="port">Port number on the server that hosts the Microsoft Dynamics CRM web or discovery service (usually 5555).</param>
+      <param name="orgName">CRM organization name that you want to connect to.</param>
+      <param name="useSsl">Indicates whether to use SSL to connect to Microsoft Dynamics CRM. Defaults to false, that is, uses http://. If set to true, uses https://.</param>
+      <param name="useUniqueInstance">Indicates whether to reuse an existing connection, if recalled while the connection is still active. If set to true, will force the system to create a unique connection.</param>
+      <param name="orgDetail">This is returned from a query to the Discovery service, and is generally used as the second leg of an organization selection process. You can set it as null if you do not want to specify a value in the request.</param>
+      <param name="user"></param>
+      <param name="clientId">The Client ID assigned when you registered your application in Microsoft Azure Active Directory or Active Directory Federation Services (AD FS).</param>
+      <param name="redirectUri">The redirect URI of the application you registered in Microsoft Azure Active Directory or Active Directory Federation Services (AD FS).</param>
+      <param name="tokenCachePath">The full path to the location where the user token cache should be stored. The running process should have access to the specified path.</param>
+      <param name="externalOrgWebProxyClient">The <see cref="Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient"></see> instance to connect to CRM.</param>
+      <param name="promptBehavior">Specify whether the user is prompted for credentials if the credentials are not supplied. Valid values are: Always (always prompts the user to specify credentials), Auto (allows the user to select in the login control interface whether to display the prompt or not), or Never (does not prompt the user to specify credentials; if using a connection method does not have a user interface, you should use this value).</param>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ActiveAuthenticationType">
+      <summary>Gets the authentication type used for the active CRM connection.</summary>
+      <returns>Returns <see cref="Microsoft.Xrm.Tooling.Connector.AuthenticationType"></see>The authentication type used for the active CRM connection.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.AddEntityToQueue(System.Guid,System.String,System.String,System.Guid,System.Boolean,System.Guid)">
+      <summary>Route an entity to a public queue.</summary>
+      <param name="entityId">ID of the entity to route.</param>
+      <param name="entityName">Name of the entity for the specified ID.</param>
+      <param name="queueName">Name of the queue to route the entity to.</param>
+      <param name="workingUserId">ID of the user to set as the working system user.</param>
+      <param name="setWorkingByUser">if true Set the worked by when doing the assign</param>
+      <param name="batchId">Optional. If set to a valid GUID (generated by <see cref="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CreateBatchOperationRequest(System.String,System.Boolean,System.Boolean)"></see>), will assign the request to the batch for later execution. Otherwise, runs the request immediately.</param>
+      <returns>
+          true on success. Otherwise, false.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.AssignEntityToUser(System.Guid,System.String,System.Guid,System.Guid)">
+      <summary>Assign an Entity to the specified user ID</summary>
+      <param name="userId">User ID to assign too</param>
+      <param name="entityName">Target entity Name</param>
+      <param name="entityId">Target entity id</param>
+      <param name="batchId">Batch ID of to use, Optional</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Associate(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection)">
+      <param name="entityName"></param>
+      <param name="entityId"></param>
+      <param name="relationship"></param>
+      <param name="relatedEntities"></param>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Authority">
+      <returns>Returns <see cref="System.String"></see>.</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.AuthOverrideHook">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CallerId">
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CancelSalesOrder(System.Guid,System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper},System.Int32,System.Guid)">
+      <summary>Cancel Sales order</summary>
+      <param name="salesOrderId">Sales order id to close</param>
+      <param name="fieldList">List of fields to add</param>
+      <param name="orderStatusCode">Status code of the order</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Clone">
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CloseActivity(System.String,System.Guid,System.String,System.String,System.Guid)">
+      <summary>Closes the Activity type specified. The Activity Entity type supports fax , letter , and phonecall
+    *Note: This will default to using English names for Status. if you need to use Non-English, you should populate the names for completed for the status and state.</summary>
+      <param name="activityEntityType">Type of Activity you would like to close.. Supports fax, letter, phonecall</param>
+      <param name="activityId">ID of the Activity you want to close</param>
+      <param name="stateCode">State Code configured on the activity</param>
+      <param name="statusCode">Status code on the activity</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>true if success false if not.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CloseIncident(System.Guid,System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper},System.Int32,System.Guid)">
+      <summary>Closes an Incident request in CRM, this special handling is necessary to support CRM Built In Object.</summary>
+      <param name="incidentId">ID of the CRM Incident to close</param>
+      <param name="fieldList">List of data items to add to the request, By default, subject is required.</param>
+      <param name="incidentStatusCode">Status code to close the incident with, defaults to resolved</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>Guid of the Activity.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CloseOpportunity(System.Guid,System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper},System.Int32,System.Guid)">
+      <summary>This will close an opportunity as either Won or lost in CRM</summary>
+      <param name="opportunityId">ID of the opportunity to close</param>
+      <param name="fieldList">List of fields for the Opportunity Close Entity</param>
+      <param name="opportunityStatusCode">Status code of Opportunity, Should be either 1 or 2, defaults to 1 ( won )</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CloseQuote(System.Guid,System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper},System.Int32,System.Guid)">
+      <summary>Closes a quote as won or lost, Revise is not supported via this method</summary>
+      <param name="quoteId">ID of the quote to close</param>
+      <param name="fieldList">List of fields that need to be updated</param>
+      <param name="quoteStatusCode">Status id of the quote, must be greater then 3 but not 7</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CloseTroubleTicket(System.Guid,System.String,System.String,System.Guid)">
+      <summary>Closes a Trouble ticket by ID</summary>
+      <param name="ticketId">ID of the Ticket to close</param>
+      <param name="subject">Title of the close ticket record</param>
+      <param name="description">Description of the closed ticket</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>Returns the ID of the closed ticket</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ConnectedOrgFriendlyName">
+      <summary>Gets the friendly name of the organization that you are connected to.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ConnectedOrgPublishedEndpoints">
+      <summary>Gets the endpoint collection for the organization you are connected to.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ConnectedOrgUniqueName">
+      <summary>Get the unique name of the organization you are connected to.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ConnectedOrgVersion">
+      <summary>Gets the version number of the organization you are connected to. If accessed before you are connected to an organization, null or 0.0 is returned.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ConnectionLockObject">
+      <summary>Gets the connection lock object that is used to control connection access for various threads. This should be used to lock the connection if you are using the Microsoft Dynamics CRM queries via LINQ.</summary>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Create(Microsoft.Xrm.Sdk.Entity)">
+      <param name="entity"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CreateAnnotation(System.String,System.Guid,System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper},System.Guid)">
+      <summary>This creates a annotation [note] entry, related to a an existing entity
+    Required Properties in the fieldList
+    notetext (string) = Text of the note,
+    subject (string) = this is the title of the note</summary>
+      <param name="targetEntityTypeName">Target Entity TypeID</param>
+      <param name="targetEntityId">Target Entity ID</param>
+      <param name="fieldList">Fields to populate</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CreateBatchOperationRequest(System.String,System.Boolean,System.Boolean)">
+      <summary>Creates a batch request for executing batch operations. This method returns an ID (GUID) that will be used to identify a request as a batch request vs a &amp;quot;normal&amp;quot; request.</summary>
+      <param name="batchName">Name of the batch.</param>
+      <param name="returnResults">Indicates whether results should be returned. true or false.</param>
+      <param name="continueOnError">Indicates whether the process should continue on error. true or false.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CreateEntityAssociation(System.String,System.Guid,System.String,System.Guid,System.String,System.Guid)">
+      <summary>Associates one Entity to another where an M2M Relationship Exists.</summary>
+      <param name="entityName1">Entity on one side of the relationship</param>
+      <param name="entity1Id">The Id of the record on the first side of the relationship</param>
+      <param name="entityName2">Entity on the second side of the relationship</param>
+      <param name="entity2Id">The Id of the record on the second side of the relationship</param>
+      <param name="relationshipName">Relationship name between the 2 entities</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>true on success, false on fail</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CreateMultiEntityAssociation(System.String,System.Guid,System.String,System.Collections.Generic.List{System.Guid},System.String,System.Guid,System.Boolean)">
+      <summary>Associates multiple entities of the same time to a single entity</summary>
+      <param name="targetEntity">Entity that things will be related too.</param>
+      <param name="targetEntity1Id">ID of entity that things will be related too</param>
+      <param name="sourceEntityName">Entity that you are relating from</param>
+      <param name="sourceEntitieIds">ID&amp;#39;s of the entities you are relating from</param>
+      <param name="relationshipName">Name of the relationship between the target and the source entities.</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <param name="isReflexiveRelationship">Optional: if set to true, indicates that this is a N:N using a reflexive relationship</param>
+      <returns>true on success, false on fail</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CreateNewActivityEntry(System.String,System.String,System.Guid,System.String,System.String,System.String,System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper},System.Guid)">
+      <summary>Creates a new activity against the target entity type</summary>
+      <param name="activityEntityTypeName">Type of Activity you would like to create</param>
+      <param name="regardingEntityTypeName">Entity type of the Entity you want to associate with.</param>
+      <param name="regardingId">ID of the Entity to associate the Activity too</param>
+      <param name="subject">Subject Line of the Activity</param>
+      <param name="description">Description Text of the Activity</param>
+      <param name="creatingUserId">User ID that Created the Activity *Calling user must have necessary permissions to assign to another user</param>
+      <param name="fieldList">Additional fields to add as part of the activity creation</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>Guid of Activity ID or Guid.empty</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CreateNewRecord(System.String,System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper},System.String,System.Boolean,System.Guid)">
+      <summary>Uses the dynamic entity pattern to create a new entity record.</summary>
+      <param name="entityName">Name of entity to create a record.</param>
+      <param name="valueArray">List of initial values in the new entity record.</param>
+      <param name="applyToSolution">Optional. Applies the update with a solution by unique name.</param>
+      <param name="enabledDuplicateDetection">Optional. If true, duplicate detection is enabled; otherwise false.</param>
+      <param name="batchId">Optional. If set to a valid GUID (ID returned by the <see cref="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CreateBatchOperationRequest(System.String,System.Boolean,System.Boolean)"></see> method), the request is assigned to a batch for later execution. If you do not specify a value in this parameter, the request to create an entity record runs immediately.</param>
+      <returns>Returns a GUID (entity record ID) on Success; Guid.Empty if the request fails.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CreateOrUpdatePickListElement(System.String,System.String,System.Collections.Generic.List{Microsoft.Xrm.Sdk.LocalizedLabel},System.Int32,System.Boolean)">
+      <summary>Adds an option to a pick list on an entity.</summary>
+      <param name="targetEntity">Entity Name to Target</param>
+      <param name="attribName">Attribute Name on the Entity</param>
+      <param name="locLabelList">List of Localized Labels</param>
+      <param name="valueData">integer Value</param>
+      <param name="publishOnComplete">Publishes the Update to the Live system.. note this is a time consuming process.. if you are doing a batch up updates, call PublishEntity Separately when you are finished.</param>
+      <returns>true on success, on fail check last error.</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmConnectOrgUriActual">
+      <summary>Gets the actual URI used to connect to Microsoft Dynamics CRM. This URI could be influenced by user defined variables.</summary>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Delete(System.String,System.Guid)">
+      <param name="entityName"></param>
+      <param name="id"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntity(System.String,System.Guid,System.Guid)">
+      <summary>Deletes an entity from the CRM</summary>
+      <param name="entityType">entity type name</param>
+      <param name="entityId">entity id</param>
+      <param name="batchId">Optional : Batch ID to attach this request too.</param>
+      <returns>true on success, false on failure</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DeleteEntityAssociation(System.String,System.Guid,System.String,System.Guid,System.String,System.Guid)">
+      <summary>Removes the Association between 2 entity items where an M2M Relationship Exists.</summary>
+      <param name="entityName1">Entity on one side of the relationship</param>
+      <param name="entity1Id">The Id of the record on the first side of the relationship</param>
+      <param name="entityName2">Entity on the second side of the relationship</param>
+      <param name="entity2Id">The Id of the record on the second side of the relationship</param>
+      <param name="relationshipName">Relationship name between the 2 entities</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>true on success, false on fail</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DisableCrossThreadSafeties">
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Disassociate(System.String,System.Guid,Microsoft.Xrm.Sdk.Relationship,Microsoft.Xrm.Sdk.EntityReferenceCollection)">
+      <param name="entityName"></param>
+      <param name="entityId"></param>
+      <param name="relationship"></param>
+      <param name="relatedEntities"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DiscoverOrganizations(System.Uri,System.Uri,System.Net.NetworkCredential)">
+      <summary>Discovers the organizations.</summary>
+      <param name="discoveryServiceUri">The discovery service URI.</param>
+      <param name="homeRealmUri">The home realm URI. Not null for federation authentication.</param>
+      <param name="networkCredential">The network credential. When given null value, uses the current user network credentials.</param>
+      <returns>A collection of organizations.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DiscoverOrganizations(System.Uri,System.Uri,System.ServiceModel.Description.ClientCredentials,System.ServiceModel.Description.ClientCredentials)">
+      <summary>Discovers the organizations.</summary>
+      <param name="discoveryServiceUri">The discovery service URI.</param>
+      <param name="homeRealmUri">The home realm URI. Not null for federation authentication.</param>
+      <param name="clientCredentials">The client credentials.</param>
+      <param name="deviceCredentials">The device credentials.</param>
+      <returns>A collection of organizations.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.DiscoverOrganizations(System.Uri,System.ServiceModel.Description.ClientCredentials,Microsoft.IdentityModel.Clients.ActiveDirectory.UserIdentifier,System.String,System.Uri,System.String,System.Boolean,System.String,Microsoft.IdentityModel.Clients.ActiveDirectory.PromptBehavior)">
+      <param name="discoveryServiceUri"></param>
+      <param name="clientCredentials"></param>
+      <param name="user"></param>
+      <param name="clientId"></param>
+      <param name="redirectUri"></param>
+      <param name="tokenCachePath"></param>
+      <param name="isOnPrem"></param>
+      <param name="authority"></param>
+      <param name="promptBehavior"></param>
+      <returns>Returns <see cref="Microsoft.Xrm.Sdk.Discovery.OrganizationDetailCollection"></see>.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Dispose">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Execute(Microsoft.Xrm.Sdk.OrganizationRequest)">
+      <param name="request"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteBatch(System.Guid)">
+      <summary>Begins running the Batch command.</summary>
+      <param name="batchId">ID of the batch to run</param>
+      <returns>true if the batch begins, false if not.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmEntityDeleteRequest(System.String,System.Guid,System.String)">
+      <summary>Executes a row level delete on a CRM entity ( thread safe ) and returns true or false. Also adds metrics for logging support.</summary>
+      <param name="entName">Name of the Entity to delete from</param>
+      <param name="entId">ID of the row to delete</param>
+      <param name="logMessageTag">Message identifying what this request in logging</param>
+      <returns>True on success, False on fail.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteCrmOrganizationRequest(Microsoft.Xrm.Sdk.OrganizationRequest,System.String)">
+      <summary>Executes a CRM Organization Request (thread safe) and returns the organization response object. Also adds metrics for logging support.</summary>
+      <param name="req">Organization Request to run</param>
+      <param name="logMessageTag">Message identifying what this request in logging.</param>
+      <returns>Result of request or null.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ExecuteWorkflowOnEntity(System.String,System.Guid,System.Guid)">
+      <summary>Executes a named workflow on an object.</summary>
+      <param name="workflowName">name of the workflow to run</param>
+      <param name="id">ID to exec against</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>Async Op ID of the WF or Guid.Empty</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetActivitiesBy(System.String,System.Guid,System.Collections.Generic.List{System.String},Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator,System.Collections.Generic.List{Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmSearchFilter},System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSortOrder},System.Int32,System.Int32,System.String,System.String@,System.Boolean@,System.Guid)">
+      <summary>Returns all Activities Related to a given Entity ID. Only Account, Contact and Opportunity entities are supported.</summary>
+      <param name="searchEntity">Type of Entity to search against</param>
+      <param name="entityId">ID of the entity to search against.</param>
+      <param name="fieldList">List of Field to return for the entity , null indicates all fields.</param>
+      <param name="searchOperator">Search Operator to use</param>
+      <param name="searchParameters">Filters responses based on search prams.</param>
+      <param name="sortParameters">Sort order</param>
+      <param name="pageCount">Number of Pages</param>
+      <param name="pageNumber">Current Page number</param>
+      <param name="pageCookie">inbound place holder cookie</param>
+      <param name="outPageCookie">outbound place holder cookie</param>
+      <param name="isMoreRecords">is there more records or not</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>Array of Activities</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetActivitiesBy(System.String,System.Guid,System.Collections.Generic.List{System.String},Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSortOrder},System.Int32,System.Int32,System.String,System.String@,System.Boolean@,System.Guid)">
+      <summary>Returns all Activities Related to a given Entity ID. Only Account, Contact and Opportunity entities are supported.</summary>
+      <param name="searchEntity">Type of Entity to search against</param>
+      <param name="entityId">ID of the entity to search against.</param>
+      <param name="fieldList">List of Field to return for the entity , null indicates all fields.</param>
+      <param name="searchOperator">Search Operator to use</param>
+      <param name="searchParameters">Filters responses based on search prams.</param>
+      <param name="sortParameters">Sort order</param>
+      <param name="pageCount">Number of Pages</param>
+      <param name="pageNumber">Current Page number</param>
+      <param name="pageCookie">inbound place holder cookie</param>
+      <param name="outPageCookie">outbound place holder cookie</param>
+      <param name="isMoreRecords">is there more records or not</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>Array of Activities</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetAllAttributesForEntity(System.String)">
+      <summary>Returns all attributes on a entity</summary>
+      <param name="entityLogicalname">returns all attributes on a entity</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetAllEntityMetadata(System.Boolean,Microsoft.Xrm.Sdk.Metadata.EntityFilters)">
+      <summary>Returns a list of entities with basic data from CRM</summary>
+      <param name="onlyPublished">defaults to true, will only return published information</param>
+      <param name="filter">EntityFilter to apply to this request, note that filters other then Default will consume more time.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetBatchById(System.Guid)">
+      <summary>TEMP</summary>
+      <param name="batchId">ID of the batch</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetBatchOperationIdRequestByName(System.String)">
+      <summary>Returns the batch id for a given batch name.</summary>
+      <param name="batchName">Name of Batch</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetBatchRequestAtPosition(System.Guid,System.Int32)">
+      <summary>Returns the organization request at a give position</summary>
+      <param name="batchId">ID of the batch</param>
+      <param name="position">Position</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetDataByKeyFromResultsSet``1(System.Collections.Generic.Dictionary{System.String,System.Object},System.String)">
+      <summary>This function gets data from a Dictionary object, where &amp;quot;string&amp;quot; identifies the field name, and Object contains the data, this method then attempts to cast the result to the Type requested, if it cannot be cast an empty object is returned.</summary>
+      <param name="results">Results from the query</param>
+      <param name="key">key name you want</param>
+      <typeparam name="T">Type if object to return</typeparam>
+      <returns>object</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityAttributeMetadataForAttribute(System.String,System.String)">
+      <summary>Gets metadata for a specific entity&amp;#39;s attribute.</summary>
+      <param name="entityLogicalname">Name of the entity</param>
+      <param name="attribName">Attribute Name</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDataByFetchSearch(System.String,System.Guid)">
+      <summary>Searches for data based on a FetchXML query</summary>
+      <param name="fetchXml">Fetch XML query data.</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>results or null</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDataByFetchSearch(System.String,System.Int32,System.Int32,System.String,System.String@,System.Boolean@,System.Guid)">
+      <summary>Searches for data based on a FetchXML query</summary>
+      <param name="fetchXml">Fetch XML query data.</param>
+      <param name="pageCount">Number records per Page</param>
+      <param name="pageNumber">Current Page number</param>
+      <param name="pageCookie">inbound place holder cookie</param>
+      <param name="outPageCookie">outbound place holder cookie</param>
+      <param name="isMoreRecords">is there more records or not</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>results or null</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDataByFetchSearchEC(System.String,System.Guid)">
+      <summary>Searches for data based on a FetchXML query</summary>
+      <param name="fetchXml">Fetch XML query data.</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>results as an entity collection or null</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDataByFetchSearchEC(System.String,System.Int32,System.Int32,System.String,System.String@,System.Boolean@,System.Guid)">
+      <summary>Searches for data based on a FetchXML query</summary>
+      <param name="fetchXml">Fetch XML query data.</param>
+      <param name="pageCount">Number records per Page</param>
+      <param name="pageNumber">Current Page number</param>
+      <param name="pageCookie">inbound place holder cookie</param>
+      <param name="outPageCookie">outbound place holder cookie</param>
+      <param name="isMoreRecords">is there more records or not</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>results as an Entity Collection or null</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDataById(System.String,System.Guid,System.Collections.Generic.List{System.String},System.Guid)">
+      <summary>Gets a List of variables from the account based on the list of field specified in the Fields List</summary>
+      <param name="searchEntity">The entity to be searched.</param>
+      <param name="entityId">ID of Entity to query</param>
+      <param name="fieldList">Populated Array of Key value pairs with the Results of the Search</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDataByLinkedSearch(System.String,System.Collections.Generic.List{Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmSearchFilter},System.String,System.Collections.Generic.List{Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmSearchFilter},System.String,System.String,System.String,Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator,System.Collections.Generic.List{System.String},System.Guid,System.Boolean)">
+      <summary>Queries an Object via a M to M Link</summary>
+      <param name="returnEntityName">Name of the entity you want return data from</param>
+      <param name="primarySearchParameters">Search Prams for the Return Entity</param>
+      <param name="linkedEntityName">Name of the entity you are linking too</param>
+      <param name="linkedSearchParameters">Search Prams for the Entity you are linking too</param>
+      <param name="linkedEntityLinkAttribName">Key field on the Entity you are linking too</param>
+      <param name="m2MEntityName">CRM Name of the Relationship</param>
+      <param name="returnEntityPrimaryId">Key field on the Entity you want to return data from</param>
+      <param name="searchOperator">Search Operator to apply</param>
+      <param name="fieldList">List of Fields from the Returned Entity you want</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <param name="isReflexiveRelationship">If the relationship is defined as Entity:Entity or Account N:N Account, this parameter should be set to true</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDataByLinkedSearch(System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.Collections.Generic.Dictionary{System.String,System.String},System.String,System.String,System.String,Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator,System.Collections.Generic.List{System.String},System.Guid)">
+      <summary>Queries an Object via a M to M Link</summary>
+      <param name="returnEntityName">Name of the entity you want return data from</param>
+      <param name="primarySearchParameters">Search Prams for the Return Entity</param>
+      <param name="linkedEntityName">Name of the entity you are linking too</param>
+      <param name="linkedSearchParameters">Search Prams for the Entity you are linking too</param>
+      <param name="linkedEntityLinkAttribName">Key field on the Entity you are linking too</param>
+      <param name="m2MEntityName">CRM Name of the Relationship</param>
+      <param name="returnEntityPrimaryId">Key field on the Entity you want to return data from</param>
+      <param name="searchOperator">Search Operator to apply</param>
+      <param name="fieldList">List of Fields from the Returned Entity you want</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDataByRollup(System.String,System.Guid,System.String,System.Collections.Generic.List{System.String},Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator,System.Collections.Generic.Dictionary{System.String,System.String},System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSortOrder},System.Guid)">
+      <summary>Returns all Activities Related to a given Entity ID. Only Account, Contact and Opportunity entities are supported.</summary>
+      <param name="searchEntity">Type of Entity to search against</param>
+      <param name="entityId">ID of the entity to search against.</param>
+      <param name="rollupfromEntity">Entity to Rollup from</param>
+      <param name="fieldList">List of Field to return for the entity , null indicates all fields.</param>
+      <param name="searchOperator"></param>
+      <param name="searchParameters">Filters responses based on search prams.</param>
+      <param name="sortParameters">Sort Order</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>Array of Activities</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDataByRollup(System.String,System.Guid,System.String,System.Collections.Generic.List{System.String},Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator,System.Collections.Generic.List{Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmSearchFilter},System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSortOrder},System.Int32,System.Int32,System.String,System.String@,System.Boolean@,System.Guid)">
+      <summary>Returns all Activities Related to a given Entity ID. Only Account, Contact and Opportunity entities are supported.</summary>
+      <param name="searchEntity">Type of Entity to search against</param>
+      <param name="entityId">ID of the entity to search against.</param>
+      <param name="rollupfromEntity">Entity to Rollup from</param>
+      <param name="fieldList">List of Field to return for the entity , null indicates all fields.</param>
+      <param name="searchOperator">Search Operator to user</param>
+      <param name="searchParameters">CRM Filter list to apply</param>
+      <param name="sortParameters">Sort by</param>
+      <param name="pageCount">Number of Pages</param>
+      <param name="pageNumber">Current Page number</param>
+      <param name="pageCookie">inbound place holder cookie</param>
+      <param name="outPageCookie">outbound place holder cookie</param>
+      <param name="isMoreRecords">is there more records or not</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDataBySearchParams(System.String,System.Collections.Generic.Dictionary{System.String,System.String},Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator,System.Collections.Generic.List{System.String},System.Guid)">
+      <summary>Gets a list of accounts based on the search parameters.</summary>
+      <param name="entityName">CRM Entity Type Name to search</param>
+      <param name="searchParameters">Array of Search Parameters</param>
+      <param name="searchOperator">Logical Search Operator</param>
+      <param name="fieldList">List of fields to retrieve, Null indicates all Fields</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>List of matching Entity Types.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDataBySearchParams(System.String,System.Collections.Generic.List{Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmSearchFilter},Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator,System.Collections.Generic.List{System.String},System.Guid)">
+      <summary>Gets a list of accounts based on the search parameters.</summary>
+      <param name="entityName">CRM Entity Type Name to search</param>
+      <param name="searchParameters">Array of Search Parameters</param>
+      <param name="searchOperator">Logical Search Operator</param>
+      <param name="fieldList">List of fields to retrieve, Null indicates all Fields</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>List of matching Entity Types.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDataBySearchParams(System.String,System.Collections.Generic.List{Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmSearchFilter},Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator,System.Collections.Generic.List{System.String},System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSortOrder},System.Int32,System.Int32,System.String,System.String@,System.Boolean@,System.Guid)">
+      <summary>Searches for data from an entity based on the search parameters.</summary>
+      <param name="entityName">Name of the entity to search</param>
+      <param name="searchParameters">Array of Search Parameters</param>
+      <param name="searchOperator">Logical Search Operator</param>
+      <param name="fieldList">List of fields to retrieve, Null indicates all Fields</param>
+      <param name="sortParameters">Sort order</param>
+      <param name="pageCount">Number records per Page</param>
+      <param name="pageNumber">Current Page number</param>
+      <param name="pageCookie">inbound place holder cookie</param>
+      <param name="outPageCookie">outbound place holder cookie</param>
+      <param name="isMoreRecords">is there more records or not</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>List of matching Entity Types.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDisplayName(System.String,System.Int32)">
+      <summary>Gets an Entity Name by Logical name or Type code.</summary>
+      <param name="entityName">logical name of the entity</param>
+      <param name="entityTypeCode">Type code for the entity</param>
+      <returns>Localized name for the entity in the current users language</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityDisplayNamePlural(System.String,System.Int32)">
+      <summary>Gets an Entity Name by Logical name or Type code.</summary>
+      <param name="entityName">logical name of the entity</param>
+      <param name="entityTypeCode">Type code for the entity</param>
+      <returns>Localized plural name for the entity in the current users language</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityFormIdListByType(System.String,Microsoft.Xrm.Tooling.Connector.CrmServiceClient.FormTypeId)">
+      <summary>Returns the Form Entity References for a given form type.</summary>
+      <param name="entityLogicalname">logical name of the entity you are querying for form data.</param>
+      <param name="formTypeId">Form Type you want</param>
+      <returns>List of Entity References for the form type requested.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityMetadata(System.String,Microsoft.Xrm.Sdk.Metadata.EntityFilters)">
+      <summary>Returns the Metadata for an entity from CRM, defaults to basic data only.</summary>
+      <param name="entityLogicalname">Logical name of the entity</param>
+      <param name="queryFilter">filter to apply to the query, defaults to default entity data.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityName(System.Int32)">
+      <summary>Returns the Entity name for the given Type code</summary>
+      <param name="entityTypeCode"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetEntityTypeCode(System.String)">
+      <summary>Gets the typecode of an entity by name.</summary>
+      <param name="entityName">name of the entity to get the type code on</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetGlobalOptionSetMetadata(System.String)">
+      <summary>Gets a global option set from CRM.</summary>
+      <param name="globalOptionSetName">Name of the Option Set To get</param>
+      <returns>OptionSetMetadata or null</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetMyCrmUserId">
+      <summary>Gets the user ID of the currently logged in user.</summary>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.GetPickListElementFromMetadataEntity(System.String,System.String)">
+      <summary>Gets a PickList, Status List or StateList from the metadata of an attribute</summary>
+      <param name="targetEntity">text name of the entity to query</param>
+      <param name="attribName">name of the attribute to query</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportDataMapToCrm(System.String,System.Boolean,System.Boolean)">
+      <summary>Used to upload a data map to the CRM</summary>
+      <param name="dataMapXml">XML of the datamap in string form</param>
+      <param name="replaceIds">True to have CRM replace ID&amp;#39;s on inbound data, False to have inbound data retain its ID&amp;#39;s</param>
+      <param name="dataMapXmlIsFilePath">if true, dataMapXml is expected to be a File name and path to load.</param>
+      <returns>Returns ID of the datamap or Guid.Empty</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportSolutionToCrm(System.String,System.Guid@,System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)">
+      <param name="solutionPath"></param>
+      <param name="importId"></param>
+      <param name="activatePlugIns"></param>
+      <param name="overwriteUnManagedCustomizations"></param>
+      <param name="skipDependancyOnProductUpdateCheckOnInstall"></param>
+      <param name="importAsHoldingSolution"></param>
+      <param name="isInternalUpgrade"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.InstallSampleDataToCrm">
+      <summary>Request CRM to install sample data shipped with CRM. Note this is process will take a few moments to execute.
+    This method will return once the request has been submitted.</summary>
+      <returns>ID of the Async job executing the request</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.IsBatchOperationsAvailable">
+      <summary>Gets information about the availability of batch operation. If true, batch operations are available.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.IsReady">
+      <summary>Gets the service connection status. If true, the service is ready to accept requests.</summary>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.IsSampleDataInstalled">
+      <summary>Determines if the CRM sample data has been installed</summary>
+      <returns>True if the sample data is installed, False if not.</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LastCrmError">
+      <summary>Gets the last error that occurred while attempting to connect to Microsoft Dynamics CRM.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LastCrmException">
+      <summary>Gets the last exception that occurred while attempting to connect to Microsoft Dynamics CRM.</summary>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.MakeSecureString(System.String)">
+      <summary>Makes a secure string</summary>
+      <param name="pass"></param>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.OAuthUserId">
+      <summary>Gets the current user ID used for connecting to CRM using OAuth.</summary>
+      <returns>Returns <see cref="https://msdn.microsoft.com/library/system.string.aspx">String</see>The current user ID used for connecting to CRM using OAuth.</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.OrganizationServiceProxy">
+      <summary>Gets the native Microsoft Dynamics CRM organization service.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.OrganizationWebProxyClient">
+      <summary>Gets the CRM OrganizationWebProxyClient instance for the active CRM connection using OAuth.</summary>
+      <returns>Returns <see cref="Microsoft.Xrm.Sdk.WebServiceClient.OrganizationWebProxyClient"></see>The OrganizationWebProxyClient instance for the active CRM connection.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PublishEntity(System.String)">
+      <summary>Publishes an entity to the production system, used in conjunction with the Metadata services.</summary>
+      <param name="entityName">Name of the entity to publish</param>
+      <returns>True on success</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ReleaseBatchInfoById(System.Guid)">
+      <summary>Release a batch from the stack Once you have completed using a batch, you must release it from the system.</summary>
+      <param name="batchId">ID of the batch</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.RemoveOAuthTokenCache(System.String)">
+      <param name="tokenCachePath"></param>
+      <returns>Returns <see cref="System.Boolean"></see>.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ResetLocalMetadataCache(System.String)">
+      <summary>This will clear the Metadata cache for either all entities or the specified entity</summary>
+      <param name="entityName">Optional: name of the entity to clear cached info for</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Retrieve(System.String,System.Guid,Microsoft.Xrm.Sdk.Query.ColumnSet)">
+      <param name="entityName"></param>
+      <param name="id"></param>
+      <param name="columnSet"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.RetrieveBatchResponse(System.Guid)">
+      <param name="batchId"></param>
+      <returns>Returns <see cref="System.Collections.Generic.List`1"></see>.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.RetrieveMultiple(Microsoft.Xrm.Sdk.Query.QueryBase)">
+      <param name="query"></param>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.SdkVersionProperty">
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.SendSingleEmail(System.Guid,System.String,System.Guid)">
+      <summary>Sends an email.</summary>
+      <param name="emailid">ID of the Email activity.</param>
+      <param name="token">Tracking Token or Null.</param>
+      <param name="batchId">Optional. If set to a valid GUID (generated by <see cref="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CreateBatchOperationRequest(System.String,System.Boolean,System.Boolean)"></see>), will assign the request to the batch for later execution. Otherwise, runs the request immediately.</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.SubmitImportRequest(Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportRequest,System.DateTime)">
+      <summary>Starts an Import request for CRM.
+    Supports a single file per Import request.</summary>
+      <param name="importRequest">Import Data Request</param>
+      <param name="delayUntil">Delays the import jobs till specified time - Use DateTime.MinValue to Run immediately</param>
+      <returns>Guid of the Import Request, or Guid.Empty. If Guid.Empty then request failed.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UninstallSampleDataFromCrm">
+      <summary>Request CRM to remove sample data shipped with CRM. Note this is process will take a few moments to execute. This method will return once the request has been submitted.</summary>
+      <returns>ID of the Async job executing the request</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.Update(Microsoft.Xrm.Sdk.Entity)">
+      <param name="entity"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateEntity(System.String,System.String,System.Guid,System.Collections.Generic.Dictionary{System.String,Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper},System.String,System.Boolean,System.Guid)">
+      <summary>Generic update entity</summary>
+      <param name="entityName">String version of the entity name</param>
+      <param name="keyFieldName">Key fieldname of the entity</param>
+      <param name="id">Guid ID of the entity to update</param>
+      <param name="fieldList">Fields to update</param>
+      <param name="applyToSolution">Optional: Applies the update with a solution by Unique name</param>
+      <param name="enabledDuplicateDetection">Optional: if true, enabled CRM onboard duplicate detection</param>
+      <param name="batchId">Optional: if set to a valid GUID, generated by the Create Batch Request Method, will assigned the request to the batch for later execution, on fail, runs the request immediately</param>
+      <returns>true on success, false on fail</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateStateAndStatusForEntity(System.String,System.Guid,System.Int32,System.Int32,System.Guid)">
+      <summary>Updates the State and Status of the Entity passed in.</summary>
+      <param name="entName">Name of the entity</param>
+      <param name="id">Guid ID of the entity you are updating</param>
+      <param name="stateCode">Int version of the new state</param>
+      <param name="statusCode">Int Version of the new status</param>
+      <param name="batchId">Optional : Batch ID to attach this request too.</param>
+      <returns>true on success.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.UpdateStateAndStatusForEntity(System.String,System.Guid,System.String,System.String,System.Guid)">
+      <summary>Updates the State and Status of the Entity passed in.</summary>
+      <param name="entName">Name of the entity</param>
+      <param name="id">Guid ID of the entity you are updating</param>
+      <param name="stateCode">String version of the new state</param>
+      <param name="statusCode">String Version of the new status</param>
+      <param name="batchId">Optional : Batch ID to attach this request too.</param>
+      <returns>true on success.</returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationResponse">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationResponse.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationResponse.Error">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationResponse.ErrorSubCode">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationResponse.IsSuccess">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationResponse.Puid">
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.Model.CrmOrgByServer">
+      <summary>Describes a Single Organization returned from a CRM Discovery server</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.Model.CrmOrgByServer.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.Model.CrmOrgByServer.DiscoveryServer">
+      <summary>This is the URI needed to connect to the Organization</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.Model.CrmOrgByServer.DiscoveryServerName">
+      <summary>This is the name assigned to the Discovery Server, this is used to visual separate organizations returned by Discovery server used, or Premise solutions.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.Model.CrmOrgByServer.FriendlyName">
+      <summary>This is the display name for the organization that a user sees when working in CRM</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.Model.CrmOrgByServer.OrgDetail">
+      <summary>This is the details of the Organization, returned directly from CRM</summary>
+      <returns></returns>
+    </member>
+    <member name="E:Microsoft.Xrm.Tooling.Connector.Model.CrmOrgByServer.PropertyChanged">
+      <summary>WCF EVENT hook</summary>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.Model.CrmOrgByServer.UniqueOrgName">
+      <summary>This is the actual name for the organization in CRM, and is required to connect to CRM</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.TraceControlSettings">
+      <summary>This class provides an override for the default trace settings. These settings must be set before the components in the control are used for them to be effective.</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceControlSettings.#ctor">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceControlSettings.AddTraceListener(System.Diagnostics.TraceListener)">
+      <summary>Adds a listener to the trace listen array</summary>
+      <param name="listenerToAdd">Trace Listener you wish to add</param>
+      <returns>true on success, false on fail.</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceControlSettings.CloseListeners">
+      <summary>Closes any trace listeners that were configured</summary>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.TraceControlSettings.TraceLevel">
+      <summary>Override Trace Level setting.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper">
+      <summary>Contains a variable definition.</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper.#ctor">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper"></see> class.</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper.#ctor(System.Object,Microsoft.Xrm.Tooling.Connector.CrmFieldType)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper"></see> class using the type of data to set.</summary>
+      <param name="data">Indicates the data to set</param>
+      <param name="crmFieldType">Type of data to set.</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper.#ctor(System.Object,Microsoft.Xrm.Tooling.Connector.CrmFieldType,System.String)">
+      <summary>Initializes a new instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper"></see> class using the type of data and the related entity name.</summary>
+      <param name="data">Indicates the data to set.</param>
+      <param name="crmFieldType">Type of data to set.</param>
+      <param name="relatedEntityName">Gets or sets the name of the related entity; applies to the Field Types: Customer and Lookup.</param>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper.ReferencedEntity">
+      <summary>Gets or sets the name of the referenced entity.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper.Type">
+      <summary>Value Type.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmDataTypeWrapper.Value">
+      <summary>Gets or sets the value to set.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmSearchFilter">
+      <summary>Crm Filter class.</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmSearchFilter.#ctor">
+      <summary>Creates an empty CRM Search Filter.</summary>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmSearchFilter.FilterOperator">
+      <summary>CRM Filter Operator</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmSearchFilter.SearchConditions">
+      <summary>List of CRM Filter conditions</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportRequest.ImportMode">
+      <summary>Mode of the Import, Update or Create</summary>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportRequest.ImportMode.Create">
+      <summary>Create a new Import</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportRequest.ImportMode.Update">
+      <summary>Update to Imported Items</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationAuthentication">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationAuthentication.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationAuthentication.MemberName">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationAuthentication.Password">
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.DeviceUserName">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceUserName.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceUserName.DecryptedPassword">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceUserName.DeviceId">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceUserName.DeviceName">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceUserName.EncryptedPassword">
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceUserName.ToClientCredentials">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceUserName.UserNameType">
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.CurrentTraceLevel">
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.Dispose">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.Initialize">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.LastError">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.LastException">
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.Log(System.Exception)">
+      <param name="exception"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.Log(System.String)">
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.Log(System.String,System.Diagnostics.TraceEventType)">
+      <param name="message"></param>
+      <param name="eventType"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.Log(System.String,System.Diagnostics.TraceEventType,System.Exception)">
+      <param name="message"></param>
+      <param name="eventType"></param>
+      <param name="exception"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.RefreshListeners(System.Collections.Generic.List{Microsoft.Xrm.Tooling.Connector.TraceSourceSetting})">
+      <param name="traceSourceSettingCollection"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.ResetLastError">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.Source">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.TraceLoggerBase.TraceSourceName">
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.AuthenticationType">
+      <summary>Represents the enumeration for the supported authentication types.</summary>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.AuthenticationType.AD">
+      <summary> Active Directory authentication.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.AuthenticationType.Certificate">
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.AuthenticationType.Claims">
+      <summary> Claims-based authentication.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.AuthenticationType.ExternalTokenManagement">
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.AuthenticationType.IFD">
+      <summary>SPLA authentication.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.AuthenticationType.InvalidConnection">
+      <summary>Invalid connection.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.AuthenticationType.Live">
+      <summary>Windows Live ID authentication. Deprecated</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.AuthenticationType.OAuth">
+      <summary>OAuth authentication.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.AuthenticationType.Office365">
+      <summary>Office 365 authentication for connecting to CRM Online.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator">
+      <summary>Logical Search Pram to apply to over all search.</summary>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator.And">
+      <summary>And Search</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator.None">
+      <summary>Do not apply the Search Operator</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSearchOperator.Or">
+      <summary>Or Search</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode">
+      <summary>Indicates an error during registration</summary>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode.BlankPassword">
+      <summary>Blank Password</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode.DeviceAlreadyExists">
+      <summary>Device Already Exists</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode.InterfaceDisabled">
+      <summary>Interface Disabled</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode.InternalError">
+      <summary>Internal Error</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode.InvalidCharactersInCredentials">
+      <summary>Invalid Characters are used in the device credentials.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode.InvalidParameterSyntax">
+      <summary>Invalid Parameter Syntax</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode.InvalidRequestFormat">
+      <summary>Invalid Request Format</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode.MissingDeviceUserNameOrPassword">
+      <summary>Missing Device User Name or Password</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode.Unknown">
+      <summary>Unspecified or Unknown Error occurred</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode.UnknownClientVersion">
+      <summary>Unknown Client Version</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.Extension">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.Extension.FirstNotNullOrEmpty``1(System.Collections.Generic.IDictionary{``0,System.String},``0[])">
+      <param name="dictionary"></param>
+      <param name="keys"></param>
+      <typeparam name="TKey"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.Extension.FormatWith(System.String,System.Object[])">
+      <param name="format"></param>
+      <param name="args"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.Extension.ToDictionary(System.String)">
+      <param name="connectionString"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.Extension.ToEnum``1(System.Int32)">
+      <param name="enumValue"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.Extension.ToEnum``1(System.String)">
+      <param name="enumName"></param>
+      <typeparam name="T"></typeparam>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.RefreshListenerDelegate">
+      <param name="listenerCollection"></param>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.TraceSourceSetting">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceSourceSetting.#ctor(System.String,System.Diagnostics.SourceLevels)">
+      <param name="sourceName"></param>
+      <param name="sourceLevels"></param>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.TraceSourceSetting.SourceName">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.TraceSourceSetting.TraceLevel">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.TraceSourceSetting.TraceListeners">
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.AttributeData">
+      <summary>Summary description for AttributeData</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.AttributeData.#ctor">
+      <summary>Initializes an instance of the <see cref="T:Microsoft.Xrm.Tooling.Connector.AttributeData"></see> class.</summary>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.AttributeData.ActualValue">
+      <summary>Gets or sets the actual value for the attribute.</summary>
+      <returns>Type: <see cref="System.Object"></see>.</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.AttributeData.AttributeLabel">
+      <summary>Gets or sets the label for the attribute.</summary>
+      <returns>Type: <see cref="System.String"></see>.</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.AttributeData.AttributeType">
+      <summary>Gets or sets the type for the attribute.</summary>
+      <returns>Type: <see cref="Microsoft.Xrm.Sdk.Metadata.AttributeTypeCode"></see>.</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.AttributeData.DisplayValue">
+      <summary>Gets or sets the display value for the attribute.</summary>
+      <returns>Type: <see cref="System.String"></see>.</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.AttributeData.IsUnsupported">
+      <returns>Type: <see cref="System.Boolean"></see>.</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.AttributeData.SchemaName">
+      <returns>Type: <see cref="System.String"></see>.</returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.crmMessageInspector">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.crmMessageInspector.#ctor">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.crmMessageInspector.AfterReceiveReply(System.ServiceModel.Channels.Message@,System.Object)">
+      <param name="reply"></param>
+      <param name="correlationState"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.crmMessageInspector.BeforeSendRequest(System.ServiceModel.Channels.Message@,System.ServiceModel.IClientChannel)">
+      <param name="request"></param>
+      <param name="channel"></param>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.FieldDelimiterCode">
+      <summary>Key used to delimit fields in the import file</summary>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.FieldDelimiterCode.Colon">
+      <summary>Specifies :</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.FieldDelimiterCode.Comma">
+      <summary>Specifies ,</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.FieldDelimiterCode.SingleQuote">
+      <summary>Specifies &amp;#39;</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PickListItem">
+      <summary>PickList Item</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PickListItem.#ctor">
+      <summary>Default Constructor</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PickListItem.#ctor(System.String,System.Int32)">
+      <summary>Constructor with data.</summary>
+      <param name="label"></param>
+      <param name="id"></param>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PickListItem.DisplayLabel">
+      <summary>Display label for the PickList Item</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PickListItem.PickListItemId">
+      <summary>ID of the picklist item</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmConnectionStringParsedData">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmConnectionStringParsedData.#ctor">
+      
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.DataDelimiterCode">
+      <summary>Key used to delimit data in the import file</summary>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.DataDelimiterCode.DoubleQuotes">
+      <summary>Specifies &amp;quot;</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.DataDelimiterCode.None">
+      <summary>Specifies no delimiter</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.DataDelimiterCode.SingleQuote">
+      <summary>Specifies &amp;#39;</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportRequest">
+      <summary>Describes an import request for CRM</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportRequest.#ctor">
+      <summary>Default constructor</summary>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportRequest.DataMapFileId">
+      <summary>ID of the DataMap to use</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportRequest.DataMapFileName">
+      <summary>Name of the DataMap File to use ID or Name is required</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportRequest.Files">
+      <summary>List of files to import in this job, there must be at least one.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportRequest.ImportName">
+      <summary>Name of the Import Request. this Name will appear in CRM</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportRequest.Mode">
+      <summary>Sets or gets the Import Mode.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportRequest.UseSystemMap">
+      <summary>if True, infers the map from the type of entity requested..</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.DeviceIdManager">
+      <summary>Management utility for the Device Id</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.DiscoverEnvironment(System.Uri)">
+      <summary>Discovers the Windows Live environment based on the Token Issuer</summary>
+      <param name="issuerUri"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.LoadDeviceCredentials">
+      <summary>Loads the device&amp;#39;s credentials from the file system</summary>
+      <returns>Device Credentials (if set) or null</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.LoadDeviceCredentials(System.Uri)">
+      <summary>Loads the device&amp;#39;s credentials from the file system</summary>
+      <param name="issuerUri">URL for the current token issuer</param>
+      <returns>Device Credentials (if set) or null</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.LoadOrRegisterDevice">
+      <summary>Loads the device credentials (if they exist).</summary>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.LoadOrRegisterDevice(System.Uri)">
+      <summary>Loads the device credentials (if they exist).</summary>
+      <param name="issuerUri">URL for the current token issuer</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.LoadOrRegisterDevice(System.String,System.String)">
+      <summary>Loads the device credentials (if they exist).</summary>
+      <param name="deviceName">Device name that should be registered</param>
+      <param name="devicePassword">Device password that should be registered</param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.LoadOrRegisterDevice(System.Uri,System.String,System.String)">
+      <summary>Loads the device credentials (if they exist).</summary>
+      <param name="issuerUri">URL for the current token issuer</param>
+      <param name="deviceName">Device name that should be registered</param>
+      <param name="devicePassword">Device password that should be registered</param>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.MaxDeviceNameLength">
+      <summary>Internal Use only</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.MaxDevicePasswordLength">
+      <summary>Internal Use only</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.PersistIfDeviceAlreadyExists">
+      <summary>Indicates that the credentials should be persisted to the disk if registration fails with DeviceAlreadyExists.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.PersistToFile">
+      <summary>Indicates whether the registered device credentials should be persisted to the database</summary>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.RegisterDevice">
+      <summary>Registers the given device with Live ID with a random application ID</summary>
+      <returns>ClientCredentials that were registered</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.RegisterDevice(System.Guid)">
+      <summary>Registers the given device with Live ID</summary>
+      <param name="applicationId">ID for the application</param>
+      <returns>ClientCredentials that were registered</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.RegisterDevice(System.Guid,System.Uri)">
+      <summary>Registers the given device with Live ID</summary>
+      <param name="applicationId">ID for the application</param>
+      <param name="issuerUri">URL for the current token issuer</param>
+      <returns>ClientCredentials that were registered</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.RegisterDevice(System.Guid,System.String,System.String)">
+      <summary>Registers the given device with Live ID</summary>
+      <param name="applicationId">ID for the application</param>
+      <param name="deviceName">Device name that should be registered</param>
+      <param name="devicePassword">Device password that should be registered</param>
+      <returns>ClientCredentials that were registered</returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceIdManager.RegisterDevice(System.Guid,System.Uri,System.String,System.String)">
+      <summary>Registers the given device with Live ID</summary>
+      <param name="applicationId">ID for the application</param>
+      <param name="issuerUri">URL for the current token issuer</param>
+      <param name="deviceName">Device name that should be registered</param>
+      <param name="devicePassword">Device password that should be registered</param>
+      <returns>ClientCredentials that were registered</returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationResponseError">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationResponseError.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationResponseError.Code">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationResponseError.RegistrationErrorCode">
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.Model.CrmOrgList">
+      <summary>Describes the Collection of Orgs that a user may select from. This is used to display the list to the user</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.Model.CrmOrgList.#ctor">
+      <summary>Container for CRM Orgs List.</summary>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.Model.CrmOrgList.OrgsList">
+      <summary>List of Orgs</summary>
+      <returns></returns>
+    </member>
+    <member name="E:Microsoft.Xrm.Tooling.Connector.Model.CrmOrgList.PropertyChanged">
+      <summary>WPF EVENT HOOK</summary>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.TraceListenerBroker">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceListenerBroker.#ctor">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceListenerBroker.PublishTraceListeners">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceListenerBroker.RegisterTraceLogger(Microsoft.Xrm.Tooling.Connector.TraceLoggerBase)">
+      <param name="traceLogger"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceListenerBroker.UnRegisterTraceLogger(Microsoft.Xrm.Tooling.Connector.TraceLoggerBase)">
+      <param name="traceLogger"></param>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.BatchItemOrganizationRequest">
+      <summary>Request object.</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.BatchItemOrganizationRequest.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.BatchItemOrganizationRequest.Request">
+      <summary>Organization Service request for the batch</summary>
+      <returns>Type: <see cref="Microsoft.Xrm.Sdk.OrganizationRequest"></see>.</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.BatchItemOrganizationRequest.RequestDebugMessage">
+      <summary>Request debug Message.</summary>
+      <returns>Type: <see cref="System.String"></see>.</returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.BatchItemOrganizationRequest.RequestReferenceNumber">
+      <summary>Reference Correlation ID</summary>
+      <returns>Type: <see cref="System.Guid"></see>.</returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmFilterConditionItem">
+      <summary>CRM Filter item.</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmFilterConditionItem.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmFilterConditionItem.FieldName">
+      <summary>CRM Field name to Filter on</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmFilterConditionItem.FieldOperator">
+      <summary>CRM Operator to apply</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.CrmFilterConditionItem.FieldValue">
+      <summary>Value to use for the Filter</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.FileTypeCode">
+      <summary>Type if file described in the FileContentToImport</summary>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.FileTypeCode.CSV">
+      <summary>CSV File Type</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportFileItem.FileTypeCode.XML">
+      <summary>XML File type</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PickListMetaElement">
+      <summary>PickList data</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PickListMetaElement.#ctor">
+      <summary>Default Constructor</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PickListMetaElement.#ctor(System.String,System.String,System.String)">
+      <summary>Constructs a PickList item with data.</summary>
+      <param name="actualValue"></param>
+      <param name="displayValue"></param>
+      <param name="pickListLabel"></param>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PickListMetaElement.ActualValue">
+      <summary>Current value of the PickList Item</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PickListMetaElement.DisplayValue">
+      <summary>Displayed value for the PickList</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PickListMetaElement.Items">
+      <summary>Array of Potential Pick List Items.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.PickListMetaElement.PickListLabel">
+      <summary>Displayed Label</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationRequest">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationRequest.#ctor">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationRequest.#ctor(System.Guid,Microsoft.Xrm.Tooling.Connector.LiveDevice)">
+      <param name="applicationId"></param>
+      <param name="device"></param>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationRequest.Authentication">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationRequest.ClientInfo">
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.LiveDevice">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.LiveDevice.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.LiveDevice.ClockSkew">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.LiveDevice.Expiry">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.LiveDevice.Token">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.LiveDevice.User">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.LiveDevice.Version">
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.RequestBatch">
+      <summary>Container class for Batches.</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.RequestBatch.#ctor(System.String,System.Boolean,System.Boolean)">
+      <summary>Default constructor</summary>
+      <param name="batchName">String name of the batch, if blank, a GUID is used</param>
+      <param name="returnResponses">True to return responses, False to not return responses</param>
+      <param name="continueOnError">True to continue if anyone item trips an error, False to stop on the first error.</param>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.RequestBatch.BatchId">
+      <summary>ID of the batch.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.RequestBatch.BatchItems">
+      <summary>Items to execute</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.RequestBatch.BatchName">
+      <summary>DisplayName of the batch.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.RequestBatch.BatchRequestSettings">
+      <summary>Settings for this Execute Multiple Request.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.RequestBatch.BatchResults">
+      <summary>Results from the Batch.</summary>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.RequestBatch.Status">
+      <summary>Status of the batch.</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.Utilities">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.Utilities.GetFileVersion(System.Reflection.Assembly)">
+      <param name="executingAssembly"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.Utilities.GetOrgnameAndOnlineRegionFromServiceUri(System.Uri,System.String@,System.String@,System.Boolean@)">
+      <param name="serviceUri"></param>
+      <param name="onlineRegion"></param>
+      <param name="organizationName"></param>
+      <param name="isOnPrem"></param>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.BatchStatus">
+      <summary>Status of the batch.</summary>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.BatchStatus.Complete">
+      <summary>Batch has completed.</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.BatchStatus.Running">
+      <summary>Batch is currently executing</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.BatchStatus.Waiting">
+      <summary>Batch is waiting to be run</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSortOrder">
+      <summary>Logical Search Pram to apply to over all search.</summary>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSortOrder.Ascending">
+      <summary>Sort in Ascending</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.LogicalSortOrder.Descending">
+      <summary>Sort in Descending</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationFailedException">
+      <summary>Indicates that Device Registration failed</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationFailedException.#ctor">
+      <summary>Construct an instance of the DeviceRegistrationFailedException class</summary>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationFailedException.#ctor(System.String)">
+      <summary>Construct an instance of the DeviceRegistrationFailedException class</summary>
+      <param name="message">Message to pass</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationFailedException.#ctor(Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode,System.String)">
+      <summary>Construct an instance of the DeviceRegistrationFailedException class</summary>
+      <param name="code">Error code that occurred</param>
+      <param name="subCode">Subcode that occurred</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationFailedException.#ctor(System.String,System.Exception)">
+      <summary>Construct an instance of the DeviceRegistrationFailedException class</summary>
+      <param name="message">Message to pass</param>
+      <param name="innerException">Exception to include</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationFailedException.#ctor(Microsoft.Xrm.Tooling.Connector.DeviceRegistrationErrorCode,System.String,System.Exception)">
+      <summary>Construct an instance of the DeviceRegistrationFailedException class</summary>
+      <param name="code">Error code that occurred</param>
+      <param name="subCode">Subcode that occurred</param>
+      <param name="innerException">Inner exception</param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationFailedException.GetObjectData(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">
+      <summary>Internal Use only</summary>
+      <param name="info"></param>
+      <param name="context"></param>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationFailedException.RegistrationErrorCode">
+      <summary>Error code that occurred during registration</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.IOverrideAuthHookWrapper">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.IOverrideAuthHookWrapper.GetAuthToken(System.Uri)">
+      <param name="connectedUri"></param>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.StringAttributeData">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.StringAttributeData.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.StringAttributeData.MaxLength">
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.XmlUtil">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.XmlUtil.#ctor">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.XmlUtil.CreateXmlDocument">
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.XmlUtil.CreateXmlDocument(System.IO.Stream)">
+      <param name="input"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.XmlUtil.CreateXmlDocument(System.String)">
+      <param name="xml"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.XmlUtil.CreateXmlDocument(System.Xml.XmlReader)">
+      <param name="reader"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.XmlUtil.CreateXmlDocument(System.String,System.Boolean)">
+      <param name="xml"></param>
+      <param name="preserveWhiteSpace"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.XmlUtil.CreateXmlReader(System.IO.Stream)">
+      <param name="xmlStream"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.XmlUtil.CreateXmlReader(System.String)">
+      <param name="xml"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.XmlUtil.CreateXmlReader(System.String,System.Boolean)">
+      <param name="xml"></param>
+      <param name="preserveWhiteSpace"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.XmlUtil.CreateXmlWriter(System.IO.TextWriter,System.Boolean)">
+      <param name="textWriter"></param>
+      <param name="indented"></param>
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.XmlUtil.CreateXmlWriter(System.String,System.Text.Encoding,System.Boolean)">
+      <param name="fileName"></param>
+      <param name="encoding"></param>
+      <param name="indented"></param>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.BooleanAttributeData">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.BooleanAttributeData.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.BooleanAttributeData.BooleanOptions">
+      <returns>Type: <see cref="Microsoft.Xrm.Sdk.Metadata.OptionMetadata"></see>.</returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportStatus">
+      <summary>ImportStatus Reasons</summary>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportStatus.Completed">
+      <summary>Import has Completed</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportStatus.Failed">
+      <summary>Import has Failed</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportStatus.InProgress">
+      <summary>Import is in Progress</summary>
+      <returns></returns>
+    </member>
+    <member name="F:Microsoft.Xrm.Tooling.Connector.CrmServiceClient.ImportStatus.NotImported">
+      <summary>Not Yet Imported</summary>
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationClientInfo">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationClientInfo.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationClientInfo.ApplicationId">
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DeviceRegistrationClientInfo.Version">
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.DynamicsFileLogTraceListener">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DynamicsFileLogTraceListener.#ctor">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DynamicsFileLogTraceListener.#ctor(System.String)">
+      <param name="name"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DynamicsFileLogTraceListener.GetSupportedAttributes">
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DynamicsFileLogTraceListener.IsWritePermitted(System.String)">
+      <param name="Location"></param>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.DynamicsFileLogTraceListener.MaxFileCount">
+      <returns></returns>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DynamicsFileLogTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String)">
+      <param name="eventCache"></param>
+      <param name="source"></param>
+      <param name="eventType"></param>
+      <param name="id"></param>
+      <param name="message"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.DynamicsFileLogTraceListener.TraceEvent(System.Diagnostics.TraceEventCache,System.String,System.Diagnostics.TraceEventType,System.Int32,System.String,System.Object[])">
+      <param name="eventCache"></param>
+      <param name="source"></param>
+      <param name="eventType"></param>
+      <param name="id"></param>
+      <param name="format"></param>
+      <param name="args"></param>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.PicklistAttributeData">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.PicklistAttributeData.#ctor">
+      
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.PicklistAttributeData.PicklistOptions">
+      <returns></returns>
+    </member>
+    <member name="T:Microsoft.Xrm.Tooling.Connector.TraceSourceSettingStore">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceSourceSettingStore.#ctor">
+      
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceSourceSettingStore.AddTraceSettingsToStore(Microsoft.Xrm.Tooling.Connector.TraceSourceSetting)">
+      <param name="listnerSettings"></param>
+    </member>
+    <member name="M:Microsoft.Xrm.Tooling.Connector.TraceSourceSettingStore.GetTraceSourceSettings(System.String)">
+      <param name="sourceName"></param>
+      <returns></returns>
+    </member>
+    <member name="P:Microsoft.Xrm.Tooling.Connector.TraceSourceSettingStore.TraceSourceSettingsCollection">
+      <returns></returns>
+    </member>
+  </members>
+</doc>

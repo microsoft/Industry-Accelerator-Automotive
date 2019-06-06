@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Model.xsd"
+    IncludeAllEntities="false" IncludeAllGlobalOptionSets="false">
+    <GlobalOptionSets>
+        <GlobalOptionSet Name='televox_addresstype' />
+    </GlobalOptionSets>
+    <Entities>
+        <!-- System Defined Entities -->
+      <Entity Name="organization" >
+        <Attributes>
+          <Attribute Name="trackingprefix" PropertyName="TrackingPrefix"/>
+          <Attribute Name="trackingtokenidbase" PropertyName="TrackingTokenIdBase"/>
+          <Attribute Name="uniquespecifierlength" PropertyName="UniqueSpecifierLength"/>
+          <Attribute Name="trackingtokeniddigits" PropertyName="TrackingTokenIdDigits"/>
+          <Attribute Name="maximumtrackingnumber" PropertyName="MaximumTrackingNumber"/>
+        </Attributes>
+      </Entity>
+        <Entity Name="account" />
+        <Entity Name="email" />
+        <Entity Name="contact" />
+        <Entity Name="incident" ClassName="Case" />
+        <Entity Name="opportunity" />
+        <Entity Name="queue" ClassName="CrmQueue" />
+        <Entity Name="subject" />
+        <Entity Name="systemuser" />
+        <Entity Name="template" ClassName="EmailTemplate" >
+            <Attributes>
+                <Attribute Name="subject" PropertyName="Subject" />
+                <Attribute Name="subjectpresentationxml" PropertyName="SubjectPresentationXml" />
+                <Attribute Name="body" PropertyName="Body" />
+                <Attribute Name="presentationxml" PropertyName="PresentationXml" />
+            </Attributes>
+        </Entity>
+        
+        <!--Custom Entities-->
+        <Entity Name="televox_shippingrequest" />
+    </Entities>
+</Model>

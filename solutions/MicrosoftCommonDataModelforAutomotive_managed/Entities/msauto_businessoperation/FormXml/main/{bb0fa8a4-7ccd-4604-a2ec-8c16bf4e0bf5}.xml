@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{bb0fa8a4-7ccd-4604-a2ec-8c16bf4e0bf5}</formid>
+    <IntroducedVersion>0.1</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{24fc2486-2117-4a52-b9aa-31b55af1538f}" IsUserDefined="1">
+          <labels>
+            <label description="General" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showlabel="false" showbar="false" IsUserDefined="0" id="{c92d84a5-6124-40fc-b13a-80263ed303f0}">
+                  <labels>
+                    <label description="General" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d7dd9c55-3310-4f2b-8df3-353fd239ab55}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{1888f269-4b28-482b-8ff7-905e0475aed4}">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="ownerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="ownerid" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9ddb99eb-7959-ec12-d25c-51eec785d202}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_account" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_account" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{a931b92e-8215-292b-4231-7626edbc7b37}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_facilityid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_facilityid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{9a77e4e0-b556-3b2e-9a38-868a4b9452ae}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_operationtypeid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_operationtypeid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{696c1e82-6b31-4567-9b51-4e071e1089d9}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_description" classid="{E0DECE4B-6FC8-4a8f-A065-082708572369}" datafieldname="msauto_description" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+                <section name="{24fc2486-2117-4a52-b9aa-31b55af1538f}_section_2" showlabel="false" showbar="false" locklevel="0" id="{e924981c-5d69-24eb-7032-ded8d562d6e2}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="Section" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{d49beea7-7bb7-524b-12c8-b0db3324d72b}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_addressname" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_addressname" disabled="false" />
+                      </cell>
+                      <cell id="{885e8eb0-dcee-28d0-6165-ba25458a67a7}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_addresscounty" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_addresscounty" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{576a0640-acab-e1c2-8697-5b7cb867a435}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_addressstreet1" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_addressstreet1" disabled="false" />
+                      </cell>
+                      <cell id="{2bb23949-7ca8-3780-72e0-2c2954b8bd45}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_addresscountry" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_addresscountry" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{949394dc-d0ad-24c6-732e-d7a0c39410ce}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_addressstreet2" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_addressstreet2" disabled="false" />
+                      </cell>
+                      <cell id="{b10e024a-1e20-4904-3eda-dd442c42593d}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_addresslatitude" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_addresslatitude" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d5d9427b-c124-3e5a-7374-bd2d9a98ea08}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_addressstreet3" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_addressstreet3" disabled="false" />
+                      </cell>
+                      <cell id="{1ca50a36-d079-8ac4-e9a4-e361cb7b918a}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_addresslongitude" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_addresslongitude" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d495b43e-7280-b511-3613-812cb4410000}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_addresscity" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_addresscity" disabled="false" />
+                      </cell>
+                      <cell id="{5a045b17-09ad-abe5-7981-27a1d8247412}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_addresspostalcode" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_addresspostalcode" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <Navigation>
+        <NavBar></NavBar>
+        <NavBarAreas>
+          <NavBarArea Id="Info">
+            <Titles>
+              <Title LCID="1033" Text="Common" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Sales">
+            <Titles>
+              <Title LCID="1033" Text="Sales" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Service">
+            <Titles>
+              <Title LCID="1033" Text="Service" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="Marketing">
+            <Titles>
+              <Title LCID="1033" Text="Marketing" />
+            </Titles>
+          </NavBarArea>
+          <NavBarArea Id="ProcessCenter">
+            <Titles>
+              <Title LCID="1033" Text="Process Sessions" />
+            </Titles>
+          </NavBarArea>
+        </NavBarAreas>
+      </Navigation>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>

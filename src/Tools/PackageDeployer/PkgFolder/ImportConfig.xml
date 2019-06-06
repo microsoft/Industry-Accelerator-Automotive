@@ -1,0 +1,11 @@
+﻿<?xml version="1.0"?>
+<configdatastorage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  installsampledata="false"
+  waitforsampledatatoinstall="false"
+  agentdesktopzipfile=""
+  agentdesktopexename=""
+  crmmigdataimportfile="">
+  <solutions>
+    <configsolutionfile solutionpackagefilename="solution_managed.zip" />
+  </solutions>
+</configdatastorage>
