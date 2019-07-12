@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>msauto_autoacceleratorenduserapp_bcc0c</Name>
+  <AppVersion>2019-05-30T18:45:18Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.19052.20.0</CreatedByClientVersion>
+  <MinClientVersion>3.19052.20.0</MinClientVersion>
+  <Tags>{"minimumRequiredApiVersion":"2.2.0","sienaVersion":"20190530T184518Z-3.19053.16.0","primaryDeviceWidth":"640","primaryDeviceHeight":"1136","deviceCapabilities":"","supportsPortrait":"true","supportsLandscape":"false","primaryFormFactor":"Phone","publisherVersion":"3.19052.20","hasComponent":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>rgba(37, 62, 143, 1)</BackgroundColor>
+  <DisplayName>Auto Accelerator - End User App</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences xsi:nil="true"></AuthorizationReferences>
+  <ConnectionReferences>{"9f8cd3af-49f7-4f41-97b0-2320ad136682":{"id":"/providers/microsoft.powerapps/apis/shared_commondataservice","displayName":"Common Data Service","iconUri":"https://cpgeneralstore.blob.core.windows.net/officialicons/commondataservice/icon_1.0.1207.1578.png","dataSources":["Service Appointments","Service Orders","Service Order Types","Service Orders_1","Service Order Types_1","Tasks"],"dependencies":[],"dependents":[],"parameterHints":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{"default.cds":{"dataSources":{"Service Appointments":{"tableName":"msauto_serviceappointments"},"Service Orders":{"tableName":"msauto_serviceorders"},"Service Order Types":{"tableName":"msauto_serviceordertypes"},"Service Orders_1":{"tableName":"msauto_serviceorders"},"Service Order Types_1":{"tableName":"msauto_serviceordertypes"},"Tasks":{"tableName":"tasks"}}}},"apiTier":"Premium"}}</ConnectionReferences>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <BackgroundImageUri>/CanvasApps/msauto_autoacceleratorenduserapp_bcc0c_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/msauto_autoacceleratorenduserapp_bcc0c_DocumentUri.msapp</DocumentUri>
+</CanvasApp>

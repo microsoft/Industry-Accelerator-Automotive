@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<savedqueries xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <savedquery>
+    <isquickfindquery>0</isquickfindquery>
+    <isprivate>0</isprivate>
+    <isdefault>0</isdefault>
+    <savedqueryid>{00000000-0000-0000-00aa-000010001006}</savedqueryid>
+    <queryapi></queryapi>
+    <layoutxml>
+      <grid name="resultset" jump="fullname" select="1" icon="1" preview="1">
+        <row name="result" id="leadid">
+          <cell name="ownerid" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="leadsourcecode" width="150" imageproviderfunctionname="" imageproviderwebresource="$webresource:" />
+          <cell name="fullname" width="300" />
+          <cell name="subject" width="200" />
+          <cell name="statuscode" width="100" />
+          <cell name="createdon" width="125" />
+          <cell name="companyname" ishidden="1" width="100" />
+        </row>
+      </grid>
+    </layoutxml>
+    <querytype>0</querytype>
+    <fetchxml>
+      <fetch version="1.0" output-format="xml-platform" mapping="logical">
+        <entity name="lead">
+          <attribute name="fullname" />
+          <order attribute="createdon" descending="true" />
+          <attribute name="createdon" />
+          <attribute name="statuscode" />
+          <attribute name="subject" />
+          <attribute name="ownerid" />
+          <filter type="and">
+            <condition attribute="statecode" operator="eq" value="0" />
+          </filter>
+          <attribute name="leadsourcecode" />
+          <attribute name="leadid" />
+        </entity>
+      </fetch>
+    </fetchxml>
+    <IntroducedVersion>5.0.0.0</IntroducedVersion>
+    <LocalizedNames>
+      <LocalizedName description="Open Leads" languagecode="1033" />
+    </LocalizedNames>
+  </savedquery>
+</savedqueries>

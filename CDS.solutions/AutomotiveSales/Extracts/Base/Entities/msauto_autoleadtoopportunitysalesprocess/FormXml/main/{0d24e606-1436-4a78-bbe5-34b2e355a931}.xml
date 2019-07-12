@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform>
+    <formid>{0d24e606-1436-4a78-bbe5-34b2e355a931}</formid>
+    <IntroducedVersion>1.0</IntroducedVersion>
+    <FormPresentation>1</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <tabs>
+        <tab verticallayout="true" id="{67cc7334-7133-4f07-bd04-55e4f8687bcf}" name="StageStep4" locklevel="0" expanded="true">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{5f382598-7bbf-42d1-9c5b-bebc17eea316}" name="StageStep4_section1">
+                  <labels>
+                    <label description="" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{0f6726e1-de15-44ae-bc7f-a5ee8e55dcc3}" showlabel="true" visible="true">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_lead_msauto_autoleadtoopportunitysalesprocess:parentcontactid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="parentcontactid" relationship="bpf_lead_msauto_autoleadtoopportunitysalesprocess" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{d5980eb0-8449-4d8e-95e7-15ccf443c5d3}" showlabel="true" visible="true">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_lead_msauto_autoleadtoopportunitysalesprocess:budgetstatus" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="budgetstatus" relationship="bpf_lead_msauto_autoleadtoopportunitysalesprocess" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{b2e7ff63-0764-42f5-93bb-d4247c35d88d}" name="StageStep10" locklevel="0" expanded="true">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{354acc4d-5983-4d68-9f2e-dee6d18fb874}" name="StageStep10_section1">
+                  <labels>
+                    <label description="" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{355f585b-9e9a-48ff-8528-c1e7b5a6f4e0}" showlabel="true" visible="true">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess:estimatedclosedate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="estimatedclosedate" relationship="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{94001bb2-3f2f-40d4-be93-5aaa85f7f98b}" showlabel="true" visible="true">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess:currentsituation" classid="{e0dece4b-6fc8-4a8f-a065-082708572369}" datafieldname="currentsituation" relationship="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{da3d6149-8104-4b21-9a86-0389113b3fc6}" name="StageStep16" locklevel="0" expanded="true">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{f9dcb87c-3e27-4f17-80b7-9f0d873bd887}" name="StageStep16_section1">
+                  <labels>
+                    <label description="" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{de7d414c-ec56-453a-a257-805703bf2955}" showlabel="true" visible="true">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess:budgetamount" classid="{533b9e00-756b-4312-95a0-dc888637ac78}" datafieldname="budgetamount" relationship="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{4d01d980-343c-4b4c-a5e4-85d52c7325c3}" showlabel="true" visible="true">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess:need" classid="{3ef39988-22bb-4f0b-bbbe-64b5a3748aee}" datafieldname="need" relationship="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{dd8d5f1a-f107-447e-bce0-b738aae81f42}" name="StageStep22" locklevel="0" expanded="true">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{8a898bc3-98ec-47dc-afc6-169a38c9b038}" name="StageStep22_section1">
+                  <labels>
+                    <label description="" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{5ee98657-3815-4b29-8f11-c0795f696725}" showlabel="true" visible="true">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess:confirminterest" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="confirminterest" relationship="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{de9abdf7-d204-4b49-ac57-729cb462d3fb}" name="StageStep26" locklevel="0" expanded="true">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{64bff278-36e2-404e-b8bb-af561d44c4da}" name="StageStep26_section1">
+                  <labels>
+                    <label description="" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{ef8937c9-cae0-4164-b7f7-8765b183d615}" showlabel="true" visible="true">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess:emailaddress" classid="{ada2203e-b4cd-49be-9ddf-234642b43b52}" datafieldname="emailaddress" relationship="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{e186c9b2-55d0-48eb-9237-b5f24df80da0}" showlabel="true" visible="true">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess:developproposal" classid="{67fac785-cd58-4f9f-abb3-4b7ddc6ed5ed}" datafieldname="developproposal" relationship="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+        <tab verticallayout="true" id="{25679c5c-4c56-42bc-9f3c-2ffff33c727e}" name="StageStep32" locklevel="0" expanded="true">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section showbar="false" columns="1" id="{c7eca660-3b48-43c0-aad4-c4d33a806825}" name="StageStep32_section1">
+                  <labels>
+                    <label description="" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{89ea6160-986d-4b86-9163-8e1de8680f9d}" showlabel="true" visible="true">
+                        <labels>
+                          <label description="" languagecode="1033" />
+                        </labels>
+                        <control id="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess:finaldecisiondate" classid="{5b773807-9fb2-42db-97c3-7a91eff8adff}" datafieldname="finaldecisiondate" relationship="bpf_opportunity_msauto_autoleadtoopportunitysalesprocess" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+    </form>
+    <IsCustomizable>1</IsCustomizable>
+    <CanBeDeleted>1</CanBeDeleted>
+    <LocalizedNames>
+      <LocalizedName description="Information" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions>
+      <Description description="A form for this entity." languagecode="1033" />
+    </Descriptions>
+  </systemform>
+</forms>
