@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<forms xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <systemform unmodified="1">
+    <formid>{9774341b-aa04-44b8-b7fa-2ad3aadefa62}</formid>
+    <IntroducedVersion>8.2.0.0</IntroducedVersion>
+    <FormPresentation>0</FormPresentation>
+    <FormActivationState>1</FormActivationState>
+    <form>
+      <hiddencontrols>
+        <data id="businessprocessflowinstanceid" datafieldname="businessprocessflowinstanceid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
+      </hiddencontrols>
+      <tabs>
+        <tab name="general" id="{9575be08-8ebb-7761-ccdc-7e9d414c5874}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
+          <labels>
+            <label description="" languagecode="1033" />
+          </labels>
+          <columns>
+            <column width="100%">
+              <sections>
+                <section name="leadtoopportunitysalesprocessinformation" showlabel="false" showbar="false" locklevel="0" id="{3d587262-a8bc-5ded-d340-3478db409bc4}" IsUserDefined="0" layout="varwidth" columns="11" labelwidth="115">
+                  <labels>
+                    <label description="" languagecode="1033" />
+                  </labels>
+                  <rows>
+                    <row>
+                      <cell id="{870d23d1-1ed5-6433-1a8a-351486b2414d}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Process Name" languagecode="1033" />
+                        </labels>
+                        <control id="name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="name" disabled="false" />
+                      </cell>
+                    </row>
+                  </rows>
+                </section>
+              </sections>
+            </column>
+          </columns>
+        </tab>
+      </tabs>
+      <footer id="{734bf81d-1a48-4ba9-a4c3-5f9685717765}" columns="1" celllabelposition="Left" celllabelalignment="Left" labelwidth="115">
+        <rows>
+          <row height="0">
+            <cell id="{f8dc2a46-4287-481a-914a-160982e1e5e9}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{d8863846-ddca-4aee-910f-1b1c0850cb3c}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
+    </form>
+    <LocalizedNames>
+      <LocalizedName description="LeadToOpportunitySalesProcesses" languagecode="1033" />
+    </LocalizedNames>
+  </systemform>
+</forms>

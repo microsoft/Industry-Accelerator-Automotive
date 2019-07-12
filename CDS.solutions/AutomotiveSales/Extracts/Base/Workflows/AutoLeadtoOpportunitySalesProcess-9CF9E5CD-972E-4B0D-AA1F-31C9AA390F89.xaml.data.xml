@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{9cf9e5cd-972e-4b0d-aa1f-31c9aa390f89}" Name="Auto Lead to Opportunity Sales Process" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <XamlFileName>/Workflows/AutoLeadtoOpportunitySalesProcess-9CF9E5CD-972E-4B0D-AA1F-31C9AA390F89.xaml</XamlFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>4</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>1</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>1</StateCode>
+  <StatusCode>2</StatusCode>
+  <processorder>100</processorder>
+  <processroleassignment>&lt;DisplayConditions&gt;&lt;Role Id="{627090ff-40a3-4053-8790-584edc5be201}" /&gt;&lt;Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" /&gt;&lt;/DisplayConditions&gt;</processroleassignment>
+  <RunAs>1</RunAs>
+  <UniqueName>msauto_autoleadtoopportunitysalesprocess</UniqueName>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>0.6.0.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <BusinessProcessType>0</BusinessProcessType>
+  <PrimaryEntity>Lead</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Auto Lead to Opportunity Sales Process" />
+  </LocalizedNames>
+  <labels>
+    <steplabels id="{67cc7334-7133-4f07-bd04-55e4f8687bcf}">
+      <label languagecode="1033" description="Lead / Walk In" />
+    </steplabels>
+    <steplabels id="{0f6726e1-de15-44ae-bc7f-a5ee8e55dcc3}">
+      <label languagecode="1033" description="Existing Contact?" />
+    </steplabels>
+    <steplabels id="{d5980eb0-8449-4d8e-95e7-15ccf443c5d3}">
+      <label languagecode="1033" description="Budget" />
+    </steplabels>
+    <steplabels id="{b2e7ff63-0764-42f5-93bb-d4247c35d88d}">
+      <label languagecode="1033" description="Discover Needs" />
+    </steplabels>
+    <steplabels id="{355f585b-9e9a-48ff-8528-c1e7b5a6f4e0}">
+      <label languagecode="1033" description="Est. Close Date" />
+    </steplabels>
+    <steplabels id="{94001bb2-3f2f-40d4-be93-5aaa85f7f98b}">
+      <label languagecode="1033" description="Current Situation" />
+    </steplabels>
+    <steplabels id="{da3d6149-8104-4b21-9a86-0389113b3fc6}">
+      <label languagecode="1033" description="Vehicles Of Interest" />
+    </steplabels>
+    <steplabels id="{de7d414c-ec56-453a-a257-805703bf2955}">
+      <label languagecode="1033" description="Budget Amount" />
+    </steplabels>
+    <steplabels id="{4d01d980-343c-4b4c-a5e4-85d52c7325c3}">
+      <label languagecode="1033" description="Need" />
+    </steplabels>
+    <steplabels id="{dd8d5f1a-f107-447e-bce0-b738aae81f42}">
+      <label languagecode="1033" description="Test Drive" />
+    </steplabels>
+    <steplabels id="{5ee98657-3815-4b29-8f11-c0795f696725}">
+      <label languagecode="1033" description="Confirm Interest" />
+    </steplabels>
+    <steplabels id="{de9abdf7-d204-4b49-ac57-729cb462d3fb}">
+      <label languagecode="1033" description="Develop Proposal" />
+    </steplabels>
+    <steplabels id="{ef8937c9-cae0-4164-b7f7-8765b183d615}">
+      <label languagecode="1033" description="Email Address" />
+    </steplabels>
+    <steplabels id="{e186c9b2-55d0-48eb-9237-b5f24df80da0}">
+      <label languagecode="1033" description="Develop Proposal" />
+    </steplabels>
+    <steplabels id="{25679c5c-4c56-42bc-9f3c-2ffff33c727e}">
+      <label languagecode="1033" description="Close" />
+    </steplabels>
+    <steplabels id="{89ea6160-986d-4b86-9163-8e1de8680f9d}">
+      <label languagecode="1033" description="Final Decision Date" />
+    </steplabels>
+  </labels>
+  <ProcessTriggers />
+</Workflow>

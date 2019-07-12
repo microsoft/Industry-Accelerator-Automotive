@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Dashboard xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <LocalizedNames>
+    <LocalizedName description="Sales Manager Dashboard" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Shows the dashboard used by a Dealership manager to review leads" languagecode="1033" />
+  </Descriptions>
+  <FormId>{4d95db2f-eaa9-41aa-93b2-be5b941bee38}</FormId>
+  <IsCustomizable>1</IsCustomizable>
+  <IsDefault>0</IsDefault>
+  <FormXml>
+    <forms type="dashboard">
+      <form>
+        <tabs>
+          <tab showlabel="false" verticallayout="true" id="{e8b3b66b-d1f8-478e-955a-c9603f803d66}" labelid="{ec891717-e6af-4582-b494-1e52652c07ff}">
+            <labels>
+              <label description="" languagecode="1033" />
+            </labels>
+            <columns>
+              <column width="100%">
+                <sections>
+                  <section showlabel="false" showbar="false" columns="111" id="{872b0800-79ec-43c9-a4b8-618b0e797d90}" labelid="{7975c2de-f582-4100-b8ff-72ef8d4fd87a}">
+                    <labels>
+                      <label description="Section" languagecode="1033" />
+                    </labels>
+                    <rows>
+                      <row>
+                        <cell id="{e515bb8b-c8c5-c5d4-daa3-7a5ee3ae849d}" showlabel="false" colspan="1" auto="false" rowspan="12" labelid="{234fb229-9a0c-4de2-bbc2-1b61ea010db8}">
+                          <labels>
+                            <label description="Lead" languagecode="1033" />
+                          </labels>
+                          <control id="Component997748" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" indicationOfSubgrid="true">
+                            <parameters>
+                              <ViewId>{5A926B99-3A5F-DF11-AE90-00155D2E3002}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <RelationshipName />
+                              <TargetEntityType>lead</TargetEntityType>
+                              <AutoExpand>Fixed</AutoExpand>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <ViewIds />
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <VisualizationId>{EE3C733D-5693-DE11-97D4-00155DA3B01E}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RecordsPerPage>8</RecordsPerPage>
+                              <HeaderColorCode />
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="1" rowspan="12" showlabel="false" id="{be4921a7-0e00-4d6d-8bab-8fcfff7fda39}" auto="false" labelid="{3b6907e4-2841-40d7-a950-dd8135e9794a}">
+                          <labels>
+                            <label description="Customers" languagecode="1033" />
+                          </labels>
+                          <control id="Component2c649f2" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" uniqueid="{d36dd618-15ce-431d-0512-051b2472c772}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>lead</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>12</RecordsPerPage>
+                              <ViewId>{00000000-0000-0000-00AA-000010001006}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds>{5A926B99-3A5F-DF11-AE90-00155D2E3002},{00000000-0000-0000-00AA-000010001005},{00000000-0000-0000-00AA-000010001006}</ViewIds>
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{AD936200-375F-DF11-AE90-00155D2E3002}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                              <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="1" rowspan="12" showlabel="false" id="{f292cbcf-ecd2-4278-89ea-2b6ce3a3852d}" auto="false" labelid="{51f6f74c-6cec-43be-addd-253804607bb2}">
+                          <labels>
+                            <label description="Leads" languagecode="1033" />
+                          </labels>
+                          <control id="Component2f5fe47" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" uniqueid="{b85d0db8-0415-9c41-b296-411e4860aa93}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>lead</TargetEntityType>
+                              <ChartGridMode>Grid</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>10</RecordsPerPage>
+                              <ViewId>{00000000-0000-0000-00AA-000010001006}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds>{00000000-0000-0000-00AA-000010001005}</ViewIds>
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{F5976C58-5693-DE11-97D4-00155DA3B01E}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                              <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row>
+                        <cell colspan="1" rowspan="12" showlabel="false" id="{eb90404e-9413-4cec-b985-5abde977bb0f}" auto="false" labelid="{c2b1fa15-0789-4dce-a7ff-16803d7acd20}">
+                          <labels>
+                            <label description="Sales Pipeline" languagecode="1033" />
+                          </labels>
+                          <control id="Component6fdecb9" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" uniqueid="{633d412a-bbd5-1de2-eb46-19015d7a1689}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>lead</TargetEntityType>
+                              <ChartGridMode>Chart</ChartGridMode>
+                              <EnableQuickFind>false</EnableQuickFind>
+                              <EnableViewPicker>false</EnableViewPicker>
+                              <EnableJumpBar>false</EnableJumpBar>
+                              <RecordsPerPage>12</RecordsPerPage>
+                              <ViewId>{00000000-0000-0000-00AA-000010001006}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds>{00000000-0000-0000-00AA-000010001005},{00000000-0000-0000-00AA-000010001006}</ViewIds>
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId>{F5976C58-5693-DE11-97D4-00155DA3B01E}</VisualizationId>
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                              <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                            </parameters>
+                          </control>
+                        </cell>
+                        <cell colspan="2" rowspan="12" showlabel="false" id="{c94156d7-a2c4-4ef6-a83a-46a233d79b9c}" auto="false" labelid="{be08bd5a-869a-4ced-ab28-c641b49b5c88}">
+                          <labels>
+                            <label description="TestDrives" languagecode="1033" />
+                          </labels>
+                          <control id="Component1f10bf7" classid="{E7A81278-8635-4d9e-8D4D-59480B391C5B}" uniqueid="{98927e4b-a7c1-0403-1514-1ccbe57245ea}" indicationOfSubgrid="true">
+                            <parameters>
+                              <TargetEntityType>msauto_testdrive</TargetEntityType>
+                              <ChartGridMode>Grid</ChartGridMode>
+                              <EnableQuickFind>true</EnableQuickFind>
+                              <EnableViewPicker>true</EnableViewPicker>
+                              <EnableJumpBar>true</EnableJumpBar>
+                              <RecordsPerPage>8</RecordsPerPage>
+                              <ViewId>{B4DE8C51-4D01-4743-ADD0-0A5661B7F25A}</ViewId>
+                              <IsUserView>false</IsUserView>
+                              <ViewIds>{B4DE8C51-4D01-4743-ADD0-0A5661B7F25A}</ViewIds>
+                              <AutoExpand>Fixed</AutoExpand>
+                              <VisualizationId />
+                              <IsUserChart>false</IsUserChart>
+                              <EnableChartPicker>false</EnableChartPicker>
+                              <RelationshipName />
+                              <HeaderColorCode>#F3F3F3</HeaderColorCode>
+                            </parameters>
+                          </control>
+                        </cell>
+                      </row>
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                      <row />
+                    </rows>
+                  </section>
+                </sections>
+              </column>
+            </columns>
+          </tab>
+        </tabs>
+        <controlDescriptions />
+      </form>
+    </forms>
+  </FormXml>
+  <IntroducedVersion>0.5.0.0</IntroducedVersion>
+  <IsTabletEnabled>1</IsTabletEnabled>
+</Dashboard>

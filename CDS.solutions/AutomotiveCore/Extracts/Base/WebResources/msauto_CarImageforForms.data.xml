@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WebResource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <WebResourceId>{4d1e7daa-f661-e911-a957-000d3a3b9a2b}</WebResourceId>
+  <Name>msauto_CarImageforForms</Name>
+  <DisplayName>Car Image for Forms</DisplayName>
+  <WebResourceType>5</WebResourceType>
+  <IntroducedVersion>0.5</IntroducedVersion>
+  <IsEnabledForMobileClient>1</IsEnabledForMobileClient>
+  <IsAvailableForMobileOffline>0</IsAvailableForMobileOffline>
+  <DependencyXml>&lt;Dependencies&gt;&lt;Dependency componentType="WebResource"/&gt;&lt;/Dependencies&gt;</DependencyXml>
+  <IsCustomizable>1</IsCustomizable>
+  <CanBeDeleted>1</CanBeDeleted>
+  <IsHidden>0</IsHidden>
+  <FileName>/WebResources/msauto_CarImageforForms4D1E7DAA-F661-E911-A957-000D3A3B9A2B</FileName>
+</WebResource>

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AppModule>
+  <UniqueName>msauto_AutoHub</UniqueName>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <WebResourceId>953b9fac-1e5e-e611-80d6-00155ded156f</WebResourceId>
+  <FormFactor>1</FormFactor>
+  <ClientType>4</ClientType>
+  <NavigationType>0</NavigationType>
+  <AppModuleComponents>
+    <AppModuleComponent type="62" schemaName="msauto_AutoHub" />
+    <AppModuleComponent type="60" id="{757bf793-da72-482f-9adb-e1cd92560a03}" />
+    <AppModuleComponent type="60" id="{ee50a18b-3f88-df11-8d93-00155db1891a}" />
+    <AppModuleComponent type="60" id="{5d431800-1270-40e9-a90a-c970556cf0fe}" />
+    <AppModuleComponent type="60" id="{45f88f83-0e67-443b-bd05-81d49719f6b1}" />
+    <AppModuleComponent type="60" id="{2701de60-8f2a-48a4-8262-4a35ca7441fa}" />
+    <AppModuleComponent type="60" id="{d1f511a8-1ead-e211-bb72-00155da9a201}" />
+    <AppModuleComponent type="60" id="{4d95db2f-eaa9-41aa-93b2-be5b941bee38}" />
+    <AppModuleComponent type="60" id="{3b5d39a7-b216-e711-80d8-00155d896f83}" />
+    <AppModuleComponent type="60" id="{25b754f5-7563-df11-ae90-00155d2e3002}" />
+    <AppModuleComponent type="60" id="{4c26b5de-4782-e911-a81a-000d3a3b55b9}" />
+    <AppModuleComponent type="60" id="{0ab4cd2d-4782-e911-a81a-000d3a3b55b9}" />
+    <AppModuleComponent type="60" id="{d5c19d41-4882-e911-a81a-000d3a3b55b9}" />
+    <AppModuleComponent type="1" schemaName="account" />
+    <AppModuleComponent type="60" id="{c00459d8-83dd-4dfa-a14c-4ebcd7747192}" />
+    <AppModuleComponent type="60" id="{69cff312-cfb6-4289-9631-249ab85d2c62}" />
+    <AppModuleComponent type="60" id="{c9e7ec2d-efca-4e4c-b3e3-f63c4bba5e4b}" />
+    <AppModuleComponent type="1" schemaName="actioncard" />
+    <AppModuleComponent type="1" schemaName="activitypointer" />
+    <AppModuleComponent type="1" schemaName="appointment" />
+    <AppModuleComponent type="1" schemaName="kbarticle" />
+    <AppModuleComponent type="1" schemaName="msauto_business" />
+    <AppModuleComponent type="1" schemaName="msauto_businessfacility" />
+    <AppModuleComponent type="1" schemaName="msauto_businessoperation" />
+    <AppModuleComponent type="1" schemaName="campaign" />
+    <AppModuleComponent type="1" schemaName="incident" />
+    <AppModuleComponent type="1" schemaName="competitor" />
+    <AppModuleComponent type="1" schemaName="contact" />
+    <AppModuleComponent type="60" id="{293c878f-f068-40a0-ae48-4297e060871c}" />
+    <AppModuleComponent type="60" id="{c1c72637-5032-40f8-bdea-ca71e9c33a76}" />
+    <AppModuleComponent type="60" id="{661157fe-2fc9-4eaa-835f-5bfa2f7b64f7}" />
+    <AppModuleComponent type="1" schemaName="contract" />
+    <AppModuleComponent type="1" schemaName="msauto_deal" />
+    <AppModuleComponent type="1" schemaName="msauto_device" />
+    <AppModuleComponent type="1" schemaName="msauto_devicebrand" />
+    <AppModuleComponent type="1" schemaName="msauto_deviceclass" />
+    <AppModuleComponent type="1" schemaName="msauto_devicegeneration" />
+    <AppModuleComponent type="1" schemaName="msauto_devicemodel" />
+    <AppModuleComponent type="1" schemaName="msauto_devicemodelcode" />
+    <AppModuleComponent type="1" schemaName="msauto_devicestyle" />
+    <AppModuleComponent type="1" schemaName="msauto_devicetype" />
+    <AppModuleComponent type="1" schemaName="msauto_devicevariant" />
+    <AppModuleComponent type="1" schemaName="msauto_devicewarranty" />
+    <AppModuleComponent type="1" schemaName="sharepointdocumentlocation" />
+    <AppModuleComponent type="1" schemaName="email" />
+    <AppModuleComponent type="1" schemaName="entitlement" />
+    <AppModuleComponent type="1" schemaName="expiredprocess" />
+    <AppModuleComponent type="1" schemaName="msauto_fleet" />
+    <AppModuleComponent type="1" schemaName="goal" />
+    <AppModuleComponent type="1" schemaName="metric" />
+    <AppModuleComponent type="1" schemaName="invoice" />
+    <AppModuleComponent type="1" schemaName="knowledgearticle" />
+    <AppModuleComponent type="1" schemaName="knowledgebaserecord" />
+    <AppModuleComponent type="1" schemaName="lead" />
+    <AppModuleComponent type="60" id="{141396eb-44e2-43f3-9aac-2f2f7d3b6c04}" />
+    <AppModuleComponent type="60" id="{aa7c154f-e2f8-45db-b780-a9a8a96332fe}" />
+    <AppModuleComponent type="1" schemaName="leadtoopportunitysalesprocess" />
+    <AppModuleComponent type="1" schemaName="mailbox" />
+    <AppModuleComponent type="1" schemaName="list" />
+    <AppModuleComponent type="1" schemaName="newprocess" />
+    <AppModuleComponent type="1" schemaName="opportunity" />
+    <AppModuleComponent type="1" schemaName="opportunitysalesprocess" />
+    <AppModuleComponent type="1" schemaName="salesorder" />
+    <AppModuleComponent type="1" schemaName="phonecall" />
+    <AppModuleComponent type="1" schemaName="phonetocaseprocess" />
+    <AppModuleComponent type="1" schemaName="msdyn_postconfig" />
+    <AppModuleComponent type="1" schemaName="msdyn_postruleconfig" />
+    <AppModuleComponent type="1" schemaName="workflow" />
+    <AppModuleComponent type="1" schemaName="product" />
+    <AppModuleComponent type="1" schemaName="queue" />
+    <AppModuleComponent type="1" schemaName="queueitem" />
+    <AppModuleComponent type="1" schemaName="bulkoperation" />
+    <AppModuleComponent type="1" schemaName="quote" />
+    <AppModuleComponent type="1" schemaName="report" />
+    <AppModuleComponent type="1" schemaName="goalrollupquery" />
+    <AppModuleComponent type="1" schemaName="msauto_salescontract" />
+    <AppModuleComponent type="1" schemaName="salesliterature" />
+    <AppModuleComponent type="1" schemaName="service" />
+    <AppModuleComponent type="1" schemaName="msauto_serviceappointment" />
+    <AppModuleComponent type="1" schemaName="msauto_servicecontract" />
+    <AppModuleComponent type="1" schemaName="sharepointsite" />
+    <AppModuleComponent type="1" schemaName="socialprofile" />
+    <AppModuleComponent type="1" schemaName="solution" />
+    <AppModuleComponent type="1" schemaName="msdyn_solutionhistory" />
+    <AppModuleComponent type="1" schemaName="syncerror" />
+    <AppModuleComponent type="1" schemaName="task" />
+    <AppModuleComponent type="1" schemaName="msauto_testdrive" />
+    <AppModuleComponent type="1" schemaName="msauto_tradein" />
+    <AppModuleComponent type="1" schemaName="translationprocess" />
+    <AppModuleComponent type="1" schemaName="msdyn_upgraderun" />
+  </AppModuleComponents>
+  <AppModuleRoleMaps>
+    <Role id="{627090ff-40a3-4053-8790-584edc5be201}" />
+    <Role id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
+  </AppModuleRoleMaps>
+  <LocalizedNames>
+    <LocalizedName description="Auto Hub" languagecode="1033" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description description="Auto Hub" languagecode="1033" />
+  </Descriptions>
+</AppModule>

@@ -1,0 +1,869 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ImportExportXml version="9.1.0.6032" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SolutionManifest>
+    <UniqueName>MicrosoftCommonDataModelforAutomotiveApps</UniqueName>
+    <LocalizedNames>
+      <LocalizedName description="Microsoft Common Data Model for Automotive Apps" languagecode="1033" />
+    </LocalizedNames>
+    <Descriptions />
+    <Version>1.0.0.0</Version>
+    <Managed>0</Managed>
+    <Publisher>
+      <UniqueName>microsoftdynamics365automotiveaccelerator</UniqueName>
+      <LocalizedNames>
+        <LocalizedName description="Microsoft Dynamics 365 Automotive Accelerator" languagecode="1033" />
+      </LocalizedNames>
+      <Descriptions>
+        <Description description="Microsoft Dynamics 365 Automotive Accelerator" languagecode="1033" />
+      </Descriptions>
+      <EMailAddress xsi:nil="true"></EMailAddress>
+      <SupportingWebsiteUrl xsi:nil="true"></SupportingWebsiteUrl>
+      <CustomizationPrefix>msauto</CustomizationPrefix>
+      <CustomizationOptionValuePrefix>97223</CustomizationOptionValuePrefix>
+      <Addresses>
+        <Address>
+          <AddressNumber>1</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+        <Address>
+          <AddressNumber>2</AddressNumber>
+          <AddressTypeCode>1</AddressTypeCode>
+          <City xsi:nil="true"></City>
+          <County xsi:nil="true"></County>
+          <Country xsi:nil="true"></Country>
+          <Fax xsi:nil="true"></Fax>
+          <FreightTermsCode xsi:nil="true"></FreightTermsCode>
+          <ImportSequenceNumber xsi:nil="true"></ImportSequenceNumber>
+          <Latitude xsi:nil="true"></Latitude>
+          <Line1 xsi:nil="true"></Line1>
+          <Line2 xsi:nil="true"></Line2>
+          <Line3 xsi:nil="true"></Line3>
+          <Longitude xsi:nil="true"></Longitude>
+          <Name xsi:nil="true"></Name>
+          <PostalCode xsi:nil="true"></PostalCode>
+          <PostOfficeBox xsi:nil="true"></PostOfficeBox>
+          <PrimaryContactName xsi:nil="true"></PrimaryContactName>
+          <ShippingMethodCode>1</ShippingMethodCode>
+          <StateOrProvince xsi:nil="true"></StateOrProvince>
+          <Telephone1 xsi:nil="true"></Telephone1>
+          <Telephone2 xsi:nil="true"></Telephone2>
+          <Telephone3 xsi:nil="true"></Telephone3>
+          <TimeZoneRuleVersionNumber xsi:nil="true"></TimeZoneRuleVersionNumber>
+          <UPSZone xsi:nil="true"></UPSZone>
+          <UTCOffset xsi:nil="true"></UTCOffset>
+          <UTCConversionTimeZoneCode xsi:nil="true"></UTCConversionTimeZoneCode>
+        </Address>
+      </Addresses>
+    </Publisher>
+    <RootComponents>
+      <RootComponent type="1" schemaName="lead" behavior="2" />
+      <RootComponent type="1" schemaName="msauto_serviceappointment" behavior="2" />
+      <RootComponent type="1" schemaName="opportunity" behavior="2" />
+      <RootComponent type="60" id="{0ab4cd2d-4782-e911-a81a-000d3a3b55b9}" behavior="0" />
+      <RootComponent type="60" id="{4c26b5de-4782-e911-a81a-000d3a3b55b9}" behavior="0" />
+      <RootComponent type="60" id="{4d95db2f-eaa9-41aa-93b2-be5b941bee38}" behavior="0" />
+      <RootComponent type="60" id="{d5c19d41-4882-e911-a81a-000d3a3b55b9}" behavior="0" />
+      <RootComponent type="62" schemaName="msauto_AutoHub" behavior="0" />
+      <RootComponent type="62" behavior="0" />
+      <RootComponent type="80" schemaName="msauto_AutoHub" behavior="0" />
+    </RootComponents>
+    <MissingDependencies>
+      <MissingDependency>
+        <Required key="0" type="1" schemaName="lead" displayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="1" type="59" schemaName="Floorup Leads by Status" displayName="Floorup Leads by Status" parentSchemaName="lead" parentDisplayName="Lead" id="{d985d3d0-4882-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="2" type="1" schemaName="msauto_serviceappointment" displayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="3" type="59" schemaName="Service Appointment by Type" displayName="Service Appointment by Type" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" id="{cc5894d8-4682-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="2" type="1" schemaName="msauto_serviceappointment" displayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="4" type="59" schemaName="Scheduled Start by Scheduled Start and Service Appointment Type" displayName="Scheduled Start by Scheduled Start and Service Appointment Type" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" id="{b9a13bcc-4682-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="2" type="1" schemaName="msauto_serviceappointment" displayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="5" type="59" schemaName="Status by Status and Service Appointment Type" displayName="Status by Status and Service Appointment Type" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" id="{e4ca2cef-4682-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="0" type="1" schemaName="lead" displayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="6" type="59" schemaName="Leads by Status Group" displayName="Leads by Status Group" parentSchemaName="lead" parentDisplayName="Lead" id="{70c81788-4882-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="0" type="1" schemaName="lead" displayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="7" type="59" schemaName="Floorup Leads by Salesperson" displayName="Floorup Leads by Salesperson" parentSchemaName="lead" parentDisplayName="Lead" id="{8f4101e3-4882-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="0" type="1" schemaName="lead" displayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="0" type="1" schemaName="lead" displayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="0" type="1" schemaName="lead" displayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="10" type="60" displayName="Sales Manager Dashboard" id="{4d95db2f-eaa9-41aa-93b2-be5b941bee38}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="0" type="1" schemaName="lead" displayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="11" type="60" displayName="Showroom Analysis" id="{d5c19d41-4882-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="0" type="1" schemaName="lead" displayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="12" type="60" displayName="Salesperson Dashboard" id="{4c26b5de-4782-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="0" type="1" schemaName="lead" displayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="2" type="1" schemaName="msauto_serviceappointment" displayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="14" type="60" displayName="Service Center Dashboard" id="{0ab4cd2d-4782-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="2" type="1" schemaName="msauto_serviceappointment" displayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="2" type="1" schemaName="msauto_serviceappointment" displayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="2" type="1" schemaName="msauto_serviceappointment" displayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="2" type="1" schemaName="msauto_serviceappointment" displayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="2" type="1" schemaName="msauto_serviceappointment" displayName="Service Appointment" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="15" type="1" schemaName="opportunity" displayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="15" type="1" schemaName="opportunity" displayName="Opportunity" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="0" type="1" schemaName="lead" displayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="0" type="1" schemaName="lead" displayName="Lead" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="15" type="1" schemaName="opportunity" displayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="15" type="1" schemaName="opportunity" displayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="15" type="1" schemaName="opportunity" displayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="12" type="60" displayName="Salesperson Dashboard" id="{4c26b5de-4782-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="15" type="1" schemaName="opportunity" displayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="16" type="1" schemaName="list" displayName="Marketing List" solution="msdynce_Marketing (9.0.4.37)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="17" type="1" schemaName="msauto_devicegeneration" displayName="Device Generation" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="18" type="1" schemaName="msauto_devicetype" displayName="Device Type" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="19" type="1" schemaName="product" displayName="Product" solution="msdynce_ProductManagement (9.0.4.0066)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="20" type="1" schemaName="msauto_deal" displayName="Deal" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="21" type="1" schemaName="msauto_devicemodelcode" displayName="Device Model Code" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="22" type="1" schemaName="msauto_devicebrand" displayName="Device Brand" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="23" type="1" schemaName="msauto_servicecontract" displayName="Service Contract" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="24" type="1" schemaName="msauto_deviceclass" displayName="Device Class" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="25" type="1" schemaName="phonetocaseprocess" displayName="Phone To Case Process" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="26" type="1" schemaName="bulkoperation" displayName="Quick Campaign" solution="msdynce_Marketing (9.0.4.37)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="27" type="1" schemaName="opportunitysalesprocess" displayName="Opportunity Sales Process" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="28" type="1" schemaName="msauto_device" displayName="Device" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="29" type="1" schemaName="msauto_business" displayName="Business" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="30" type="1" schemaName="msauto_devicewarranty" displayName="Device Warranty" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="31" type="1" schemaName="quote" displayName="Quote" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="32" type="1" schemaName="msauto_testdrive" displayName="Test Drive" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="33" type="1" schemaName="msauto_businessfacility" displayName="Business Facility" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="34" type="1" schemaName="invoice" displayName="Invoice" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="35" type="1" schemaName="contract" displayName="Contract" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="36" type="1" schemaName="msdyn_solutionhistory" displayName="Solution History" solution="SolutionHistoryAPIs (9.1.0.8)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="37" type="1" schemaName="msdyn_postconfig" displayName="Post Configuration" solution="ActivityFeedsCore (9.0.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="38" type="1" schemaName="campaign" displayName="Campaign" solution="msdynce_Marketing (9.0.4.37)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="39" type="1" schemaName="salesorder" displayName="Order" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="40" type="1" schemaName="salesliterature" displayName="Sales Literature" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="41" type="1" schemaName="msdyn_upgraderun" displayName="Upgrade Run" solution="SolutionUpgradeInfrastructure (2.6.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="42" type="1" schemaName="msauto_devicevariant" displayName="Device Variant" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="43" type="1" schemaName="incident" displayName="Case" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="44" type="1" schemaName="msdyn_postruleconfig" displayName="Post Rule Configuration" solution="ActivityFeedsCore (9.0.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="45" type="1" schemaName="leadtoopportunitysalesprocess" displayName="Lead To Opportunity Sales Process" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="46" type="1" schemaName="msauto_devicestyle" displayName="Device Style" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="47" type="1" schemaName="competitor" displayName="Competitor" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="48" type="1" schemaName="msauto_tradein" displayName="Trade In" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="21" type="1" schemaName="msauto_devicemodelcode" displayName="Device Model Code" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="23" type="1" schemaName="msauto_servicecontract" displayName="Service Contract" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="22" type="1" schemaName="msauto_devicebrand" displayName="Device Brand" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="49" type="1" schemaName="service" displayName="Service" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="50" type="1" schemaName="msauto_businessoperation" displayName="Business Operation" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="38" type="1" schemaName="campaign" displayName="Campaign" solution="msdynce_Marketing (9.0.4.37)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="50" type="1" schemaName="msauto_businessoperation" displayName="Business Operation" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="20" type="1" schemaName="msauto_deal" displayName="Deal" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="34" type="1" schemaName="invoice" displayName="Invoice" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="35" type="1" schemaName="contract" displayName="Contract" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="31" type="1" schemaName="quote" displayName="Quote" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="45" type="1" schemaName="leadtoopportunitysalesprocess" displayName="Lead To Opportunity Sales Process" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="41" type="1" schemaName="msdyn_upgraderun" displayName="Upgrade Run" solution="SolutionUpgradeInfrastructure (2.6.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="43" type="1" schemaName="incident" displayName="Case" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="28" type="1" schemaName="msauto_device" displayName="Device" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="32" type="1" schemaName="msauto_testdrive" displayName="Test Drive" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="51" type="1" schemaName="msauto_salescontract" displayName="Sales Contract" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="36" type="1" schemaName="msdyn_solutionhistory" displayName="Solution History" solution="SolutionHistoryAPIs (9.1.0.8)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="48" type="1" schemaName="msauto_tradein" displayName="Trade In" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="27" type="1" schemaName="opportunitysalesprocess" displayName="Opportunity Sales Process" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="18" type="1" schemaName="msauto_devicetype" displayName="Device Type" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="49" type="1" schemaName="service" displayName="Service" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="40" type="1" schemaName="salesliterature" displayName="Sales Literature" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="26" type="1" schemaName="bulkoperation" displayName="Quick Campaign" solution="msdynce_Marketing (9.0.4.37)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="16" type="1" schemaName="list" displayName="Marketing List" solution="msdynce_Marketing (9.0.4.37)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="52" type="1" schemaName="msauto_fleet" displayName="Fleet" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="46" type="1" schemaName="msauto_devicestyle" displayName="Device Style" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="29" type="1" schemaName="msauto_business" displayName="Business" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="30" type="1" schemaName="msauto_devicewarranty" displayName="Device Warranty" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="47" type="1" schemaName="competitor" displayName="Competitor" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="53" type="1" schemaName="msauto_devicemodel" displayName="Device Model" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="17" type="1" schemaName="msauto_devicegeneration" displayName="Device Generation" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="44" type="1" schemaName="msdyn_postruleconfig" displayName="Post Rule Configuration" solution="ActivityFeedsCore (9.0.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="39" type="1" schemaName="salesorder" displayName="Order" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="37" type="1" schemaName="msdyn_postconfig" displayName="Post Configuration" solution="ActivityFeedsCore (9.0.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="54" type="1" schemaName="entitlement" displayName="Entitlement" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="42" type="1" schemaName="msauto_devicevariant" displayName="Device Variant" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="25" type="1" schemaName="phonetocaseprocess" displayName="Phone To Case Process" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="24" type="1" schemaName="msauto_deviceclass" displayName="Device Class" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="33" type="1" schemaName="msauto_businessfacility" displayName="Business Facility" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="19" type="1" schemaName="product" displayName="Product" solution="msdynce_ProductManagement (9.0.4.0066)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="32" type="1" schemaName="msauto_testdrive" displayName="Test Drive" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="10" type="60" displayName="Sales Manager Dashboard" id="{4d95db2f-eaa9-41aa-93b2-be5b941bee38}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="19" type="1" schemaName="product" displayName="Product" solution="msdynce_ProductManagement (9.0.4.0066)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="53" type="1" schemaName="msauto_devicemodel" displayName="Device Model" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="30" type="1" schemaName="msauto_devicewarranty" displayName="Device Warranty" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="32" type="1" schemaName="msauto_testdrive" displayName="Test Drive" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="47" type="1" schemaName="competitor" displayName="Competitor" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="23" type="1" schemaName="msauto_servicecontract" displayName="Service Contract" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="39" type="1" schemaName="salesorder" displayName="Order" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="31" type="1" schemaName="quote" displayName="Quote" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="41" type="1" schemaName="msdyn_upgraderun" displayName="Upgrade Run" solution="SolutionUpgradeInfrastructure (2.6.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="28" type="1" schemaName="msauto_device" displayName="Device" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="48" type="1" schemaName="msauto_tradein" displayName="Trade In" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="20" type="1" schemaName="msauto_deal" displayName="Deal" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="37" type="1" schemaName="msdyn_postconfig" displayName="Post Configuration" solution="ActivityFeedsCore (9.0.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="24" type="1" schemaName="msauto_deviceclass" displayName="Device Class" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="16" type="1" schemaName="list" displayName="Marketing List" solution="msdynce_Marketing (9.0.4.37)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="21" type="1" schemaName="msauto_devicemodelcode" displayName="Device Model Code" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="25" type="1" schemaName="phonetocaseprocess" displayName="Phone To Case Process" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="29" type="1" schemaName="msauto_business" displayName="Business" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="44" type="1" schemaName="msdyn_postruleconfig" displayName="Post Rule Configuration" solution="ActivityFeedsCore (9.0.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="17" type="1" schemaName="msauto_devicegeneration" displayName="Device Generation" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="49" type="1" schemaName="service" displayName="Service" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="45" type="1" schemaName="leadtoopportunitysalesprocess" displayName="Lead To Opportunity Sales Process" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="38" type="1" schemaName="campaign" displayName="Campaign" solution="msdynce_Marketing (9.0.4.37)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="26" type="1" schemaName="bulkoperation" displayName="Quick Campaign" solution="msdynce_Marketing (9.0.4.37)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="52" type="1" schemaName="msauto_fleet" displayName="Fleet" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="36" type="1" schemaName="msdyn_solutionhistory" displayName="Solution History" solution="SolutionHistoryAPIs (9.1.0.8)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="34" type="1" schemaName="invoice" displayName="Invoice" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="42" type="1" schemaName="msauto_devicevariant" displayName="Device Variant" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="50" type="1" schemaName="msauto_businessoperation" displayName="Business Operation" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="27" type="1" schemaName="opportunitysalesprocess" displayName="Opportunity Sales Process" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="22" type="1" schemaName="msauto_devicebrand" displayName="Device Brand" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="35" type="1" schemaName="contract" displayName="Contract" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="40" type="1" schemaName="salesliterature" displayName="Sales Literature" solution="msdynce_Sales (9.0.4.0076)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="46" type="1" schemaName="msauto_devicestyle" displayName="Device Style" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="18" type="1" schemaName="msauto_devicetype" displayName="Device Type" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="51" type="1" schemaName="msauto_salescontract" displayName="Sales Contract" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="33" type="1" schemaName="msauto_businessfacility" displayName="Business Facility" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="43" type="1" schemaName="incident" displayName="Case" solution="msdynce_Service (9.0.5.56)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="55" type="2" schemaName="statecode" displayName="Status" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="6" type="59" schemaName="Leads by Status Group" displayName="Leads by Status Group" parentSchemaName="lead" parentDisplayName="Lead" id="{70c81788-4882-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="56" type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="7" type="59" schemaName="Floorup Leads by Salesperson" displayName="Floorup Leads by Salesperson" parentSchemaName="lead" parentDisplayName="Lead" id="{8f4101e3-4882-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="57" type="2" schemaName="statuscode" displayName="Status Reason" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="7" type="59" schemaName="Floorup Leads by Salesperson" displayName="Floorup Leads by Salesperson" parentSchemaName="lead" parentDisplayName="Lead" id="{8f4101e3-4882-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="58" type="2" schemaName="statecode" displayName="Status" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="5" type="59" schemaName="Status by Status and Service Appointment Type" displayName="Status by Status and Service Appointment Type" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" id="{e4ca2cef-4682-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="59" type="2" schemaName="msauto_serviceappointmenttypeid" displayName="Service Appointment Type" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="5" type="59" schemaName="Status by Status and Service Appointment Type" displayName="Status by Status and Service Appointment Type" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" id="{e4ca2cef-4682-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="59" type="2" schemaName="msauto_serviceappointmenttypeid" displayName="Service Appointment Type" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="3" type="59" schemaName="Service Appointment by Type" displayName="Service Appointment by Type" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" id="{cc5894d8-4682-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="59" type="2" schemaName="msauto_serviceappointmenttypeid" displayName="Service Appointment Type" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="4" type="59" schemaName="Scheduled Start by Scheduled Start and Service Appointment Type" displayName="Scheduled Start by Scheduled Start and Service Appointment Type" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" id="{b9a13bcc-4682-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="60" type="2" schemaName="msauto_scheduledstart" displayName="Scheduled Start" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" />
+        <Dependent key="4" type="59" schemaName="Scheduled Start by Scheduled Start and Service Appointment Type" displayName="Scheduled Start by Scheduled Start and Service Appointment Type" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" id="{b9a13bcc-4682-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="57" type="2" schemaName="statuscode" displayName="Status Reason" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="1" type="59" schemaName="Floorup Leads by Status" displayName="Floorup Leads by Status" parentSchemaName="lead" parentDisplayName="Lead" id="{d985d3d0-4882-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="61" type="2" schemaName="fullname" displayName="Name" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="62" type="26" schemaName="Open Leads" displayName="Open Leads" parentSchemaName="lead" parentDisplayName="Lead" id="{00000000-0000-0000-00aa-000010001006}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="57" type="2" schemaName="statuscode" displayName="Status Reason" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="62" type="26" schemaName="Open Leads" displayName="Open Leads" parentSchemaName="lead" parentDisplayName="Lead" id="{00000000-0000-0000-00aa-000010001006}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="63" type="2" schemaName="createdon" displayName="Created On" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="62" type="26" schemaName="Open Leads" displayName="Open Leads" parentSchemaName="lead" parentDisplayName="Lead" id="{00000000-0000-0000-00aa-000010001006}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="64" type="2" schemaName="subject" displayName="Topic" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="62" type="26" schemaName="Open Leads" displayName="Open Leads" parentSchemaName="lead" parentDisplayName="Lead" id="{00000000-0000-0000-00aa-000010001006}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="55" type="2" schemaName="statecode" displayName="Status" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="62" type="26" schemaName="Open Leads" displayName="Open Leads" parentSchemaName="lead" parentDisplayName="Lead" id="{00000000-0000-0000-00aa-000010001006}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="65" type="2" schemaName="leadsourcecode" displayName="Lead Source" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="62" type="26" schemaName="Open Leads" displayName="Open Leads" parentSchemaName="lead" parentDisplayName="Lead" id="{00000000-0000-0000-00aa-000010001006}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="56" type="2" schemaName="ownerid" displayName="Owner" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="62" type="26" schemaName="Open Leads" displayName="Open Leads" parentSchemaName="lead" parentDisplayName="Lead" id="{00000000-0000-0000-00aa-000010001006}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="66" type="2" schemaName="leadid" displayName="Lead" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" />
+        <Dependent key="62" type="26" schemaName="Open Leads" displayName="Open Leads" parentSchemaName="lead" parentDisplayName="Lead" id="{00000000-0000-0000-00aa-000010001006}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="67" type="26" schemaName="My Open Opportunities" displayName="My Open Opportunities" parentSchemaName="opportunity" parentDisplayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" id="{00000000-0000-0000-00aa-000010003000}" />
+        <Dependent key="12" type="60" displayName="Salesperson Dashboard" id="{4c26b5de-4782-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="68" type="26" schemaName="All Leads" displayName="All Leads" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{5a926b99-3a5f-df11-ae90-00155d2e3002}" />
+        <Dependent key="11" type="60" displayName="Showroom Analysis" id="{d5c19d41-4882-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="69" type="26" schemaName="My Open Leads" displayName="My Open Leads" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{00000000-0000-0000-00aa-000010001005}" />
+        <Dependent key="12" type="60" displayName="Salesperson Dashboard" id="{4c26b5de-4782-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="70" type="26" schemaName="Active Test Drives" displayName="Active Test Drives" parentSchemaName="msauto_testdrive" parentDisplayName="Test Drive" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" id="{b4de8c51-4d01-4743-add0-0a5661b7f25a}" />
+        <Dependent key="10" type="60" displayName="Sales Manager Dashboard" id="{4d95db2f-eaa9-41aa-93b2-be5b941bee38}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="69" type="26" schemaName="My Open Leads" displayName="My Open Leads" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{00000000-0000-0000-00aa-000010001005}" />
+        <Dependent key="10" type="60" displayName="Sales Manager Dashboard" id="{4d95db2f-eaa9-41aa-93b2-be5b941bee38}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="68" type="26" schemaName="All Leads" displayName="All Leads" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{5a926b99-3a5f-df11-ae90-00155d2e3002}" />
+        <Dependent key="10" type="60" displayName="Sales Manager Dashboard" id="{4d95db2f-eaa9-41aa-93b2-be5b941bee38}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="62" type="26" schemaName="Open Leads" displayName="Open Leads" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{00000000-0000-0000-00aa-000010001006}" />
+        <Dependent key="62" type="26" schemaName="Open Leads" displayName="Open Leads" parentSchemaName="lead" parentDisplayName="Lead" id="{00000000-0000-0000-00aa-000010001006}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="71" type="26" schemaName="Active Service Appointments" displayName="Active Service Appointments" parentSchemaName="msauto_serviceappointment" parentDisplayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (0.7.0.0)" id="{f00dc3d3-fe94-49ac-8426-8a825c2c0a31}" />
+        <Dependent key="14" type="60" displayName="Service Center Dashboard" id="{0ab4cd2d-4782-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="72" type="59" schemaName="Leads by Owner" displayName="Leads by Owner" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{ad936200-375f-df11-ae90-00155d2e3002}" />
+        <Dependent key="72" type="59" schemaName="Leads by Owner" displayName="Leads by Owner" parentSchemaName="lead" parentDisplayName="Lead" id="{ad936200-375f-df11-ae90-00155d2e3002}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="73" type="59" schemaName="Leads by Source (DOUGHNUT)" displayName="Leads by Source (DOUGHNUT)" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{d311600c-163a-e711-80e3-00155d42a416}" />
+        <Dependent key="73" type="59" schemaName="Leads by Source (DOUGHNUT)" displayName="Leads by Source (DOUGHNUT)" parentSchemaName="lead" parentDisplayName="Lead" id="{d311600c-163a-e711-80e3-00155d42a416}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="74" type="59" schemaName="Leads by Owner (Tag Chart)" displayName="Leads by Owner (Tag Chart)" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{b92a5119-193a-e711-80e3-00155d42a416}" />
+        <Dependent key="74" type="59" schemaName="Leads by Owner (Tag Chart)" displayName="Leads by Owner (Tag Chart)" parentSchemaName="lead" parentDisplayName="Lead" id="{b92a5119-193a-e711-80e3-00155d42a416}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="75" type="59" schemaName="Leads by Source" displayName="Leads by Source" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{ee3c733d-5693-de11-97d4-00155da3b01e}" />
+        <Dependent key="75" type="59" schemaName="Leads by Source" displayName="Leads by Source" parentSchemaName="lead" parentDisplayName="Lead" id="{ee3c733d-5693-de11-97d4-00155da3b01e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="76" type="59" schemaName="Leads by Rating" displayName="Leads by Rating" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{f5976c58-5693-de11-97d4-00155da3b01e}" />
+        <Dependent key="76" type="59" schemaName="Leads by Rating" displayName="Leads by Rating" parentSchemaName="lead" parentDisplayName="Lead" id="{f5976c58-5693-de11-97d4-00155da3b01e}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="75" type="59" schemaName="Leads by Source" displayName="Leads by Source" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{ee3c733d-5693-de11-97d4-00155da3b01e}" />
+        <Dependent key="10" type="60" displayName="Sales Manager Dashboard" id="{4d95db2f-eaa9-41aa-93b2-be5b941bee38}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="76" type="59" schemaName="Leads by Rating" displayName="Leads by Rating" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{f5976c58-5693-de11-97d4-00155da3b01e}" />
+        <Dependent key="10" type="60" displayName="Sales Manager Dashboard" id="{4d95db2f-eaa9-41aa-93b2-be5b941bee38}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="76" type="59" schemaName="Leads by Rating" displayName="Leads by Rating" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{f5976c58-5693-de11-97d4-00155da3b01e}" />
+        <Dependent key="12" type="60" displayName="Salesperson Dashboard" id="{4c26b5de-4782-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="72" type="59" schemaName="Leads by Owner" displayName="Leads by Owner" parentSchemaName="lead" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{ad936200-375f-df11-ae90-00155d2e3002}" />
+        <Dependent key="10" type="60" displayName="Sales Manager Dashboard" id="{4d95db2f-eaa9-41aa-93b2-be5b941bee38}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="77" type="59" schemaName="Top Opportunities" displayName="Top Opportunities" parentSchemaName="opportunity" parentDisplayName="Opportunity" solution="msdynce_Sales (9.0.4.0076)" id="{ebbe5dd1-8397-4be4-aa79-7b29a3af9743}" />
+        <Dependent key="12" type="60" displayName="Salesperson Dashboard" id="{4c26b5de-4782-e911-a81a-000d3a3b55b9}" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="78" type="60" displayName="Lead Quick Create" parentDisplayName="Lead" solution="msdynce_LeadManagement (9.0.4.0066)" id="{aa7c154f-e2f8-45db-b780-a9a8a96332fe}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="79" type="60" displayName="Sales Performance Dashboard" solution="msdynce_Sales (9.0.4.0076)" id="{25b754f5-7563-df11-ae90-00155d2e3002}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="80" type="60" displayName="Account - Auto" parentDisplayName="Account" solution="MicrosoftCommonDataModelforAutomotiveSales (0.6.0.0)" id="{c00459d8-83dd-4dfa-a14c-4ebcd7747192}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="81" type="60" displayName="Contact Quick Create" parentDisplayName="Contact" solution="msdynce_AppCommon (9.0.4.0066)" id="{661157fe-2fc9-4eaa-835f-5bfa2f7b64f7}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="82" type="60" displayName="Sales Activity Social Dashboard" solution="msdynce_Sales (9.0.4.0076)" id="{2701de60-8f2a-48a4-8262-4a35ca7441fa}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="83" type="60" displayName="Sales Activity Dashboard" solution="msdynce_Sales (9.0.4.0076)" id="{45f88f83-0e67-443b-bd05-81d49719f6b1}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="84" type="60" displayName="Dealership Dashboard" solution="MicrosoftCommonDataModelforAutomotiveSales (0.6.0.0)" id="{757bf793-da72-482f-9adb-e1cd92560a03}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="85" type="60" displayName="Lead - Auto" parentDisplayName="Lead" solution="MicrosoftCommonDataModelforAutomotiveSales (0.6.0.0)" id="{141396eb-44e2-43f3-9aac-2f2f7d3b6c04}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="86" type="60" displayName="Sales Dashboard" solution="msdynce_Sales (9.0.4.0076)" id="{d1f511a8-1ead-e211-bb72-00155da9a201}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="87" type="60" displayName="Contact - Auto" parentDisplayName="Contact" solution="MicrosoftCommonDataModelforAutomotiveSales (0.6.0.0)" id="{c1c72637-5032-40f8-bdea-ca71e9c33a76}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="88" type="60" displayName="Sales Overview Dashboard" solution="msdynce_Sales (9.0.4.0076)" id="{3b5d39a7-b216-e711-80d8-00155d896f83}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="89" type="60" displayName="Sales Insights" parentDisplayName="Contact" solution="SICommon (9.0.2.161)" id="{293c878f-f068-40a0-ae48-4297e060871c}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="90" type="60" displayName="Account Quick Create" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{c9e7ec2d-efca-4e4c-b3e3-f63c4bba5e4b}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="91" type="60" displayName="Account Hierarchy Tile Form" parentDisplayName="Account" solution="msdynce_AppCommon (9.0.4.0066)" id="{69cff312-cfb6-4289-9631-249ab85d2c62}" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="92" type="61" schemaName="msdyn_/Images/Wall_16.png" displayName="msdyn_/Images/Wall_16.png" solution="ActivityFeedsCore (9.0.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="93" type="61" schemaName="msdyn_/PersonalWall.htm" displayName="msdyn_/PersonalWall.htm" solution="ActivityFeedsCore (9.0.0.0)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="94" type="61" schemaName="msdyn_/Images/AppModule_Default_Icon.png" displayName="msdyn_/Images/AppModule_Default_Icon.png" solution="AppModuleWebResources (2.5)" />
+        <Dependent key="9" type="80" schemaName="msauto_AutoHub" displayName="Auto Hub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="95" type="61" schemaName="msdyn_appmanagementcontrol" displayName="msdyn_appmanagementcontrol" solution="AppModuleWebResources (2.5)" />
+        <Dependent key="8" type="62" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="95" type="61" schemaName="msdyn_appmanagementcontrol" displayName="msdyn_appmanagementcontrol" solution="AppModuleWebResources (2.5)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="92" type="61" schemaName="msdyn_/Images/Wall_16.png" displayName="msdyn_/Images/Wall_16.png" solution="ActivityFeedsCore (9.0.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="93" type="61" schemaName="msdyn_/PersonalWall.htm" displayName="msdyn_/PersonalWall.htm" solution="ActivityFeedsCore (9.0.0.0)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="96" type="61" schemaName="msdyn_launchDesigner.html" displayName="msdyn_launchDesigner.html" solution="GuidedHelp (1.2.0.2)" />
+        <Dependent key="13" type="62" schemaName="msauto_AutoHub" />
+      </MissingDependency>
+    </MissingDependencies>
+  </SolutionManifest>
+</ImportExportXml>

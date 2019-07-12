@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Workflow WorkflowId="{7a71bd66-bf5f-e911-a953-000d3a3b9b3d}" Name="Recurrence -&gt; HTTP,Parse JSON,Apply to each,Create a new record" Description="Retrieve prospect information from an external API automatically on a timer and write that information to Dynamics." xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <JsonFileName>/Workflows/Recurrence-HTTPParseJSONApplytoeachCreateanewrecor-7A71BD66-BF5F-E911-A953-000D3A3B9B3D.json</JsonFileName>
+  <Type>1</Type>
+  <Subprocess>0</Subprocess>
+  <Category>5</Category>
+  <Mode>0</Mode>
+  <Scope>4</Scope>
+  <OnDemand>0</OnDemand>
+  <TriggerOnCreate>0</TriggerOnCreate>
+  <TriggerOnDelete>0</TriggerOnDelete>
+  <AsyncAutodelete>0</AsyncAutodelete>
+  <SyncWorkflowLogOnFailure>0</SyncWorkflowLogOnFailure>
+  <StateCode>0</StateCode>
+  <StatusCode>1</StatusCode>
+  <RunAs>1</RunAs>
+  <IsTransacted>1</IsTransacted>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <IsCustomizable>1</IsCustomizable>
+  <PrimaryEntity>none</PrimaryEntity>
+  <LocalizedNames>
+    <LocalizedName languagecode="1033" description="Recurrence -&gt; HTTP,Parse JSON,Apply to each,Create a new record" />
+  </LocalizedNames>
+  <Descriptions>
+    <Description languagecode="1033" description="Retrieve prospect information from an external API automatically on a timer and write that information to Dynamics." />
+  </Descriptions>
+</Workflow>
