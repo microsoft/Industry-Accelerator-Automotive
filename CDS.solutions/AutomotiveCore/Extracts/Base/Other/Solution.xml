@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.1.0.6032" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.1.0.8031" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>MicrosoftCommonDataModelforAutomotive</UniqueName>
     <LocalizedNames>
@@ -8,7 +8,7 @@
     <Descriptions>
       <Description description="Microsoft Common Data Model for Automotive" languagecode="1033" />
     </Descriptions>
-    <Version>1.0.0.0</Version>
+    <Version>1.0.0.1</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>microsoftdynamics365automotiveaccelerator</UniqueName>
@@ -164,8 +164,10 @@
       <RootComponent type="60" id="{00d2c36d-923f-44b6-ac58-43b394db586b}" behavior="0" />
       <RootComponent type="60" id="{064ce895-2048-42e5-9b37-c76f365cb3df}" behavior="0" />
       <RootComponent type="60" id="{09c36403-1dfb-4221-baac-e5a7f123da7f}" behavior="0" />
+      <RootComponent type="60" id="{1a275a1a-a5e0-4cce-b557-fb0b0f2bd6e7}" behavior="0" />
       <RootComponent type="60" id="{2930a6ce-ba62-443d-b51f-a7d660500c07}" behavior="0" />
       <RootComponent type="60" id="{7d1aec62-9062-4fcc-af04-b368ac211532}" behavior="0" />
+      <RootComponent type="60" id="{a168d8f9-b024-4cab-9f6b-e344f828fec8}" behavior="0" />
       <RootComponent type="60" id="{c4146334-02fb-4b29-b18b-f80f8b346d84}" behavior="0" />
       <RootComponent type="60" id="{c7347e30-6e66-4bbe-aaba-377099e057bb}" behavior="0" />
       <RootComponent type="60" id="{df90729a-f5e6-4861-9222-6ea58b7fbcdf}" behavior="0" />

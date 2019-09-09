@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.1.0.5626" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.1.0.8031" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>AutoFlowsandApps</UniqueName>
     <LocalizedNames>
@@ -85,9 +85,7 @@
       <RootComponent type="29" id="{7a71bd66-bf5f-e911-a953-000d3a3b9b3d}" behavior="0" />
       <RootComponent type="29" id="{95ebdabe-d257-e911-a955-000d3a3b9316}" behavior="0" />
       <RootComponent type="29" id="{a39f3058-c157-e911-a957-000d3a3b9a2b}" behavior="0" />
-      <RootComponent type="300" schemaName="msauto_autoacceleratorenduserapp_bcc0c" behavior="0" />
-      <RootComponent type="300" schemaName="msauto_autoacceleratorschedulerapp_02941" behavior="0" />
-      <RootComponent type="300" schemaName="msauto_autoserviceacceleratorservicecenterapp_65997" behavior="0" />
+      <RootComponent type="300" schemaName="msauto_autoserviceacceleratorservicemanagerapp_0f040" behavior="0" />
     </RootComponents>
     <MissingDependencies />
   </SolutionManifest>

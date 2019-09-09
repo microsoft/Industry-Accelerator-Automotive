@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>msauto_autoserviceacceleratorservicemanagerapp_0f040</Name>
+  <AppVersion>2019-09-05T19:15:37Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.19083.21.0</CreatedByClientVersion>
+  <MinClientVersion>3.19083.21.0</MinClientVersion>
+  <Tags>{"minimumRequiredApiVersion":"2.2.0","sienaVersion":"20190905T191537Z-3.19083.21.0","primaryDeviceWidth":"1366","primaryDeviceHeight":"768","deviceCapabilities":"webcam,location","supportsPortrait":"false","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.19083.21","hasComponent":"false"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>rgba(0, 176, 240, 1)</BackgroundColor>
+  <DisplayName>Auto Service Accelerator - Service Manager App</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher xsi:nil="true"></Publisher>
+  <AuthorizationReferences xsi:nil="true"></AuthorizationReferences>
+  <ConnectionReferences>{"ec21cf0b-18af-4933-8959-4a101e3ce932":{"id":"/providers/microsoft.powerapps/apis/shared_commondataservice","displayName":"Common Data Service","iconUri":"https://connectoricons-prod.azureedge.net/commondataservice/icon_1.0.1247.1679.png","dataSources":["Accounts","Contacts","Business Operations","Device Types","Service Order Types","Service Appointments","Teams","Users","Service Appointment Types"],"dependencies":[],"dependents":[],"parameterHints":{},"isOnPremiseConnection":false,"dataSets":{"default.cds":{"dataSources":{"Accounts":{"tableName":"accounts"},"Contacts":{"tableName":"contacts"},"Business Operations":{"tableName":"msauto_businessoperations"},"Device Types":{"tableName":"msauto_devicetypes"},"Service Order Types":{"tableName":"msauto_serviceordertypes"},"Service Appointments":{"tableName":"msauto_serviceappointments"},"Teams":{"tableName":"teams"},"Users":{"tableName":"systemusers"},"Service Appointment Types":{"tableName":"msauto_serviceappointmenttypes"}}}},"apiTier":"Premium"},"c73cca51-d7eb-4f32-a2ea-a15e911a52ac":{"id":"/providers/microsoft.powerapps/apis/shared_office365users","displayName":"Office 365 Users","iconUri":"https://connectoricons-prod.azureedge.net/office365users/icon_1.0.1243.1662.png","dataSources":["Office365Users"],"dependencies":[],"dependents":[],"parameterHints":{},"isOnPremiseConnection":false,"dataSets":{},"apiTier":"Standard"}}</ConnectionReferences>
+  <DatabaseReferences>{}</DatabaseReferences>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies xsi:nil="true"></CdsDependencies>
+  <BackgroundImageUri>/CanvasApps/msauto_autoserviceacceleratorservicemanagerapp_0f0_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/msauto_autoserviceacceleratorservicemanagerapp_0f0_DocumentUri.msapp</DocumentUri>
+</CanvasApp>

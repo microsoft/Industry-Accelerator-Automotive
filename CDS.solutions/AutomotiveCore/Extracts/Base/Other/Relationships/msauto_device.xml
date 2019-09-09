@@ -81,7 +81,7 @@
     <CascadeShare>NoCascade</CascadeShare>
     <CascadeUnshare>NoCascade</CascadeUnshare>
     <CascadeRollupView>NoCascade</CascadeRollupView>
-    <IsValidForAdvancedFind>1</IsValidForAdvancedFind>
+    <IsValidForAdvancedFind>0</IsValidForAdvancedFind>
     <ReferencingAttributeName>msauto_DealDeviceId</ReferencingAttributeName>
     <RelationshipDescription>
       <Descriptions>
