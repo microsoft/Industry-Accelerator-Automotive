@@ -159,12 +159,12 @@
       <header id="{ae040d6a-2664-470d-8dc0-b37fd79a6488}" columns="111">
         <rows>
           <row>
-            <cell id="{14680333-0478-46ed-acf4-eb0737594cb8}">
+            <cell id="{14680333-0478-46ed-acf4-eb0737594cb8}" showlabel="false">
               <labels>
                 <label description="" languagecode="1033" />
               </labels>
             </cell>
-            <cell id="{30ac7614-d125-423a-8fa6-f3dba19ee107}">
+            <cell id="{30ac7614-d125-423a-8fa6-f3dba19ee107}" showlabel="false">
               <labels>
                 <label description="" languagecode="1033" />
               </labels>
@@ -179,7 +179,23 @@
         </rows>
       </header>
       <Navigation>
-        <NavBar></NavBar>
+        <NavBar>
+          <NavBarByRelationshipItem RelationshipName="msauto_msauto_deal_msauto_dealdevice_DealId" Id="nav_msauto_msauto_deal_msauto_dealdevice_DealId" Show="true" Sequence="10001" Area="Info">
+            <Titles>
+              <Title LCID="1033" Text="Deal Devices" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem RelationshipName="msauto_msauto_deal_msauto_salescontract_DealId" Sequence="10002" Area="Info" Id="nav_msauto_msauto_deal_msauto_salescontract_DealId">
+            <Titles>
+              <Title LCID="1033" Text="Sales Contracts" />
+            </Titles>
+          </NavBarByRelationshipItem>
+          <NavBarByRelationshipItem RelationshipName="msauto_msauto_deal_msauto_tradein_DealId" Sequence="10003" Area="Info" Id="nav_msauto_msauto_deal_msauto_tradein_DealId">
+            <Titles>
+              <Title LCID="1033" Text="Trade Ins" />
+            </Titles>
+          </NavBarByRelationshipItem>
+        </NavBar>
         <NavBarAreas>
           <NavBarArea Id="Info">
             <Titles>

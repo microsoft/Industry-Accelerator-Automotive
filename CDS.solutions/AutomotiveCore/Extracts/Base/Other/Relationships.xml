@@ -298,6 +298,7 @@
   <EntityRelationship Name="msauto_msauto_deal_msauto_dealdevice_DealId" />
   <EntityRelationship Name="msauto_msauto_deal_msauto_salescontract_DealId" />
   <EntityRelationship Name="msauto_msauto_deal_msauto_tradein_DealId" />
+  <EntityRelationship Name="msauto_msauto_dealdevice_msauto_dealdeviceaddon_DealDevice" />
   <EntityRelationship Name="msauto_msauto_dealerplate_msauto_dealerplatedeviceassignment_DealerPlateId" />
   <EntityRelationship Name="msauto_msauto_dealfile_msauto_deal_DealFileId" />
   <EntityRelationship Name="msauto_msauto_dealtype_msauto_dealterm_DealTypeId" />
