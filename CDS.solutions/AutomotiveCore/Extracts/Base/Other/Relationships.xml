@@ -253,6 +253,7 @@
   <EntityRelationship Name="msauto_account_msauto_servicecontract_ProviderAccount" />
   <EntityRelationship Name="msauto_account_msauto_serviceorder_Customer" />
   <EntityRelationship Name="msauto_account_msauto_serviceorderjobdetail_SubcontractorAccount" />
+  <EntityRelationship Name="msauto_account_msauto_testdrive_customerid" />
   <EntityRelationship Name="msauto_account_msauto_warranty_ProviderAccount" />
   <EntityRelationship Name="msauto_appointment_msauto_testdrive_AppointmentId" />
   <EntityRelationship Name="msauto_contact_msauto_aggregatekpicontext_DeviceId" />
@@ -266,6 +267,7 @@
   <EntityRelationship Name="msauto_contact_msauto_serviceappointment_Customer" />
   <EntityRelationship Name="msauto_contact_msauto_servicecontract_Customer" />
   <EntityRelationship Name="msauto_contact_msauto_serviceorder_Customer" />
+  <EntityRelationship Name="msauto_contact_msauto_testdrive_customerid" />
   <EntityRelationship Name="msauto_deviceinspectionchecklisttype_deviceinspectionchecklist_DeviceInspectionChecklistTypeId" />
   <EntityRelationship Name="msauto_msauto_aggregatekpi_msauto_aggregatekpicontext_AggregateKPIId" />
   <EntityRelationship Name="msauto_msauto_aggregatekpicontext_msauto_aggregate_AggregateKPIContextId" />
@@ -306,6 +308,7 @@
   <EntityRelationship Name="msauto_msauto_device_msauto_dealdevice_DeviceId" />
   <EntityRelationship Name="msauto_msauto_device_msauto_dealdeviceaddon_DealDeviceId" />
   <EntityRelationship Name="msauto_msauto_device_msauto_dealerplatedeviceassignment_DeviceId" />
+  <EntityRelationship Name="msauto_msauto_device_msauto_device_parentdeviceid" />
   <EntityRelationship Name="msauto_msauto_device_msauto_devicecomponent_DeviceId" />
   <EntityRelationship Name="msauto_msauto_device_msauto_devicecomponent_SubDeviceId" />
   <EntityRelationship Name="msauto_msauto_device_msauto_deviceinspection_DeviceId" />
@@ -378,6 +381,7 @@
   <EntityRelationship Name="msauto_msauto_devicevariant_msauto_device_DeviceVariantId" />
   <EntityRelationship Name="msauto_msauto_devicevariant_msauto_testdrive_DeviceVariantId" />
   <EntityRelationship Name="msauto_msauto_devicewarranty_msauto_serviceorderjobdetail_DeviceWarrantyId" />
+  <EntityRelationship Name="msauto_msauto_event_msauto_device" />
   <EntityRelationship Name="msauto_msauto_fleet_msauto_fleetdevice_FleetId" />
   <EntityRelationship Name="msauto_msauto_operationcode_msauto_serviceorderjobdetail_OperationCodeId" />
   <EntityRelationship Name="msauto_msauto_operationtype_msauto_businessoperation_OperationTypeId" />
@@ -419,6 +423,7 @@
   <EntityRelationship Name="msauto_systemuser_msauto_aggregatekpicontext_UserId" />
   <EntityRelationship Name="msauto_systemuser_msauto_devicemeasurement_MeasuredBy" />
   <EntityRelationship Name="msauto_systemuser_msauto_serviceorderjobdetail_TechnicianId" />
+  <EntityRelationship Name="msauto_testdrive_contactid_Contact" />
   <EntityRelationship Name="owner_msauto_aggregate" />
   <EntityRelationship Name="owner_msauto_aggregatekpi" />
   <EntityRelationship Name="owner_msauto_aggregatekpicontext" />

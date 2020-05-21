@@ -3,6 +3,8 @@
   <UniqueName>msauto_AutoHub</UniqueName>
   <IntroducedVersion>1.0</IntroducedVersion>
   <WebResourceId>953b9fac-1e5e-e611-80d6-00155ded156f</WebResourceId>
+  <OptimizedFor></OptimizedFor>
+  <WelcomePageId>008376d2-4f91-ea11-a811-000d3a329613</WelcomePageId>
   <FormFactor>1</FormFactor>
   <ClientType>4</ClientType>
   <NavigationType>0</NavigationType>
