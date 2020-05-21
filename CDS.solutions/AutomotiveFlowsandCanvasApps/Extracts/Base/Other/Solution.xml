@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.1.0.8031" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.1.0.16845" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
-    <UniqueName>AutoFlowsandApps</UniqueName>
+    <UniqueName>AutoServiceManagerCanvasApp</UniqueName>
     <LocalizedNames>
-      <LocalizedName description="Auto Flows and Apps" languagecode="1033" />
+      <LocalizedName description="Auto Service Manager Canvas App" languagecode="1033" />
     </LocalizedNames>
     <Descriptions />
-    <Version>1.0.0.1</Version>
+    <Version>2.0.0.1</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>microsoftdynamics365automotiveaccelerator</UniqueName>
@@ -80,13 +80,37 @@
       </Addresses>
     </Publisher>
     <RootComponents>
-      <RootComponent type="29" id="{06f65aa7-2157-e911-a957-000d3a3b9a2b}" behavior="0" />
-      <RootComponent type="29" id="{1930d429-5060-e911-a957-000d3a3b9a2b}" behavior="0" />
-      <RootComponent type="29" id="{7a71bd66-bf5f-e911-a953-000d3a3b9b3d}" behavior="0" />
-      <RootComponent type="29" id="{95ebdabe-d257-e911-a955-000d3a3b9316}" behavior="0" />
-      <RootComponent type="29" id="{a39f3058-c157-e911-a957-000d3a3b9a2b}" behavior="0" />
-      <RootComponent type="300" schemaName="msauto_autoserviceacceleratorservicemanagerapp_0f040" behavior="0" />
+      <RootComponent type="300" schemaName="msauto_autoserviceacceleratorservicemanagerapp_692f9" behavior="0" />
     </RootComponents>
-    <MissingDependencies />
+    <MissingDependencies>
+      <MissingDependency>
+        <Required key="0" type="1" schemaName="msauto_serviceordertype" displayName="Service Order Type" solution="MicrosoftCommonDataModelforAutomotive (2.0.0.1)" />
+        <Dependent key="1" type="300" schemaName="msauto_autoserviceacceleratorservicemanagerapp_692f9" displayName="Auto Service Accelerator - Service Manager App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="2" type="1" schemaName="msauto_serviceappointmenttype" displayName="Service Appointment Type" solution="MicrosoftCommonDataModelforAutomotive (2.0.0.1)" />
+        <Dependent key="1" type="300" schemaName="msauto_autoserviceacceleratorservicemanagerapp_692f9" displayName="Auto Service Accelerator - Service Manager App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="3" type="1" schemaName="msauto_serviceappointment" displayName="Service Appointment" solution="MicrosoftCommonDataModelforAutomotive (2.0.0.1)" />
+        <Dependent key="1" type="300" schemaName="msauto_autoserviceacceleratorservicemanagerapp_692f9" displayName="Auto Service Accelerator - Service Manager App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="4" type="1" schemaName="msauto_devicetype" displayName="Device Type" solution="MicrosoftCommonDataModelforAutomotive (2.0.0.1)" />
+        <Dependent key="1" type="300" schemaName="msauto_autoserviceacceleratorservicemanagerapp_692f9" displayName="Auto Service Accelerator - Service Manager App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="5" type="1" schemaName="msauto_testdrive" displayName="Test Drive" solution="MicrosoftCommonDataModelforAutomotive (2.0.0.1)" />
+        <Dependent key="1" type="300" schemaName="msauto_autoserviceacceleratorservicemanagerapp_692f9" displayName="Auto Service Accelerator - Service Manager App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="6" type="1" schemaName="msauto_device" displayName="Device" solution="MicrosoftCommonDataModelforAutomotive (2.0.0.1)" />
+        <Dependent key="1" type="300" schemaName="msauto_autoserviceacceleratorservicemanagerapp_692f9" displayName="Auto Service Accelerator - Service Manager App" />
+      </MissingDependency>
+      <MissingDependency>
+        <Required key="7" type="1" schemaName="msauto_businessoperation" displayName="Business Operation" solution="MicrosoftCommonDataModelforAutomotive (2.0.0.1)" />
+        <Dependent key="1" type="300" schemaName="msauto_autoserviceacceleratorservicemanagerapp_692f9" displayName="Auto Service Accelerator - Service Manager App" />
+      </MissingDependency>
+    </MissingDependencies>
   </SolutionManifest>
 </ImportExportXml>

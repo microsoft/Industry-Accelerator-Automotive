@@ -5,7 +5,7 @@
     <IntroducedVersion>0.1</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form>
+    <form headerdensity="HighWithControls">
       <tabs>
         <tab name="tab_3" id="{5348306d-9014-9ec2-478a-9ab898d7b7ba}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
           <labels>
@@ -25,6 +25,22 @@
                           <label description="Name" languagecode="1033" />
                         </labels>
                         <control id="msauto_name" classid="{4273EDBD-AC1D-40d3-9FB2-095C621B552D}" datafieldname="msauto_name" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{b5785fb6-ab15-4906-96b4-ec40ffe62879}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Contact" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_contactid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_contactid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{ca7d2c80-ed83-40cd-b2d2-9d6ac1773c29}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Customer" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_customerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_customerid" disabled="false" />
                       </cell>
                     </row>
                     <row>
@@ -361,7 +377,7 @@
         </tab>
       </tabs>
       <Navigation>
-        <NavBar></NavBar>
+        <NavBar />
         <NavBarAreas>
           <NavBarArea Id="Info">
             <Titles>

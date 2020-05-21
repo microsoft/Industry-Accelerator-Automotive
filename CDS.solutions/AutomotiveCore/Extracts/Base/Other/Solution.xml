@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ImportExportXml version="9.1.0.8031" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<ImportExportXml version="9.1.0.16845" SolutionPackageVersion="9.1" languagecode="1033" generatedBy="CrmLive" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SolutionManifest>
     <UniqueName>MicrosoftCommonDataModelforAutomotive</UniqueName>
     <LocalizedNames>
@@ -8,7 +8,7 @@
     <Descriptions>
       <Description description="Microsoft Common Data Model for Automotive" languagecode="1033" />
     </Descriptions>
-    <Version>1.0.0.1</Version>
+    <Version>2.0.0.1</Version>
     <Managed>0</Managed>
     <Publisher>
       <UniqueName>microsoftdynamics365automotiveaccelerator</UniqueName>
@@ -82,6 +82,7 @@
       </Addresses>
     </Publisher>
     <RootComponents>
+      <RootComponent type="1" schemaName="contact" behavior="0" />
       <RootComponent type="1" schemaName="msauto_aggregate" behavior="0" />
       <RootComponent type="1" schemaName="msauto_aggregatekpi" behavior="0" />
       <RootComponent type="1" schemaName="msauto_aggregatekpicontext" behavior="0" />
@@ -161,6 +162,7 @@
       <RootComponent type="1" schemaName="msauto_warranty" behavior="0" />
       <RootComponent type="1" schemaName="msauto_warrantylimit" behavior="0" />
       <RootComponent type="1" schemaName="msauto_warrantytype" behavior="0" />
+      <RootComponent type="20" id="{acb9d8fc-86e4-e911-a82e-000d3a1d5a0b}" behavior="0" />
       <RootComponent type="60" id="{00d2c36d-923f-44b6-ac58-43b394db586b}" behavior="0" />
       <RootComponent type="60" id="{064ce895-2048-42e5-9b37-c76f365cb3df}" behavior="0" />
       <RootComponent type="60" id="{09c36403-1dfb-4221-baac-e5a7f123da7f}" behavior="0" />

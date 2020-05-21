@@ -5,7 +5,7 @@
     <IntroducedVersion>0.1</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form>
+    <form headerdensity="HighWithControls">
       <tabs>
         <tab name="tab_7" id="{d0418999-7a1c-ab21-39a5-a060836801e6}" IsUserDefined="0" locklevel="0" showlabel="true" expanded="true">
           <labels>
@@ -28,19 +28,19 @@
                       </cell>
                     </row>
                     <row>
-                      <cell id="{8b30728c-9d91-528c-be48-31150ac9717b}" showlabel="true" locklevel="0">
-                        <labels>
-                          <label description="Customer" languagecode="1033" />
-                        </labels>
-                        <control id="msauto_customerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_customerid" disabled="false" />
-                      </cell>
-                    </row>
-                    <row>
-                      <cell id="{869584b4-eb9a-a9d4-e87c-bc963e6e51a3}" showlabel="true" locklevel="0">
+                      <cell id="{a5f5c8c7-e578-4c00-b5b5-addcf9eb1b77}" showlabel="true" locklevel="0">
                         <labels>
                           <label description="Contact" languagecode="1033" />
                         </labels>
                         <control id="msauto_contactid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_contactid" disabled="false" />
+                      </cell>
+                    </row>
+                    <row>
+                      <cell id="{6954a371-37bb-4f31-82a6-ac981f8b0312}" showlabel="true" locklevel="0">
+                        <labels>
+                          <label description="Customer" languagecode="1033" />
+                        </labels>
+                        <control id="msauto_customerid" classid="{270BD3DB-D9AF-4782-9025-509E298DEC0A}" datafieldname="msauto_customerid" disabled="false" />
                       </cell>
                     </row>
                     <row>
@@ -370,7 +370,7 @@
         </tab>
       </tabs>
       <Navigation>
-        <NavBar></NavBar>
+        <NavBar />
         <NavBarAreas>
           <NavBarArea Id="Info">
             <Titles>
@@ -402,7 +402,7 @@
       <header id="{3bfde17d-b8c8-44b6-99f2-1d36e0104e75}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
         <rows>
           <row>
-            <cell id="{04376c40-9428-4b0c-9de6-c313e48e10f2}">
+            <cell id="{04376c40-9428-4b0c-9de6-c313e48e10f2}" showlabel="false">
               <labels>
                 <label description="" languagecode="1033" />
               </labels>
@@ -423,7 +423,7 @@
         </rows>
       </header>
       <footer id="{10f7abd0-b250-4ba9-bd53-48ba447e0007}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
-        <rows></rows>
+        <rows />
       </footer>
       <DisplayConditions Order="0" FallbackForm="true" />
     </form>

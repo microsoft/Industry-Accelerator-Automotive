@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CanvasApp xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Name>msauto_autoserviceacceleratorservicemanagerapp_692f9</Name>
+  <AppVersion>2020-05-14T18:53:44Z</AppVersion>
+  <Status>Ready</Status>
+  <CreatedByClientVersion>3.20023.8.0</CreatedByClientVersion>
+  <MinClientVersion>3.20023.8.0</MinClientVersion>
+  <Tags>{"minimumRequiredApiVersion":"2.2.0","sienaVersion":"56000733-adc9-4610-a90e-1cf11006613c","primaryDeviceWidth":"1366","primaryDeviceHeight":"768","deviceCapabilities":"location","supportsPortrait":"false","supportsLandscape":"true","primaryFormFactor":"Tablet","publisherVersion":"3.20023.8","hasComponent":"true","hasNonOOBComponent":"false","hasUnlockedComponent":"true"}</Tags>
+  <IsCdsUpgraded>0</IsCdsUpgraded>
+  <GalleryItemId xsi:nil="true"></GalleryItemId>
+  <BackgroundColor>rgba(0, 176, 240, 1)</BackgroundColor>
+  <DisplayName>Auto Service Accelerator - Service Manager App</DisplayName>
+  <Description xsi:nil="true"></Description>
+  <CommitMessage xsi:nil="true"></CommitMessage>
+  <Publisher></Publisher>
+  <AuthorizationReferences xsi:nil="true"></AuthorizationReferences>
+  <ConnectionReferences>{"c73cca51-d7eb-4f32-a2ea-a15e911a52ac":{"id":"/providers/microsoft.powerapps/apis/shared_office365users","displayName":"Office 365 Users","iconUri":"https://connectoricons-prod.azureedge.net/office365users/icon_1.0.1335.1964.png","dataSources":["Office365Users"],"dependencies":[],"dependents":[],"parameterHints":{},"isOnPremiseConnection":false,"bypassConsent":false,"dataSets":{},"apiTier":"Standard"}}</ConnectionReferences>
+  <DatabaseReferences>{"default.cds":{"databaseDetails":{"referenceType":"Environmental","environmentName":"default.cds"},"dataSources":{"Business Operations":{"entitySetName":"msauto_businessoperations","logicalName":"msauto_businessoperation"},"Device Types":{"entitySetName":"msauto_devicetypes","logicalName":"msauto_devicetype"},"Accounts":{"entitySetName":"accounts","logicalName":"account"},"Contacts":{"entitySetName":"contacts","logicalName":"contact"},"Service Order Types":{"entitySetName":"msauto_serviceordertypes","logicalName":"msauto_serviceordertype"},"Service Appointment Types":{"entitySetName":"msauto_serviceappointmenttypes","logicalName":"msauto_serviceappointmenttype"},"Service Appointments":{"entitySetName":"msauto_serviceappointments","logicalName":"msauto_serviceappointment"},"Users":{"entitySetName":"systemusers","logicalName":"systemuser"},"Teams":{"entitySetName":"teams","logicalName":"team"},"Devices":{"entitySetName":"msauto_devices","logicalName":"msauto_device"},"Test Drives":{"entitySetName":"msauto_testdrives","logicalName":"msauto_testdrive"}}}}</DatabaseReferences>
+  <BypassConsent>0</BypassConsent>
+  <AdminControlBypassConsent>0</AdminControlBypassConsent>
+  <EmbeddedApp xsi:nil="true"></EmbeddedApp>
+  <IntroducedVersion>1.0</IntroducedVersion>
+  <CdsDependencies>{"cdsdependencies":[{"logicalname":"msauto_businessoperation","componenttype":1},{"logicalname":"msauto_devicetype","componenttype":1},{"logicalname":"account","componenttype":1},{"logicalname":"contact","componenttype":1},{"logicalname":"msauto_serviceordertype","componenttype":1},{"logicalname":"msauto_serviceappointmenttype","componenttype":1},{"logicalname":"msauto_serviceappointment","componenttype":1},{"logicalname":"systemuser","componenttype":1},{"logicalname":"team","componenttype":1},{"logicalname":"msauto_device","componenttype":1},{"logicalname":"msauto_testdrive","componenttype":1}]}</CdsDependencies>
+  <BackgroundImageUri>/CanvasApps/msauto_autoserviceacceleratorservicemanagerapp_692_BackgroundImageUri</BackgroundImageUri>
+  <DocumentUri>/CanvasApps/msauto_autoserviceacceleratorservicemanagerapp_692_DocumentUri.msapp</DocumentUri>
+</CanvasApp>

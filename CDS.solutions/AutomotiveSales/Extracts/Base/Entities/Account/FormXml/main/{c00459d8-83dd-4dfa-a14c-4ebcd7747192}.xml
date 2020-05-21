@@ -5,7 +5,7 @@
     <IntroducedVersion>1.0.0.0</IntroducedVersion>
     <FormPresentation>1</FormPresentation>
     <FormActivationState>1</FormActivationState>
-    <form showImage="true">
+    <form showImage="true" headerdensity="HighWithControls">
       <ancestor id="{8448b78f-8f42-454e-8e2a-f8196b0419af}" />
       <hiddencontrols>
         <data id="address1_addressid" datafieldname="address1_addressid" classid="{5546E6CD-394C-4bee-94A8-4425E17EF6C6}" />
@@ -536,7 +536,7 @@
                           <parameters>
                             <ViewId>{B4DE8C51-4D01-4743-ADD0-0A5661B7F25A}</ViewId>
                             <IsUserView>false</IsUserView>
-                            <RelationshipName>msauto_account_msauto_testdrive_Customer</RelationshipName>
+                            <RelationshipName>msauto_account_msauto_testdrive_customerid</RelationshipName>
                             <TargetEntityType>msauto_testdrive</TargetEntityType>
                             <AutoExpand>Fixed</AutoExpand>
                             <EnableQuickFind>false</EnableQuickFind>
@@ -1419,6 +1419,27 @@
         <Role Id="{627090ff-40a3-4053-8790-584edc5be201}" />
         <Role Id="{119f245c-3cc8-4b62-b31c-d1a046ced15d}" />
       </DisplayConditions>
+      <footer id="{f37c37c9-419f-4435-97ea-34a9d216d2fa}" celllabelposition="Top" columns="111" labelwidth="115" celllabelalignment="Left">
+        <rows>
+          <row>
+            <cell id="{ff0a3a1e-3f04-42fa-8936-a03b050be74b}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{b1a0ec38-adfc-4d79-815c-109590755b1f}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+            <cell id="{0feb21de-c940-4544-95bd-ec598cbee962}" showlabel="false">
+              <labels>
+                <label description="" languagecode="1033" />
+              </labels>
+            </cell>
+          </row>
+        </rows>
+      </footer>
     </form>
     <IsCustomizable>1</IsCustomizable>
     <CanBeDeleted>1</CanBeDeleted>

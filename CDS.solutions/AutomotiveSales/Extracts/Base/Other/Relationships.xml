@@ -34,12 +34,9 @@
   <EntityRelationship Name="lk_msauto_leadspecificationtype_createdby" />
   <EntityRelationship Name="lk_msauto_leadspecificationtype_modifiedby" />
   <EntityRelationship Name="msauto_account_msauto_financingopportunity_Customer" />
-  <EntityRelationship Name="msauto_account_msauto_testdrive_Customer" />
   <EntityRelationship Name="msauto_account_msauto_tradein_Customer" />
   <EntityRelationship Name="msauto_contact_msauto_financingopportunity_Customer" />
   <EntityRelationship Name="msauto_contact_msauto_leadprospect_ContactId" />
-  <EntityRelationship Name="msauto_contact_msauto_testdrive_ContactId" />
-  <EntityRelationship Name="msauto_contact_msauto_testdrive_Customer" />
   <EntityRelationship Name="msauto_contact_msauto_tradein_Customer" />
   <EntityRelationship Name="msauto_lead_msauto_leaddevice_LeadId" />
   <EntityRelationship Name="msauto_lead_msauto_leaddevicespecification_LeadId" />
