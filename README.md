@@ -36,7 +36,8 @@ Click "release" tab on the top or click this [link](https://github.com/microsoft
 
 Engage with experts and peers, read blog articles, and find local events within the Industry Accelerator Community. 
 
-Join the [Industry Accelerator conversation](https://community.dynamics.com/365/industry-accelerators/).\n
+Join the [Industry Accelerator conversation](https://community.dynamics.com/365/industry-accelerators/).
+
 Join the [Automotive conversation](https://community.dynamics.com/365/industry-accelerators/f/automotive-accelerator-forum).
 
 ## Contributing
